@@ -1,6 +1,5 @@
 import { Transition, Dialog } from "@headlessui/react";
 import { Fragment, useRef } from "react";
-import { XIcon } from "@heroicons/react/outline";
 
 const Signin = ({ open, onClose }) => {
   const cancelButtonRef = useRef(null);
