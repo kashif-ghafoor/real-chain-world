@@ -1,10 +1,8 @@
 import { Transition, Dialog } from "@headlessui/react";
-import { Fragment, useRef, useState } from "react";
-import Signup from "./Signup";
+import { Fragment, useRef } from "react";
 
-const Signin = ({ open, onClose }) => {
+const Signup = ({ open, onClose }) => {
   const cancelButtonRef = useRef(null);
-  const [openn, setOpenn] = useState(false);
 
   return (
     <>
@@ -115,15 +113,9 @@ const Signin = ({ open, onClose }) => {
                         src={require("../assets/google@2x.png")}
                       />
                       <p className="absolute top-[660px] left-[280px] font-medium flex items-center w-[334px]">
-                        Are you new to Real Chain World?
+                        Don’t have an account?
                       </p>
-                      <button
-                        className="absolute top-[690px] left-[380px] font-medium text-lightseagreen-100 flex items-center w-[110px]"
-                        onClick={() => {
-                          setOpenn(true);
-                          onClose(false);
-                        }}
-                      >
+                      <button className="absolute top-[660px] left-[460px] font-medium text-lightseagreen-100 flex items-center w-[110px]">
                         Sign Up
                       </button>
                     </div>
@@ -134,9 +126,8 @@ const Signin = ({ open, onClose }) => {
           </div>
         </Dialog>
       </Transition.Root>
-      <Signup open={openn} onClose={() => setOpenn(false)} />
     </>
   );
 };
 
-export default Signin;
+export default Signup;

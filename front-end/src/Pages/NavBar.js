@@ -1,4 +1,4 @@
-import { Fragment, useState, useRef } from "react";
+import { Fragment, useState } from "react";
 import { ChevronDownIcon, PlayCircleIcon } from "@heroicons/react/20/solid";
 import { Popover, Transition } from "@headlessui/react";
 import { ChartPieIcon, CursorArrowRaysIcon } from "@heroicons/react/24/outline";
@@ -21,8 +21,6 @@ const callsToAction = [{ name: "Watch demo", href: "#", icon: PlayCircleIcon }];
 
 function NavBar() {
   const [open, setOpen] = useState(false);
-
-  const cancelButtonRef = useRef(null);
 
   return (
     <>
