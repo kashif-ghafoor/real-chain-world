@@ -1,9 +1,9 @@
 import { Transition, Dialog } from "@headlessui/react";
 import { Fragment, useRef, useState } from "react";
-import ResetPasswordLinkSend from "./ResetPasswordLink";
+// import ResetPasswordLinkSend from "./ResetPasswordLink";
 
 const ResetPassword = ({ open, onClose }) => {
-  const [linksend, setLinksend] = useState(false);
+  //   const [linksend, setLinksend] = useState(false);
   const cancelButtonRef = useRef(null);
   return (
     <>
@@ -76,10 +76,10 @@ const ResetPassword = ({ open, onClose }) => {
 
                       <button
                         className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[370px] left-[270px] w-240px] h-10"
-                        onClick={() => {
-                          setLinksend(true);
-                          onClose(false);
-                        }}
+                        // onClick={() => {
+                        //   setLinksend(true);
+                        //   onClose(false);
+                        // }}
                       >
                         <div className="absolute top-[0px] left-[0px] rounded-lg bg-lightseagreen-100 w-[240px] h-10" />
                         <div className="absolute top-[4px] left-[85px] text-4xl font-medium  text-white text-left flex items-center w-[86px]">
@@ -100,7 +100,7 @@ const ResetPassword = ({ open, onClose }) => {
           </div>
         </Dialog>
       </Transition.Root>
-      <ResetPassword open={linksend} onClose={() => setLinksend(false)} />
+      {/* <ResetPassword open={linksend} onClose={() => setLinksend(false)} /> */}
     </>
   );
 };
