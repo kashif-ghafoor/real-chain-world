@@ -1,6 +1,5 @@
 import { Transition, Dialog } from "@headlessui/react";
 import { Fragment, useRef } from "react";
-import { Checkbox } from "@material-tailwind/react";
 
 const Signup = ({ open, onClose }) => {
   const cancelButtonRef = useRef(null);
