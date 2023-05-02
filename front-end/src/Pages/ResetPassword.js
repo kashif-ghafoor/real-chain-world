@@ -1,13 +1,10 @@
 import { Transition, Dialog } from "@headlessui/react";
 import { Fragment, useRef, useState } from "react";
-import Signup from "./Signup";
-import ResetPassword from "./ResetPassword";
+import ResetPasswordLinkSend from "./ResetPasswordLink";
 
-const Signin = ({ open, onClose }) => {
+const ResetPassword = ({ open, onClose }) => {
+  const [linksend, setLinksend] = useState(false);
   const cancelButtonRef = useRef(null);
-  const [openn, setOpenn] = useState(false);
-  const [reset, setReset] = useState(false);
-
   return (
     <>
       <Transition.Root show={open} as={Fragment}>
@@ -51,10 +48,10 @@ const Signin = ({ open, onClose }) => {
                           x
                         </button>
                       </div>
-                      <h3 className="absolute top-[80px] left-[335px] text-11xl tracking-[-0.02em]  font-bold text-lightseagreen-100 ">
+                      <h3 className="absolute top-[100px] left-[280px] text-11xl tracking-[-0.02em]  font-bold text-lightseagreen-100 ">
                         Reset Password
                       </h3>
-                      <div className="absolute top-[148px] left-[360px]  ">
+                      <div className="absolute top-[170px] left-[355px]  ">
                         <img
                           className="h-15 w-16"
                           src={require("../assets/logo-signin.png")}
@@ -64,73 +61,36 @@ const Signin = ({ open, onClose }) => {
                       <div>
                         <label
                           for="email"
-                          className="absolute top-[260px] left-[270px] text-lightseagreen-100 text-xs"
+                          className="absolute top-[270px] left-[270px] text-lightseagreen-100 text-xs"
                         >
                           Email
                         </label>
                         <input
                           type="email"
                           id="email"
-                          className="absolute top-[280px] left-[270px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 "
+                          className="absolute top-[290px] left-[270px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 "
                           placeholder="xyz@example.com"
                           required
                         />
                       </div>
-                      <div>
-                        <label
-                          for="password"
-                          className="absolute top-[340px] left-[270px] text-lightseagreen-100 text-xs"
-                        >
-                          Password
-                        </label>
-                        <input
-                          type="password"
-                          id="password"
-                          className="absolute top-[360px] left-[270px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5"
-                          placeholder="•••••••••"
-                          required
-                        />
-                      </div>
+
                       <button
-                        className="absolute top-[410px] left-[385px] 
-                          text-gray-700 text-xs font-medium flex w-[247px]"
+                        className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[370px] left-[270px] w-240px] h-10"
                         onClick={() => {
-                          setReset(true);
+                          setLinksend(true);
                           onClose(false);
                         }}
                       >
-                        Forget Password?
-                      </button>
-                      <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[470px] left-[270px] w-240px] h-10">
                         <div className="absolute top-[0px] left-[0px] rounded-lg bg-lightseagreen-100 w-[240px] h-10" />
-                        <div className="absolute top-[4px] left-[95px] text-4xl font-medium  text-white text-left flex items-center w-[86px]">
-                          Login
+                        <div className="absolute top-[4px] left-[85px] text-4xl font-medium  text-white text-left flex items-center w-[86px]">
+                          Submit
                         </div>
                       </button>
-                      <p className="absolute top-[530px] left-[330px] font-medium text-gray-700 flex items-center w-[214px]">
-                        Or Sign in using
-                      </p>
-                      <img
-                        className="absolute top-[570px] left-[365px] w-[25px] h-[25px] object-cover cursor-pointer"
-                        alt=""
-                        src={require("../assets/metamask@2x.png")}
-                      />
-                      <img
-                        className="absolute top-[570px] left-[400px] w-[30px] h-[25px] object-cover cursor-pointer"
-                        alt=""
-                        src={require("../assets/google@2x.png")}
-                      />
-                      <p className="absolute top-[660px] left-[280px] font-medium flex items-center w-[334px]">
-                        Are you new to Real Chain World?
-                      </p>
                       <button
-                        className="absolute top-[690px] left-[380px] font-medium text-lightseagreen-100 flex items-center w-[110px]"
-                        onClick={() => {
-                          setOpenn(true);
-                          onClose(false);
-                        }}
+                        className="absolute top-[410px] left-[410px] 
+                          text-gray-700 text-xxs font-medium flex w-[247px]"
                       >
-                        Sign Up
+                        Back to Login
                       </button>
                     </div>
                   </Dialog.Panel>
@@ -140,10 +100,9 @@ const Signin = ({ open, onClose }) => {
           </div>
         </Dialog>
       </Transition.Root>
-      <Signup open={openn} onClose={() => setOpenn(false)} />
-      <ResetPassword open={reset} onClose={() => setReset(false)} />
+      <ResetPassword open={linksend} onClose={() => setLinksend(false)} />
     </>
   );
 };
 
-export default Signin;
+export default ResetPassword;
