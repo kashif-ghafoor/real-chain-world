@@ -37,9 +37,9 @@ const ResetPasswordLink = ({ open, onClose }) => {
                   leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                   leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 >
-                  <Dialog.Panel className="relative transform overflow-hidden rounded-md bg-white text-center shadow-xl transition-all h-full w-3/5">
-                    <div className="bg-white pb-96 pt-96">
-                      <div className="absolute top-[20px] left-[730px]">
+                  <Dialog.Panel className="relative transform overflow-hidden rounded-md bg-white text-center shadow-xl transition-all h-full w-1/2">
+                    <div className="bg-white pb-48 pt-64">
+                      <div className="absolute top-[20px] left-[600px]">
                         <button
                           className="bg-transparent text-lightseagreen-100 font-bold text-5xl "
                           onClick={() => onClose(false)}
@@ -47,19 +47,25 @@ const ResetPasswordLink = ({ open, onClose }) => {
                           x
                         </button>
                       </div>
-
-                      <div className="absolute top-[140px] bg-white w-full h-[300px] overflow-hidden text-left text-5xl text-lightseagreen-100">
-                        <div className="absolute top-[0px] left-[200px] rounded-3xs bg-white box-border w-[340px] h-[407.75px] border-t-[1.5px] border-solid border-lightseagreen-100" />
-                        <div className="absolute top-[110px] left-[250px] font-semibold flex items-center w-[362px]">
+                      <div className="absolute top-[38px] left-[44px]  ">
+                        <img
+                          className="h-15 w-16"
+                          src={require("../assets/logo-signin.png")}
+                          alt=""
+                        />
+                      </div>
+                      <div className="absolute top-[120px] bg-white w-10/12 h-[300px] overflow-hidden text-left text-4xl text-lightseagreen-100">
+                        <div className="absolute top-[0px] left-[200px] rounded-3xs bg-white box-border w-[260px] h-[407.75px] border-t-[1.5px] border-solid border-lightseagreen-100" />
+                        <div className="absolute top-[110px] left-[240px] font-semibold flex items-center w-[260px]">
                           Link Sent Successfully
                         </div>
 
                         <img
-                          className="absolute top-[24px] left-[340px] w-[60px] h-[60px] overflow-hidden"
+                          className="absolute top-[24px] left-[310px] w-[50px] h-[50px] overflow-hidden"
                           alt=""
                           src="/done.svg"
                         />
-                        <div className="absolute text-xxs top-[171px] left-[238px] text-[14px] text-gray-500 flex items-center w-[289px]">
+                        <div className="absolute text-xxxs top-[155px] left-[215px] text-[11px] text-gray-500 flex items-center w-[235px]">
                           Your password has not been changed since more than 90
                           days. We sent you an email with a reset link. Please
                           click on it to reset your password.
