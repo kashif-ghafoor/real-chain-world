@@ -14,10 +14,10 @@ function Landing() {
       <BestOpp />
       <div />
       <section
-        className="absolute top-[2050px] left-[0px] w-[1300px] h-[300px] text-left text-5xl text-slategray-200 "
+        className="absolute top-[2050px] left-[0px] w-screen h-[300px] text-left text-5xl text-slategray-200 "
         id="callout"
       >
-        <div className="absolute top-[0px] left-[0px] bg-white box-border w-[1300px] h-[411px] border-t-[0.5px] border-solid border-blue-for-button" />
+        <div className="absolute top-[0px] left-[0px] bg-white box-border w-screen h-[411px] border-t-[0.5px] border-solid border-blue-for-button" />
         <img
           className="absolute top-[38px] left-[894px] w-[330px] h-[250px] object-cover"
           alt=""
@@ -37,7 +37,7 @@ function Landing() {
         </button>
       </section>
       <section
-        className="absolute top-[2402px] left-[0px] w-[1300px] h-[366px] text-left text-13xl text-lightseagreen-100 "
+        className="absolute top-[2402px] left-[0px] w-screen h-[366px] text-left text-13xl text-lightseagreen-100 "
         id="info-section"
       >
         <b className="absolute top-[69px] left-[95px] flex items-center w-[600px]">
@@ -52,7 +52,7 @@ function Landing() {
         </div>
       </section>
       <section
-        className="absolute top-[2760px] left-[0px] w-[1100px] h-[488px] text-center text-13xl text-blue-for-button "
+        className="absolute top-[2760px] left-[0px] w-screen  h-[488px] text-center text-13xl text-blue-for-button "
         id="invest-section"
       >
         <div className="absolute top-[0px] left-[0px] bg-white w-[700px] h-[488px]" />

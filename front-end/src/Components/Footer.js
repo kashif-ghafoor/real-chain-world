@@ -3,10 +3,10 @@ import { memo } from "react";
 const Footer = memo(() => {
   return (
     <footer
-      className="absolute top-[3400px] left-[-7px] w-[1300px] h-[369px] text-left text-gray-100 "
+      className="absolute top-[3400px] w-screen h-[369px] text-left text-gray-100 "
       id="footer"
     >
-      <div className="absolute top-[-1px] left-[0px] bg-white box-border w-[1300px] h-[369px] border-t-[1px] border-solid border-gray-600" />
+      <div className="absolute top-[-1px] left-[0px] bg-white box-border w-screen h-[369px] border-t-[1px] border-solid border-gray-600" />
       <div className="absolute top-[50px] left-[170px] ">
         <img className="h-15 w-48" src={require("../assets/logo.png")} alt="" />
       </div>

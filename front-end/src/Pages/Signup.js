@@ -67,7 +67,7 @@ const Signup = ({ open, onClose }) => {
                         <input
                           type="email"
                           id="email"
-                          className="absolute top-[190px] left-[270px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 "
+                          className="absolute top-[190px] left-[270px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 focus:outline-none focus:border-none"
                           placeholder="xyz@example.com"
                           required
                         />
@@ -82,7 +82,7 @@ const Signup = ({ open, onClose }) => {
                         <input
                           type="password"
                           id="password"
-                          className="absolute top-[270px] left-[270px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5"
+                          className="absolute top-[270px] left-[270px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 focus:outline-none focus:border-none"
                           placeholder="•••••••••"
                           required
                         />
@@ -97,7 +97,7 @@ const Signup = ({ open, onClose }) => {
                         <input
                           type="password"
                           id="password"
-                          className="absolute top-[350px] left-[270px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5"
+                          className="absolute top-[350px] left-[270px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 focus:outline-none focus:border-none"
                           placeholder="•••••••••"
                           required
                         />
