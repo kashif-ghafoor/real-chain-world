@@ -10,7 +10,7 @@ function Landing() {
     <>
       <NavBar />
       <Hero />
-      {/* <DiscoverSection /> */}
+      <DiscoverSection />
       {/* <BestOpp /> */}
 
       <section
