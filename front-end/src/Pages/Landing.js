@@ -10,14 +10,14 @@ function Landing() {
     <>
       <NavBar />
       <Hero />
-      <DiscoverSection />
-      <BestOpp />
-      <div />
+      {/* <DiscoverSection /> */}
+      {/* <BestOpp /> */}
+
       <section
         className="absolute top-[2050px] left-[0px] w-screen h-[300px] text-left text-5xl text-slategray-200 "
         id="callout"
       >
-        <div className="absolute top-[0px] left-[0px] bg-white box-border w-screen h-[411px] border-t-[0.5px] border-solid border-blue-for-button" />
+        <div className="absolute top-[0px] left-[0px] bg-blackk box-border w-screen h-[411px] border-t-[0.5px] border-solid border-blue-for-button" />
         <img
           className="absolute top-[38px] left-[894px] w-[330px] h-[250px] object-cover"
           alt=""
