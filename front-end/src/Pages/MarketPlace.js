@@ -1,4 +1,6 @@
+import Callout from "../Components/Callout";
 import NavBar from "../Components/NavBar";
+import Footer from "../Components/Footer";
 
 const MarketPlace = () => {
   return (
@@ -199,12 +201,14 @@ const MarketPlace = () => {
                 0 Investors
               </p>
               <button className="cursor-pointer [border:none] mt-8 ml-1 pl-4 bg-lightseagreen-100 rounded w-[290px] h-[50px]">
-                <div className=" text-4xl font-medium text-white text-center">{`View Property   `}</div>
+                <div className="text-4xl font-medium text-white text-center">{`View Property   `}</div>
               </button>
             </div>
           </card>
         </div>
       </div>
+      <Callout />
+      <Footer />
     </>
   );
 };

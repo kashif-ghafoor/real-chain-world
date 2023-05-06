@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { Link } from "react-router-dom";
 
 const Footer = memo(() => {
   return (
@@ -34,14 +35,22 @@ const Footer = memo(() => {
 
         <div className="flex-col m-14 ml-24">
           <b className="text-4xl text-lightseagreen-100">Investors</b>
-          <div className=" mt-2 font-medium">Marketplace</div>
-          <div className="mt-2  font-medium">Tokenize Your Property</div>
+          <Link to="/MarketPlace">
+            <div className=" mt-2 font-medium">Marketplace</div>
+          </Link>
+          <Link to="/Tokenization">
+            <div className="mt-2  font-medium">Tokenize Your Property</div>
+          </Link>
           <div className="mt-2  font-medium">Terms</div>
         </div>
         <div className="flex-col m-14 ml-24">
           <b className=" text-4xl text-lightseagreen-100">Sellers</b>
-          <div className="mt-2 font-medium">Learn About Real Chain World</div>
-          <div className="mt-2 font-medium">Our Team</div>
+          <Link to="/Learn">
+            <div className="mt-2 font-medium">Learn About Real Chain World</div>
+          </Link>
+          <Link to="/About">
+            <div className="mt-2 font-medium">Our Team</div>
+          </Link>
         </div>
       </div>
       <div className="justify-center">
