@@ -65,7 +65,7 @@ function Landing() {
           src={require("../assets/workflow.png")}
         />
       </section>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

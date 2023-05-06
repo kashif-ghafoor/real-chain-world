@@ -2,56 +2,54 @@ import { memo } from "react";
 
 const Footer = memo(() => {
   return (
-    <footer
-      className="absolute top-[3400px] w-screen h-[369px] text-left text-gray-100 "
-      id="footer"
-    >
-      <div className="absolute top-[-1px] left-[0px] bg-white box-border w-screen h-[369px] border-t-[1px] border-solid border-gray-600" />
-      <div className="absolute top-[50px] left-[170px] ">
-        <img className="h-15 w-48" src={require("../assets/logo.png")} alt="" />
-      </div>
+    <footer className="mt-56 h-[360px] text-left text-gray-100 " id="footer">
+      <div className="box-border h-[1px] border-t-[1px] border-solid border-gray-600" />
+      <div className="flex justify-around">
+        <div className="w-[200px] m-16 ml-24">
+          <div>
+            <img
+              className="h-15 w-48"
+              src={require("../assets/logo.png")}
+              alt=""
+            />
+          </div>
+          <div className="m-6 ml-10 flex justify-between w-[100px]">
+            <img
+              className="w-[25px] h-[25px] overflow-hidden"
+              alt=""
+              src="/biinstagram.svg"
+            />
+            <img
+              className="w-[25px] h-[25px] overflow-hidden"
+              alt=""
+              src="/bitwitter.svg"
+            />
+            <img
+              className=" w-[25px] h-[25px] overflow-hidden"
+              alt=""
+              src="/bimedium.svg"
+            />
+          </div>
+        </div>
 
-      <b className="absolute top-[49px] left-[700px] text-4xl text-lightseagreen-100">
-        Investors
-      </b>
-      <b className="absolute top-[49px] left-[1000px] text-4xl text-lightseagreen-100">
-        Sellers
-      </b>
-      <div className="absolute top-[110px] left-[700px] font-medium">
-        Marketplace
+        <div className="flex-col m-14 ml-24">
+          <b className="text-4xl text-lightseagreen-100">Investors</b>
+          <div className=" mt-2 font-medium">Marketplace</div>
+          <div className="mt-2  font-medium">Tokenize Your Property</div>
+          <div className="mt-2  font-medium">Terms</div>
+        </div>
+        <div className="flex-col m-14 ml-24">
+          <b className=" text-4xl text-lightseagreen-100">Sellers</b>
+          <div className="mt-2 font-medium">Learn About Real Chain World</div>
+          <div className="mt-2 font-medium">Our Team</div>
+        </div>
       </div>
-      <div className="absolute top-[110px] left-[1000px] font-medium">
-        Tokenize Your Property
+      <div className="justify-center">
+        <div className="m-4 bg-lightseagreen-100 w-[1250px] h-[2px]" />
+        <div className="pl-28 ml-96 font-semibold ">
+          All Rights Reserved, 2023 © Real Chain World
+        </div>
       </div>
-      <div className="absolute top-[150px] left-[1000px] font-medium">
-        Terms
-      </div>
-      <div className="absolute top-[150px] left-[700px] font-medium">
-        Learn About Real Chain World
-      </div>
-      <div className="absolute top-[190px] left-[700px] font-medium">
-        Our Team
-      </div>
-      <div className="absolute top-[300px] left-[42px] bg-lightseagreen-100 w-[1250px] h-[2px]" />
-
-      <div className="absolute top-[320px] left-[500px] font-semibold">
-        All Rights Reserved, 2023 © Real Chain World
-      </div>
-      <img
-        className="absolute top-[146px] left-[240px] w-[25px] h-[25px] overflow-hidden"
-        alt=""
-        src="/biinstagram.svg"
-      />
-      <img
-        className="absolute top-[148px] left-[280px] w-[25px] h-[25px] overflow-hidden"
-        alt=""
-        src="/bitwitter.svg"
-      />
-      <img
-        className="absolute top-[148px] left-[320px] w-[25px] h-[25px] overflow-hidden"
-        alt=""
-        src="/bimedium.svg"
-      />
     </footer>
   );
 });
