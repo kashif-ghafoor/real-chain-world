@@ -11,10 +11,10 @@ function Landing() {
       <NavBar />
       <Hero />
       <DiscoverSection />
-      {/* <BestOpp /> */}
+      <BestOpp />
 
-      <section
-        className="absolute top-[2050px] left-[0px] w-screen h-[300px] text-left text-5xl text-slategray-200 "
+      {/* <section
+        className=" w-screen h-[300px] text-left text-5xl text-slategray-200 "
         id="callout"
       >
         <div className="absolute top-[0px] left-[0px] bg-blackk box-border w-screen h-[411px] border-t-[0.5px] border-solid border-blue-for-button" />
@@ -35,8 +35,8 @@ function Landing() {
             Meet the World
           </div>
         </button>
-      </section>
-      <section
+      </section> */}
+      {/* <section
         className="absolute top-[2402px] left-[0px] w-screen h-[366px] text-left text-13xl text-lightseagreen-100 "
         id="info-section"
       >
@@ -50,8 +50,8 @@ function Landing() {
           restricted to accredited investors, real estate developers and
           businesses.
         </div>
-      </section>
-      <section
+      </section> */}
+      {/* <section
         className="absolute top-[2760px] left-[0px] w-screen  h-[488px] text-center text-13xl text-blue-for-button "
         id="invest-section"
       >
@@ -64,8 +64,8 @@ function Landing() {
           alt=""
           src={require("../assets/workflow.png")}
         />
-      </section>
-      <Footer />
+      </section> */}
+      {/* <Footer /> */}
     </>
   );
 }
