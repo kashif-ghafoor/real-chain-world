@@ -67,7 +67,7 @@ const BestOpp = () => {
                 30 Inlet Cove Cottage
               </p>
               <p className=" text-3xl mt-2 pl-4 font-light text-gray-700">
-                Alexandria, Pakistan
+                Lahore, Pakistan
               </p>
               <button className="cursor-pointer [border:none] mt-8 ml-1 pl-4 bg-lightseagreen-100 rounded w-[290px] h-[50px]">
                 <div className=" text-4xl font-medium text-white text-center">{`View Property   `}</div>

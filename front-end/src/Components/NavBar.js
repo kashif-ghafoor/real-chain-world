@@ -3,7 +3,7 @@ import { ChevronDownIcon, PlayCircleIcon } from "@heroicons/react/20/solid";
 import { Popover, Transition } from "@headlessui/react";
 import { ChartPieIcon, CursorArrowRaysIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
-import Signin from "./Signin";
+import Signin from "../Pages/Signin";
 
 const learn = [
   {

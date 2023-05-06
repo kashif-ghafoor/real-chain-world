@@ -1,9 +1,8 @@
-import { Fragment } from "react";
 import Hero from "../Components/Hero";
 import DiscoverSection from "../Components/DiscoverSection";
 import BestOpp from "../Components/BestOpp";
 import Footer from "../Components/Footer";
-import NavBar from "./NavBar";
+import NavBar from "../Components/NavBar";
 
 function Landing() {
   return (
