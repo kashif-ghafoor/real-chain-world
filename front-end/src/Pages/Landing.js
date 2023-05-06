@@ -13,58 +13,58 @@ function Landing() {
       <DiscoverSection />
       <BestOpp />
 
-      {/* <section
-        className=" w-screen h-[300px] text-left text-5xl text-slategray-200 "
+      <section
+        className=" mt-28 w-[1300px] h-[100px] text-left text-5xl text-slategray-200 "
         id="callout"
       >
-        <div className="absolute top-[0px] left-[0px] bg-blackk box-border w-screen h-[411px] border-t-[0.5px] border-solid border-blue-for-button" />
-        <img
-          className="absolute top-[38px] left-[894px] w-[330px] h-[250px] object-cover"
-          alt=""
-          src={require("../assets/callout.png")}
-        />
-        <b className="absolute top-[40px] left-[130px] text-13xl leading-[40px] flex text-blue-for-button items-center w-[600px]">
-          Real Estate is still the best investment you can make!!
-        </b>
-        <div className="absolute top-[140px] left-[130px] tracking-[0.05em] font-medium flex items-center w-[600px]">
-          Meet the world by investing in Real Chain World
-        </div>
-
-        <button className="cursor-pointer [border:none] py-3 px-5 bg-blue-for-button absolute top-[210px] left-[130px] rounded-3xs flex flex-row items-center justify-center">
-          <div className="relative text-4xl font-medium  text-white text-left">
-            Meet the World
+        <div className="bg-blackk box-border h-[11px] border-t-[0.5px] border-solid border-blue-for-button" />
+        <div className="flex">
+          <div className="mt-12 pl-24 flex-col">
+            <b className="text-13xl leading-[40px] flex text-blue-for-button items-center w-[500px]">
+              Real Estate is still the best investment you can make!!
+            </b>
+            <p className="mt-4 text-lightseagreen-100 tracking-[0.05em] font-normal flex items-center w-[600px]">
+              Meet the world by investing in Real Chain World
+            </p>
+            <button className="mt-6 cursor-pointer [border:none] py-2 px-4 bg-blue-for-button  rounded-3xs flex flex-row items-center justify-center">
+              <p className="relative text-4xl font-medium  text-white text-left">
+                Meet the World
+              </p>
+            </button>
           </div>
-        </button>
-      </section> */}
-      {/* <section
-        className="absolute top-[2402px] left-[0px] w-screen h-[366px] text-left text-13xl text-lightseagreen-100 "
+          <img
+            className="pl-32 m-8 w-[400px] h-[250px] object-cover"
+            alt=""
+            src={require("../assets/callout.png")}
+          />
+        </div>
+      </section>
+      <div
+        className="pl-24 mt-80 h-[300px] text-left text-13xl text-lightseagreen-100 "
         id="info-section"
       >
-        <b className="absolute top-[69px] left-[95px] flex items-center w-[600px]">
-          Benefits of Tokenization
-        </b>
-        <div className="absolute top-[140px] left-[95px] text-4xl tracking-[0.03em] leading-[40px] text-gray-700 flex items-center w-[710px]">
+        <b className="flex items-center w-[600px]">Benefits of Tokenization</b>
+        <div className="text-4xl tracking-[0.03em] leading-[40px] text-gray-700 flex items-center w-[710px]">
           The tokenization of Real Estate is revolutionizing the financial
           industry and changing the way investors trade and manage assets. Until
           now, investment opportunities in the real estate sector have been
           restricted to accredited investors, real estate developers and
           businesses.
         </div>
-      </section> */}
-      {/* <section
-        className="absolute top-[2760px] left-[0px] w-screen  h-[488px] text-center text-13xl text-blue-for-button "
+      </div>
+      <section
+        className="mt-8 h-[250px] text-center text-13xl text-blue-for-button "
         id="invest-section"
       >
-        <div className="absolute top-[0px] left-[0px] bg-white w-[700px] h-[488px]" />
-        <b className="absolute top-[59px] left-[153px] flex items-center justify-center w-[1000px]">
+        <b className="flex justify-center w-[1300px]">
           How You Can Invest in Real Chain World
         </b>
         <img
-          className="absolute top-[140px] left-[270px] w-[800px] h-[280px] "
+          className="pt-8 ml-64 w-[800px] h-[280px] "
           alt=""
           src={require("../assets/workflow.png")}
         />
-      </section> */}
+      </section>
       {/* <Footer /> */}
     </>
   );
