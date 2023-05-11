@@ -145,7 +145,7 @@ const Signin = ({ open, onClose }) => {
                               </button>
                             </div>
                             <button
-                              ype="submit"
+                              type="submit"
                               disabled={isSubmitting}
                               className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[360px] left-[270px] w-240px] h-10"
                             >
