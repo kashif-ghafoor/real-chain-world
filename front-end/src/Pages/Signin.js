@@ -1,7 +1,7 @@
 import { Transition, Dialog } from "@headlessui/react";
 import { Fragment, useRef, useState } from "react";
 import Signup from "./Signup";
-import { useFormik } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import ResetPassword from "./ResetPassword";
 
 const Signin = ({ open, onClose }) => {
@@ -9,15 +9,26 @@ const Signin = ({ open, onClose }) => {
   const [openn, setOpenn] = useState(false);
   const [reset, setReset] = useState(false);
 
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-      password: "",
-    },
-    onSubmit: (values) => {
-      console.log(values);
-    },
-  });
+  const initialValues = { email: "", password: "" };
+
+  const validate = (values) => {
+    const errors = {};
+
+    if (!values.email) {
+      errors.email = "Email is required";
+    }
+
+    if (!values.password) {
+      errors.password = "Password is required";
+    }
+
+    return errors;
+  };
+
+  const handleSubmit = (values, { setSubmitting }) => {
+    // Submit logic here
+    setSubmitting(false);
+  };
 
   return (
     <>
@@ -73,64 +84,79 @@ const Signin = ({ open, onClose }) => {
                         />
                       </div>
 
-                      <form onSubmit={formik.handleSubmit}>
-                        <div>
-                          <label
-                            htmlFor="email"
-                            className="absolute top-[180px] left-[270px] text-lightseagreen-100 text-xs"
-                          >
-                            Email
-                          </label>
-                          <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            onChange={formik.handleChange}
-                            value={formik.values.email}
-                            className="absolute top-[200px] left-[270px] h-[40px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 focus:outline-none"
-                            placeholder="xyz@example.com"
-                            required
-                          />
-                        </div>
-                        <div>
-                          <label
-                            htmlFor="password"
-                            className="absolute top-[255px] left-[270px] text-lightseagreen-100 text-xs"
-                          >
-                            Password
-                          </label>
-                          <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            onChange={formik.handleChange}
-                            value={formik.values.password}
-                            className="absolute top-[275px] left-[270px] h-[40px]  bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 focus:outline-none"
-                            placeholder="•••••••••"
-                            required
-                          />
-                        </div>
-                        <button
-                          type="button"
-                          className="absolute top-[315px] left-[385px] 
+                      <Formik
+                        initialValues={initialValues}
+                        validate={validate}
+                        onSubmit={handleSubmit}
+                      >
+                        {({ isSubmitting }) => (
+                          <Form>
+                            <div>
+                              <label
+                                htmlFor="email"
+                                className="absolute top-[180px] left-[270px] text-lightseagreen-100 text-xs"
+                              >
+                                Email
+                              </label>
+                              <Field
+                                type="email"
+                                id="email"
+                                name="email"
+                                className="absolute top-[200px] left-[270px] h-[40px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 focus:outline-none"
+                                placeholder="xyz@example.com"
+                                required
+                              />
+                              <ErrorMessage
+                                name="email"
+                                component="div"
+                                className="text-red-500 text-xs absolute top-[210px] left-[530px]"
+                              />
+                            </div>
+                            <div>
+                              <label
+                                htmlFor="password"
+                                className="absolute top-[255px] left-[270px] text-lightseagreen-100 text-xs"
+                              >
+                                Password
+                              </label>
+                              <Field
+                                type="password"
+                                id="password"
+                                name="password"
+                                className="absolute top-[275px] left-[270px] h-[40px]  bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 focus:outline-none"
+                                placeholder="•••••••••"
+                                required
+                              />
+                              <ErrorMessage
+                                name="password"
+                                component="div"
+                                className="text-red-500 text-xs  absolute top-[285px] left-[520px] h-[40px]"
+                              />
+                              <button
+                                type="button"
+                                className="absolute top-[315px] left-[385px] 
               text-gray-700 text-xs font-medium flex w-[247px]"
-                          onClick={() => {
-                            setReset(true);
-                            onClose(false);
-                          }}
-                        >
-                          Forget Password?
-                        </button>
-                        <button
-                          type="submit"
-                          className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[360px] left-[270px] w-240px] h-10"
-                        >
-                          <div className="absolute top-[0px] left-[0px] rounded bg-lightseagreen-100 w-[240px] h-10" />
-                          <div className="absolute top-[4px] left-[95px] text-4xl font-medium  text-white text-left flex items-center w-[86px]">
-                            Login
-                          </div>
-                        </button>
-                      </form>
+                                onClick={() => {
+                                  setReset(true);
+                                  onClose(false);
+                                }}
+                              >
+                                Forget Password?
+                              </button>
+                            </div>
+                            <button
+                              ype="submit"
+                              disabled={isSubmitting}
+                              className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[360px] left-[270px] w-240px] h-10"
+                            >
+                              <div className="absolute top-[0px] left-[0px] rounded bg-lightseagreen-100 w-[240px] h-10" />
+                              <div className="absolute top-[4px] left-[95px] text-4xl font-medium  text-white text-left flex items-center w-[86px]">
+                                Login
+                              </div>
+                            </button>
+                          </Form>
+                        )}
+                      </Formik>
                       <img
                         className="absolute top-[445px] left-[260px] w-[250px]"
                         alt=""
