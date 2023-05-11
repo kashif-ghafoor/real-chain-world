@@ -16,7 +16,7 @@ function Landing() {
         className=" mt-28 w-[1300px] h-[100px] text-left text-5xl text-slategray-200 "
         id="callout"
       >
-        <div className="bg-blackk box-border h-[11px] border-t-[0.5px] border-solid border-blue-for-button" />
+        <div className="box-border h-[3px] border-t-[0.7px] border-solid border-white" />{" "}
         <div className="flex">
           <div className="mt-12 pl-24 flex-col">
             <b className="text-13xl leading-[40px] flex text-blue-for-button items-center w-[500px]">
