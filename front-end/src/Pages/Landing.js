@@ -43,7 +43,7 @@ function Landing() {
         id="info-section"
       >
         <b className="flex items-center w-[600px]">Benefits of Tokenization</b>
-        <div className="text-4xl tracking-[0.03em] leading-[40px] text-gray-700 flex items-center w-[710px]">
+        <div className="text-4xl tracking-[0.03em] leading-[40px] text-gray-500 flex items-center w-[710px]">
           The tokenization of Real Estate is revolutionizing the financial
           industry and changing the way investors trade and manage assets. Until
           now, investment opportunities in the real estate sector have been

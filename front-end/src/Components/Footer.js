@@ -32,30 +32,41 @@ const Footer = memo(() => {
             />
           </div>
         </div>
-
         <div className="flex-col m-14 ml-24">
+          <b className="text-4xl text-lightseagreen-100">Support</b>
+          <div className=" mt-2 text-gray-500">Contact Us</div>
+          <div className=" mt-2 text-gray-500">FAQ's</div>
+          <div className="mt-2 text-gray-500">Privacy Policy</div>
+          <div className="mt-2  text-gray-500">Terms and Conditions</div>
+        </div>
+        <div className="flex-col m-14 ml-10">
           <b className="text-4xl text-lightseagreen-100">Investors</b>
           <Link to="/MarketPlace">
-            <div className=" mt-2 font-medium">Marketplace</div>
+            <div className=" mt-2 text-gray-500">Marketplace</div>
           </Link>
           <Link to="/Tokenization">
-            <div className="mt-2  font-medium">Tokenize Your Property</div>
+            <div className="mt-2 text-gray-500">Tokenize Your Property</div>
           </Link>
-          <div className="mt-2  font-medium">Terms</div>
+          <div className="mt-2  text-gray-500">Platform</div>
         </div>
-        <div className="flex-col m-14 ml-24">
+        <div className="flex-col m-14 ml-2">
           <b className=" text-4xl text-lightseagreen-100">Sellers</b>
           <Link to="/Learn">
-            <div className="mt-2 font-medium">Learn About Real Chain World</div>
+            <div className="mt-2 text-gray-500">
+              Learn About Real Chain World
+            </div>
           </Link>
           <Link to="/About">
-            <div className="mt-2 font-medium">Our Team</div>
+            <div className="mt-2 text-gray-500">Our Team</div>
+          </Link>
+          <Link to="/About">
+            <div className="mt-2 text-gray-500">About Us</div>
           </Link>
         </div>
       </div>
       <div className="justify-center">
         <div className="m-4 bg-lightseagreen-100 w-[1250px] h-[2px]" />
-        <div className="pl-28 ml-96 font-semibold ">
+        <div className="pl-28 ml-96 text-gray-500 ">
           All Rights Reserved, 2023 © Real Chain World
         </div>
       </div>

@@ -29,7 +29,7 @@ const MarketPlace = () => {
             City
           </p>
           <input
-            className="relative top-[2px] ml-4 w-4/5 h-[40px] bg-white text-gray-900 text-sm p-2.5 focus:outline-none focus:border-none"
+            className="relative top-[2px] ml-4 w-4/5 h-[40px] bg-white text-gray-500 text-sm p-2.5 focus:outline-none focus:border-none"
             placeholder="Lahore"
             required
           />
@@ -40,7 +40,7 @@ const MarketPlace = () => {
             Property Name
           </p>
           <input
-            className="relative top-[2px] ml-4 w-5/6 h-[40px] bg-white text-gray-900 text-sm p-2.5 focus:outline-none focus:border-none"
+            className="relative top-[2px] ml-4 w-5/6 h-[40px] bg-white text-gray-500 text-sm p-2.5 focus:outline-none focus:border-none"
             placeholder="Search Property"
             required
           />
@@ -66,10 +66,11 @@ const MarketPlace = () => {
         </button>
       </div>
       <h1 className="mt-10 ml-28  text-9xl tracking-[-0.02em] font-bold font-h2 text-lightseagreen-100">
-        Our Listings
+        Projects on our Platform
       </h1>
-      <h3 className=" ml-28 text-5xl tracking-[-0.02em] font-semibold w-[450px] text-gray-700">
-        Invest in Tokenized Real Estate
+      <h3 className=" ml-28 text-4xl tracking-[-0.02em] font-medium w-[650px] text-gray-500">
+        Giving you the trust you need to own your share of tokenized real
+        estate.
       </h3>
       <div className="ml-24 mt-12" id="best-opportunties">
         <div className="m-6 flex flex-wrap gap-16 w-[1100px]">

@@ -8,8 +8,8 @@ const BestOpp = () => {
             <h4 className="text-9xl font-h4 tracking-[-0.01em]">
               Best Opportunities
             </h4>
-            <p className="mt-4 text-4xl font-medium text-gray-700">
-              Amet minim mollit non deserunt ullamco est sit aliostrud amet.
+            <p className="mt-4 text-4xl font-medium text-gray-500">
+              Start investing flexibly, wherever you are in the world
             </p>
           </div>
           <Link to="/marketplace">
