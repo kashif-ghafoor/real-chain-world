@@ -6,20 +6,35 @@ import React from "react";
 import { useState } from "react";
 
 const Tokenization = () => {
-  const [activeForm, setActiveForm] = useState(null);
+  const [activeForm, setActiveForm] = useState("form1");
 
   const handleButtonClick = (formId) => {
     setActiveForm(formId);
   };
 
+  const handleNext = () => {
+    switch (activeForm) {
+      case "form1":
+        setActiveForm("form2");
+        break;
+      case "form2":
+        setActiveForm("form3");
+        break;
+      case "form3":
+        setActiveForm("form1");
+        break;
+      default:
+        setActiveForm("form1");
+    }
+  };
   const renderForm = () => {
     switch (activeForm) {
       case "form1":
-        return <Form1 />;
+        return <Form1 onNext={handleNext} />;
       case "form2":
-        return <Form2 />;
+        return <Form2 onNext={handleNext} />;
       case "form3":
-        return <Form3 />;
+        return <Form3 onNext={handleNext} />;
       default:
         return null;
     }
@@ -63,6 +78,7 @@ const Tokenization = () => {
             </button>
           </div>
         </div>
+
         <div>{renderForm()}</div>
       </div>
     </>
