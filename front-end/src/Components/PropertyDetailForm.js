@@ -34,7 +34,7 @@ const PropertyForm = ({ onNext }) => {
                   type="radio"
                   name="type"
                   value="residential"
-                  required
+                  required // Make the field required
                 />
                 Residential
               </label>
@@ -44,6 +44,7 @@ const PropertyForm = ({ onNext }) => {
                   type="radio"
                   name="type"
                   value="commercial"
+                  required // Make the field required
                 />
                 Commercial
               </label>
@@ -53,6 +54,7 @@ const PropertyForm = ({ onNext }) => {
                   type="radio"
                   name="type"
                   value="industrial"
+                  required // Make the field required
                 />
                 Industrial
               </label>
@@ -62,6 +64,7 @@ const PropertyForm = ({ onNext }) => {
                   type="radio"
                   name="type"
                   value="vacant land"
+                  required // Make the field required
                 />
                 Vacant Land
               </label>
@@ -71,6 +74,7 @@ const PropertyForm = ({ onNext }) => {
                   type="radio"
                   name="type"
                   value="agricultural"
+                  required // Make the field required
                 />
                 Agricultural
               </label>
@@ -88,6 +92,7 @@ const PropertyForm = ({ onNext }) => {
               className="mt-2 w-[400px]  border border-gray-600 focus:outline-none"
               type="text"
               name="address"
+              required // Make the field required
             />
             <label className="font-medium mt-8" htmlFor="country">
               Country
@@ -96,6 +101,7 @@ const PropertyForm = ({ onNext }) => {
               className="mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-none"
               type="text"
               name="country"
+              required // Make the field required
             />
             <label className="font-medium mt-8" htmlFor="city">
               City
@@ -104,6 +110,7 @@ const PropertyForm = ({ onNext }) => {
               className="mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-none"
               type="text"
               name="city"
+              required // Make the field required
             />
             <label className="font-medium mt-8" htmlFor="area">
               Area
@@ -112,17 +119,8 @@ const PropertyForm = ({ onNext }) => {
               className="mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-none"
               type="text"
               name="area"
+              required // Make the field required
             />
-
-            {/* <label className="font-medium mt-10" htmlFor="goal">
-              What’s your goal with tokenizing your asset? (optional)
-            </label>
-            <Field
-              as="textarea"
-              className="mt-2 w-[400px]  border border-gray-600 focus:outline-none"
-              type="text"
-              name="goal"
-            /> */}
           </div>
 
           <div className="flex flex-col mt-24">
@@ -136,6 +134,7 @@ const PropertyForm = ({ onNext }) => {
               className="mt-2 w-[400px]  border border-gray-600 focus:outline-none"
               type="text"
               name="price"
+              required // Make the field required
             />
 
             <label className="font-medium mt-8" htmlFor="selectedOption">
@@ -146,6 +145,7 @@ const PropertyForm = ({ onNext }) => {
               as="select"
               id="selectedOption"
               name="selectedOption"
+              required // Make the field required
             >
               <option className="bg-offwhite" value="option1">
                 PKR
@@ -175,6 +175,7 @@ const PropertyForm = ({ onNext }) => {
                     name="selectOptions"
                     type="checkbox"
                     value="swimmingpool"
+                    required // Make the field required
                   />
                   <label className="pl-4" htmlFor="swimmingpool">
                     Swimming Pool
@@ -272,6 +273,17 @@ const PropertyForm = ({ onNext }) => {
                 </div>
               </div>
             </FieldArray>
+          </div>
+          <div className="mt-16">
+            <label className="font-medium mt-16" htmlFor="goal">
+              What’s your goal with tokenizing your asset? (optional)
+            </label>
+            <Field
+              as="textarea"
+              className="mt-2 w-[400px]  border border-gray-600 focus:outline-none"
+              type="text"
+              name="goal"
+            />
           </div>
 
           <div className="rounded bg-lightseagreen-100 ml-72 mt-10 mb-14 w-[120px]  h-[40px]">
