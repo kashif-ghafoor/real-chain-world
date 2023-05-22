@@ -5,6 +5,7 @@ const PropertyForm = ({ onNext }) => {
   const initialValues = {
     type: "",
     address: "",
+    selectedOption: "",
   };
 
   const handleSubmit = (values) => {
@@ -16,6 +17,9 @@ const PropertyForm = ({ onNext }) => {
       <div className="flex flex-col text-blue text-4xl font-semibold">
         <h2>Property Detail</h2>
         <h2 className="font-medium mt-80">Property Location</h2>
+        <h2 className="font-medium  absolute top-[1090px]">
+          Price and Currency
+        </h2>
       </div>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form className="ml-56">
@@ -108,7 +112,7 @@ const PropertyForm = ({ onNext }) => {
               name="area"
             />
 
-            <label className="font-medium mt-10" htmlFor="goal">
+            {/* <label className="font-medium mt-10" htmlFor="goal">
               What’s your goal with tokenizing your asset? (optional)
             </label>
             <Field
@@ -116,7 +120,41 @@ const PropertyForm = ({ onNext }) => {
               className="mt-2 w-[400px]  border border-gray-600 focus:outline-none"
               type="text"
               name="goal"
+            /> */}
+          </div>
+
+          <div className="flex flex-col mt-24">
+            <label className="font-medium ">
+              Please Enter the desired price of your Property
+            </label>
+            <label className="font-medium mt-6" htmlFor="price">
+              Price
+            </label>
+            <Field
+              className="mt-2 w-[400px]  border border-gray-600 focus:outline-none"
+              type="text"
+              name="price"
             />
+
+            <label className="font-medium mt-8" htmlFor="selectedOption">
+              Specify the Currency
+            </label>
+            <Field
+              className="bg-lightseagreen-200"
+              as="select"
+              id="selectedOption"
+              name="selectedOption"
+            >
+              <option className="bg-offwhite" value="option1">
+                PKR
+              </option>
+              <option className="bg-offwhite" value="option2">
+                USD
+              </option>
+              <option className="bg-offwhite" value="option3">
+                EUR
+              </option>
+            </Field>
           </div>
 
           <div className="rounded bg-lightseagreen-100 ml-72 mt-10 mb-14 w-[120px]  h-[40px]">
