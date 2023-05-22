@@ -1,11 +1,12 @@
 import React from "react";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form, Field, FieldArray } from "formik";
 
 const PropertyForm = ({ onNext }) => {
   const initialValues = {
     type: "",
     address: "",
     selectedOption: "",
+    selectOptions: [],
   };
 
   const handleSubmit = (values) => {
@@ -20,6 +21,7 @@ const PropertyForm = ({ onNext }) => {
         <h2 className="font-medium  absolute top-[1090px]">
           Price and Currency
         </h2>
+        <h2 className="font-medium absolute top-[1370px]">Property Features</h2>
       </div>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form className="ml-56">
@@ -155,6 +157,121 @@ const PropertyForm = ({ onNext }) => {
                 EUR
               </option>
             </Field>
+          </div>
+
+          <div className="flex mt-24">
+            <FieldArray className="flex ml-32 mt-20" name="selectOptions">
+              <div>
+                <label className="font-medium">
+                  Which features does the property have?
+                </label>
+                <div
+                  className="mt-4"
+                  role="group"
+                  aria-labelledby="checkbox-group"
+                >
+                  <Field
+                    className="accent-lightseagreen-100"
+                    name="selectOptions"
+                    type="checkbox"
+                    value="swimmingpool"
+                  />
+                  <label className="pl-4" htmlFor="swimmingpool">
+                    Swimming Pool
+                  </label>
+                </div>
+                <div
+                  className="mt-4"
+                  role="group"
+                  aria-labelledby="checkbox-group"
+                >
+                  <Field
+                    className="accent-lightseagreen-100"
+                    name="selectOptions"
+                    type="checkbox"
+                    value="garage"
+                  />
+                  <label className="pl-4" htmlFor="garage">
+                    Garage
+                  </label>
+                </div>
+                <div
+                  className="mt-4"
+                  role="group"
+                  aria-labelledby="checkbox-group"
+                >
+                  <Field
+                    className="accent-lightseagreen-100"
+                    name="selectOptions"
+                    type="checkbox"
+                    value="garden"
+                  />
+                  <label className="pl-4" htmlFor="garden">
+                    Garden or Yard
+                  </label>
+                </div>
+                <div
+                  className="mt-4"
+                  role="group"
+                  aria-labelledby="checkbox-group"
+                >
+                  <Field
+                    className="accent-lightseagreen-100"
+                    name="selectOptions"
+                    type="checkbox"
+                    value="basement"
+                  />
+                  <label className="pl-4" htmlFor="basement">
+                    Basement
+                  </label>
+                </div>
+                <div
+                  className="mt-4"
+                  role="group"
+                  aria-labelledby="checkbox-group"
+                >
+                  <Field
+                    className="accent-lightseagreen-100"
+                    name="selectOptions"
+                    type="checkbox"
+                    value="balcony"
+                  />
+                  <label className="pl-4" htmlFor="balcony">
+                    Balcony
+                  </label>
+                </div>
+                <div
+                  className="mt-4"
+                  role="group"
+                  aria-labelledby="checkbox-group"
+                >
+                  <Field
+                    className="accent-lightseagreen-100"
+                    name="selectOptions"
+                    type="checkbox"
+                    value="Study or Home Office"
+                  />
+                  <label className="pl-4" htmlFor="Study or Home Office">
+                    Study or Home Office
+                  </label>
+                </div>
+                <div
+                  className="mt-4"
+                  role="group"
+                  aria-labelledby="checkbox-group"
+                >
+                  <Field
+                    className="accent-lightseagreen-100"
+                    name="selectOptions"
+                    type="checkbox"
+                    value="gym"
+                  />
+                  <label className="pl-4" htmlFor="gym">
+                    Gym
+                  </label>
+                </div>
+              </div>
+            </FieldArray>
           </div>
 
           <div className="rounded bg-lightseagreen-100 ml-72 mt-10 mb-14 w-[120px]  h-[40px]">
