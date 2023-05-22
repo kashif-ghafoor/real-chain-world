@@ -80,7 +80,7 @@ function NavBar() {
                     {learn.map((item) => (
                       <div
                         key={item.name}
-                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-4 hover:bg-gray-50"
+                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-4 hover:bg-lightseagreen-200"
                       >
                         <div className="flex-auto">
                           <a
@@ -94,7 +94,7 @@ function NavBar() {
                       </div>
                     ))}
                   </div>
-                  <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                  <div className="grid grid-cols-2 divide-x divide-gray-900/5  hover:bg-lightseagreen-200">
                     {callsToAction.map((item) => (
                       <a
                         key={item.name}
