@@ -1,34 +1,75 @@
 import React from "react";
-import { Formik, Form } from "formik";
+import { useFormik } from "formik";
+import { useDropzone } from "react-dropzone";
 
-const RequiredDocForm = () => {
-  const initialValues = {
-    type: "",
-    address: "",
+const RequiredDocForm = ({ onNext }) => {
+  const formik = useFormik({
+    initialValues: {
+      files: [],
+    },
+    onSubmit: (values) => {
+      console.log(values.files);
+    },
+  });
+
+  const handleDrop = (acceptedFiles) => {
+    const filteredFiles = acceptedFiles.filter(
+      (file) => file.type === "application/pdf"
+    );
+    formik.setFieldValue("files", [...formik.values.files, ...filteredFiles]);
   };
 
-  const handleSubmit = (values) => {
-    console.log(values); // You can perform further actions with the form values here
+  const handleRemove = (index) => {
+    const updatedFiles = [...formik.values.files];
+    updatedFiles.splice(index, 1);
+    formik.setFieldValue("files", updatedFiles);
   };
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop: handleDrop,
+    accept: ".pdf",
+    multiple: true,
+  });
 
   return (
-    <div className="flex ml-32 mt-20">
-      <div className="flex flex-col text-blue text-4xl font-semibold">
-        <h2>Required Documents</h2>
+    <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto p-4">
+      <div
+        {...getRootProps()}
+        className={`p-6 border-2 border-dashed rounded-md ${
+          isDragActive ? "border-blue-500" : "border-gray-300"
+        }`}
+      >
+        <input {...getInputProps()} />
+        {isDragActive ? (
+          <p className="text-blue-500">Drop PDF files here...</p>
+        ) : (
+          <p className="text-gray-500">
+            Drag and drop PDF files here, or click to select files
+          </p>
+        )}
       </div>
-      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-        <Form className="ml-56">
-          <div className="rounded bg-lightseagreen-100 ml-72 mt-10 w-[120px]  h-[40px]">
+      <div className="mt-4">
+        {formik.values.files.map((file, index) => (
+          <div key={index} className="bg-offwhite p-2 rounded-md">
+            <span>{file.name}</span>
             <button
-              className="text-white p-2 pl-10 text-3xl font-medium"
-              type="submit"
+              type="button"
+              onClick={() => handleRemove(index)}
+              className="ml-32 text-red-500"
             >
-              Done
+              Remove
             </button>
           </div>
-        </Form>
-      </Formik>
-    </div>
+        ))}
+      </div>
+      <button
+        type="submit"
+        onClick={onNext}
+        className="mt-4 bg-lightseagreen-100 text-white font-medium px-4 py-2 rounded-md"
+      >
+        Submit
+      </button>
+    </form>
   );
 };
 
