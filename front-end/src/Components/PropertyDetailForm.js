@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
 
-const PropertyForm = () => {
+const PropertyForm = ({ onNext }) => {
   const initialValues = {
     type: "",
     address: "",
@@ -55,7 +55,7 @@ const PropertyForm = () => {
                   className="m-3 mr-4 accent-lightseagreen-100"
                   type="radio"
                   name="type"
-                  value="commercial"
+                  value="vacant land"
                 />
                 Vacant Land
               </label>
@@ -64,7 +64,7 @@ const PropertyForm = () => {
                   className="m-3 mr-4 accent-lightseagreen-100"
                   type="radio"
                   name="type"
-                  value="commercial"
+                  value="agricultural"
                 />
                 Agricultural
               </label>
@@ -123,6 +123,7 @@ const PropertyForm = () => {
             <button
               className="text-white p-2 pl-10 text-3xl font-medium"
               type="submit"
+              onClick={onNext}
             >
               Done
             </button>
