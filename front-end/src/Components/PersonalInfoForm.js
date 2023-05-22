@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
-const PersonalInfoForm = () => {
+const PersonalInfoForm = ({ onNext }) => {
   const initialValues = {
     lastname: "",
     firstname: "",
@@ -74,6 +74,7 @@ const PersonalInfoForm = () => {
             <button
               className="text-white p-2 pl-10 text-3xl font-medium"
               type="submit"
+              onClick={onNext}
             >
               Done
             </button>
