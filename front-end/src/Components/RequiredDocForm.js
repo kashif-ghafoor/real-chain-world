@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import { useDropzone } from "react-dropzone";
 
 const RequiredDocForm = () => {
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const formik = useFormik({
     initialValues: {
       files: [],
@@ -11,6 +12,7 @@ const RequiredDocForm = () => {
     onSubmit: (values) => {
       console.log(values.files);
       console.log(values.videos);
+      setFormSubmitted(true);
     },
   });
 
@@ -64,13 +66,20 @@ const RequiredDocForm = () => {
   });
 
   return (
-    <div className="flex ml-28 mt-20">
+    <div className="flex ml-28 mt-12">
       <div className="flex flex-col text-blue text-4xl font-semibold">
-        <h2>Property Documents</h2>
+        <h2 className="mt-10">Property Documents</h2>
         <h2 className="mt-44">Property Videos</h2>
       </div>
       <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto p-4">
-        <label className="font-medium mt-24">
+        {formSubmitted && (
+          <div className="bg-blue rounded w-[360px] h-[40px]">
+            <p className="text-white font-medium mb-4 pt-2 pl-8">
+              Form submitted successfully !
+            </p>
+          </div>
+        )}
+        <label className="font-medium mt-28">
           Upload the relevant property documents and images *
         </label>
         <div
