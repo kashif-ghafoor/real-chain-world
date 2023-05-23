@@ -2,7 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import { useDropzone } from "react-dropzone";
 
-const RequiredDocForm = ({ onNext }) => {
+const RequiredDocForm = () => {
   const formik = useFormik({
     initialValues: {
       files: [],
@@ -11,7 +11,6 @@ const RequiredDocForm = ({ onNext }) => {
     onSubmit: (values) => {
       console.log(values.files);
       console.log(values.videos);
-      onNext();
     },
   });
 
