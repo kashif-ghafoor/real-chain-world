@@ -55,10 +55,10 @@ const PersonalInfoForm = ({ onNext }) => {
               <label className="font-medium">Who are you?</label>
               <div className="flex">
                 <label className="font-medium mt-8" htmlFor="firstname">
-                  First Name
+                  First Name *
                 </label>
                 <label className="font-medium ml-44 mt-8" htmlFor="lastname">
-                  Last Name
+                  Last Name *
                 </label>
               </div>
               <div className="flex">
@@ -85,7 +85,7 @@ const PersonalInfoForm = ({ onNext }) => {
               />
 
               <label className="font-medium mt-8" htmlFor="phone">
-                Phone Number
+                Phone Number *
               </label>
               <Field
                 className="mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-none"
@@ -100,7 +100,7 @@ const PersonalInfoForm = ({ onNext }) => {
               />
 
               <label className="font-medium mt-8" htmlFor="company">
-                Company
+                Company *
               </label>
               <Field
                 className="mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-none"
@@ -114,7 +114,7 @@ const PersonalInfoForm = ({ onNext }) => {
               />
 
               <label className="font-medium mt-8" htmlFor="email">
-                Email
+                Email *
               </label>
               <Field
                 className="mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-none"

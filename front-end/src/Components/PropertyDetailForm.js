@@ -72,7 +72,7 @@ const PropertyForm = ({ onNext }) => {
             <div className="text-3xl ">
               {/* Type of property */}
               <label className="font-medium">
-                What type of property is it?
+                What type of property is it? *
               </label>
               <div className="mt-4 flex flex-col">
                 <label className="bg-bgbutton w-[200px] h-[40px]">
@@ -129,7 +129,7 @@ const PropertyForm = ({ onNext }) => {
                 Please share the location of your Property
               </label>
               <label className="font-medium mt-6" htmlFor="address">
-                Full Address
+                Full Address *
               </label>
               <Field
                 as="textarea"
@@ -138,7 +138,7 @@ const PropertyForm = ({ onNext }) => {
                 name="address"
               />
               <label className="font-medium mt-8" htmlFor="country">
-                Country
+                Country *
               </label>
               <Field
                 className="mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-none"
@@ -146,7 +146,7 @@ const PropertyForm = ({ onNext }) => {
                 name="country"
               />
               <label className="font-medium mt-8" htmlFor="city">
-                City
+                City *
               </label>
               <Field
                 className="mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-none"
@@ -154,7 +154,7 @@ const PropertyForm = ({ onNext }) => {
                 name="city"
               />
               <label className="font-medium mt-8" htmlFor="area">
-                Area
+                Area *
               </label>
               <Field
                 className="mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-none"
@@ -165,7 +165,7 @@ const PropertyForm = ({ onNext }) => {
 
             <div className="flex flex-col mt-24">
               <label className="font-medium ">
-                Please Enter the desired price of your Property
+                Please Enter the desired price of your Property *
               </label>
               <label className="font-medium mt-6" htmlFor="price">
                 Price
@@ -177,7 +177,7 @@ const PropertyForm = ({ onNext }) => {
               />
 
               <label className="font-medium mt-8" htmlFor="selectedOption">
-                Specify the Currency
+                Specify the Currency *
               </label>
               <Field
                 className="bg-lightseagreen-200"
@@ -201,7 +201,7 @@ const PropertyForm = ({ onNext }) => {
               <FieldArray className="flex ml-32 mt-20" name="selectOptions">
                 <div>
                   <label className="font-medium">
-                    Which features does the property have?
+                    Which features does the property have? *
                   </label>
                   <div
                     className="mt-4"
@@ -306,6 +306,21 @@ const PropertyForm = ({ onNext }) => {
                     />
                     <label className="pl-4" htmlFor="gym">
                       Gym
+                    </label>
+                  </div>
+                  <div
+                    className="mt-4"
+                    role="group"
+                    aria-labelledby="checkbox-group"
+                  >
+                    <Field
+                      className="accent-lightseagreen-100"
+                      name="selectOptions"
+                      type="checkbox"
+                      value="other"
+                    />
+                    <label className="pl-4" htmlFor="other">
+                      Other
                     </label>
                   </div>
                 </div>

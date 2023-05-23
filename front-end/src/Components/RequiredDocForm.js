@@ -38,7 +38,7 @@ const RequiredDocForm = ({ onNext }) => {
       </div>
       <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto p-4">
         <label className="font-medium mt-24">
-          Upload the relevant property documents and images
+          Upload the relevant property documents and images *
         </label>
         <div
           {...getRootProps()}
