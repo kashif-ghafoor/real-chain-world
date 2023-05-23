@@ -40,7 +40,7 @@ const PersonalInfoForm = ({ onNext }) => {
   };
 
   return (
-    <div className="flex ml-32 mt-20">
+    <div className="flex ml-28 mt-20">
       <div className="flex flex-col text-blue text-4xl font-semibold">
         <h2>Personal Information</h2>
       </div>
@@ -65,11 +65,13 @@ const PersonalInfoForm = ({ onNext }) => {
                 <Field
                   className="w-[175px] h-[32px] border border-gray-600 focus:outline-none"
                   type="text"
+                  placeholder="First Name"
                   name="firstname"
                 />
                 <Field
                   className="ml-20 w-[175px] h-[32px] border border-gray-600 focus:outline-none"
                   type="text"
+                  placeholder="Last Name"
                   name="lastname"
                 />
               </div>
@@ -91,7 +93,8 @@ const PersonalInfoForm = ({ onNext }) => {
                 className="mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-none"
                 type="tel"
                 name="phone"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="92-1234567890"
+                pattern="[0-9]{2}-[0-9]{10}"
               />
               <ErrorMessage
                 name="phone"
@@ -105,6 +108,7 @@ const PersonalInfoForm = ({ onNext }) => {
               <Field
                 className="mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-none"
                 type="text"
+                placeholder="xyz"
                 name="company"
               />
               <ErrorMessage
@@ -118,6 +122,7 @@ const PersonalInfoForm = ({ onNext }) => {
               </label>
               <Field
                 className="mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-none"
+                placeholder="example123@com"
                 type="text"
                 name="email"
               />

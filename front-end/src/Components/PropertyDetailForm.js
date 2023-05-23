@@ -143,6 +143,7 @@ const PropertyForm = ({ onNext }) => {
               <Field
                 className="mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-none"
                 type="text"
+                placeholder="Pakistan"
                 name="country"
               />
               <label className="font-medium mt-8" htmlFor="city">
@@ -151,6 +152,7 @@ const PropertyForm = ({ onNext }) => {
               <Field
                 className="mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-none"
                 type="text"
+                placeholder="Karachi"
                 name="city"
               />
               <label className="font-medium mt-8" htmlFor="area">
@@ -159,6 +161,7 @@ const PropertyForm = ({ onNext }) => {
               <Field
                 className="mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-none"
                 type="text"
+                placeholder="Street-2 Zone 5"
                 name="area"
               />
             </div>
@@ -173,6 +176,7 @@ const PropertyForm = ({ onNext }) => {
               <Field
                 className="mt-2 w-[400px]  border border-gray-600 focus:outline-none"
                 type="text"
+                placeholder="100,00,000."
                 name="price"
               />
 
