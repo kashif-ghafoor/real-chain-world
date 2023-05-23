@@ -133,8 +133,8 @@ const PersonalInfoForm = ({ onNext }) => {
               />
             </div>
 
-            <div className="font-medium mt-12">
-              <label htmlFor="goal">
+            <div className="mt-12">
+              <label className="font-medium " htmlFor="goal">
                 What’s your goal with tokenizing your asset? (optional)
               </label>
               <Field
@@ -145,7 +145,7 @@ const PersonalInfoForm = ({ onNext }) => {
               />
             </div>
 
-            <div className="rounded bg-lightseagreen-100 ml-72 mt-10 mb-14 w-[120px]  h-[40px]">
+            <div className="rounded bg-lightseagreen-100 ml-72 mt-10 mb-4 w-[120px]  h-[40px]">
               <button
                 className="text-white p-2 pl-10 text-3xl font-medium"
                 type="submit"

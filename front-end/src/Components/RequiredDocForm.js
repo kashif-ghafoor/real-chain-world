@@ -151,7 +151,7 @@ const RequiredDocForm = () => {
 
         <button
           type="submit"
-          className="mt-4 bg-lightseagreen-100 text-white font-medium px-4 py-2 rounded-md"
+          className="mt-4 bg-lightseagreen-100 text-white ml-80 font-medium px-4 py-2 rounded-md"
           disabled={
             formik.values.files.length === 0 ||
             formik.values.videos.length === 0

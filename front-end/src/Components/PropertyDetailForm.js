@@ -331,7 +331,7 @@ const PropertyForm = ({ onNext }) => {
               </FieldArray>
             </div>
 
-            <div className="rounded bg-lightseagreen-100 ml-72 mt-10 mb-14 w-[120px]  h-[40px]">
+            <div className="rounded bg-lightseagreen-100 mt-14 ml-72 mb-2 w-[120px]  h-[40px]">
               <button
                 className="text-white p-2 pl-10 text-3xl font-medium"
                 type="submit"
