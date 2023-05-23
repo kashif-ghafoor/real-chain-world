@@ -1,4 +1,5 @@
 import NavBar from "../Components/NavBar";
+import Footer from "../Components/Footer";
 import Form1 from "../Components/PropertyDetailForm";
 import Form2 from "../Components/PersonalInfoForm";
 import Form3 from "../Components/RequiredDocForm";
@@ -81,6 +82,7 @@ const Tokenization = () => {
 
         <div>{renderForm()}</div>
       </div>
+      <Footer />
     </>
   );
 };
