@@ -48,7 +48,7 @@ const ResetPassword = ({ open, onClose }) => {
                           x
                         </button>
                       </div>
-                      <h3 className="absolute top-[100px] left-[250px] text-9xl tracking-[-0.02em]  font-medium text-lightseagreen-100 ">
+                      <h3 className="absolute top-[100px] left-[275px] text-lightseagreen-100 text-4xl font-medium  ">
                         Reset Password
                       </h3>
                       <div className="absolute top-[55px] left-[57px]  ">
@@ -68,7 +68,7 @@ const ResetPassword = ({ open, onClose }) => {
                         <input
                           type="email"
                           id="email"
-                          className="absolute top-[200px] left-[220px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 "
+                          className="absolute top-[200px] left-[220px] h-[40px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 focus:outline-none focus:border-none"
                           placeholder="xyz@example.com"
                           required
                         />
@@ -87,8 +87,8 @@ const ResetPassword = ({ open, onClose }) => {
                         </div>
                       </button>
                       <button
-                        className="absolute top-[320px] left-[360px] 
-                          text-gray-700 text-xxs font-medium flex w-[247px]"
+                        className="absolute top-[315px] left-[375px] 
+                          text-gray-700 text-2xl font-medium flex w-[247px] "
                       >
                         Back to Login
                       </button>

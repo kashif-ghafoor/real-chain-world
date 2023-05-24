@@ -32,6 +32,8 @@ module.exports = {
         darkorange: "rgba(230, 137, 14, 0.1)",
         mediumpurple: "rgba(197, 133, 247, 0.1)",
         darkslategray: "rgba(34, 54, 91, 0.1)",
+        offwhite: "#ede9fe",
+        bgbutton: "#dcfce7",
         "blue-for-button": "#4c7489",
       },
       fontFamily: {
@@ -43,6 +45,7 @@ module.exports = {
       borderRadius: { "3xs": "10px", "11xl": "30px", mini: "15px", xl: "20px" },
     },
     fontSize: {
+      "2xl": "13px",
       "3xl": "16px",
       "4xl": "20px",
       "5xl": "24px",

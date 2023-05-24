@@ -2,93 +2,101 @@ import { Link } from "react-router-dom";
 const BestOpp = () => {
   return (
     <>
-      <section
-        className="absolute top-[1400px] left-[0px] w-[1300px] h-[550px] text-left text-gray-700 text-lightseagreen-100 "
-        id="best-opportunties"
-      >
-        <h4 className="absolute top-[0px] left-[120px] text-9xl font-h4 text-center tracking-[-0.01em]">
-          Best Opportunities
-        </h4>
-        <div className="absolute top-[55px] left-[120px] text-4xl font-medium text-gray-700">
-          Amet minim mollit non deserunt ullamco est sit aliostrud amet.
+      <div className="ml-24 mt-28" id="best-opportunties">
+        <div className="w-[1200px] h-[130px] text-left text-gray-700 text-lightseagreen-100 flex">
+          <div className="flex-column justify-between">
+            <h4 className="text-9xl font-h4 tracking-[-0.01em]">
+              Best Opportunities
+            </h4>
+            <p className="mt-4 text-4xl font-medium text-gray-500">
+              Start investing flexibly, wherever you are in the world
+            </p>
+          </div>
+          <Link to="/marketplace">
+            <button className="cursor-pointer [border:none] mt-16 pl-96 bg-[transparent] text-3xl font-medium items-center flex">
+              See More
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 ml-2 -mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </Link>
         </div>
-        <Link to="/marketplace">
-          <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[65px] left-[1070px]  text-3xl font-medium flex flex-row items-center justify-center">
-            See More
-            <svg
-              aria-hidden="true"
-              class="w-4 h-4 ml-2 -mr-1"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-        </Link>
-      </section>
-      <card className="absolute top-[1540px] left-[105px] w-[300px] h-[300px] text-left text-black ">
-        <div className="absolute top-[54px] left-[0px] rounded-mini bg-white shadow-[0px_2px_2px_2px_rgba(71,_142,_117,_0.3)] w-[320px] h-[300px]" />
-        <img
-          className="absolute top-[0px] left-[20px] rounded-mini w-[280px] h-[170px] object-cover"
-          alt=""
-          src={require("../assets//rectangle-10@2x.png")}
-        />
-        <p className="absolute top-[190px] left-[22px] text-4xl font-medium">
-          30 Inlet Cove Cottage
-        </p>
-        <p className="absolute top-[230px] left-[22px] text-3xl font-light text-gray-700">
-          Alexandria, Pakistan
-        </p>
-
-        <button className="cursor-pointer [border:none] p-0 bg-lightseagreen-100 absolute top-[295px] left-[03px] rounded-3xs w-[313px] h-[50px]">
-          <div className="absolute top-[10px] left-[calc(50%_-_70.5px)] text-4xl font-medium text-white text-left">{`View Property   `}</div>
-        </button>
-      </card>
-      <card className="absolute top-[1540px] left-[485px] w-[300px] h-[300px] text-left text-black ">
-        <div className="absolute top-[54px] left-[0px] rounded-mini bg-white shadow-[0px_2px_2px_2px_rgba(71,_142,_117,_0.3)] w-[320px] h-[300px]" />
-        <img
-          className="absolute top-[0px] left-[20px] rounded-mini w-[280px] h-[170px] object-cover"
-          alt=""
-          src={require("../assets//rectangle-10@2x.png")}
-        />
-        <p className="absolute top-[190px] left-[22px] text-4xl font-medium">
-          Icon Valley Gulberg
-        </p>
-
-        <p className="absolute top-[230px] left-[22px] text-3xl font-light text-gray-700">
-          Lahore, Pakistan
-        </p>
-        <p className="absolute flex top-[260px] left-[35px] text-3xl font-normal"></p>
-
-        <button className="cursor-pointer [border:none] p-0 bg-lightseagreen-100 absolute top-[295px] left-[03px] rounded-3xs w-[313px] h-[50px]">
-          <div className="absolute top-[10px] left-[calc(50%_-_70.5px)] text-4xl font-medium text-white text-left">{`View Property   `}</div>
-        </button>
-      </card>
-      <card className="absolute top-[1540px] left-[865px] w-[300px] h-[300px] text-left text-black ">
-        <div className="absolute top-[54px] left-[0px] rounded-mini bg-white shadow-[0px_2px_2px_2px_rgba(71,_142,_117,_0.3)] w-[320px] h-[300px]" />
-        <img
-          className="absolute top-[0px] left-[20px] rounded-mini w-[280px] h-[170px] object-cover"
-          alt=""
-          src={require("../assets//rectangle-10@2x.png")}
-        />
-        <p className="absolute top-[190px] left-[22px] text-4xl font-medium">
-          Icon Valley Gulberg
-        </p>
-
-        <p className="absolute top-[230px] left-[22px] text-3xl font-light text-gray-700">
-          Lahore, Pakistan
-        </p>
-        <p className="absolute flex top-[260px] left-[35px] text-3xl font-normal"></p>
-
-        <button className="cursor-pointer [border:none] p-0 bg-lightseagreen-100 absolute top-[295px] left-[03px] rounded-3xs w-[313px] h-[50px]">
-          <div className="absolute top-[10px] left-[calc(50%_-_70.5px)] text-4xl font-medium text-white text-left">{`View Property   `}</div>
-        </button>
-      </card>
+        <div className="m-2 flex justify-between w-[1000px]">
+          <card className="w-[300px] h-[380px]">
+            <img
+              className="w-[300px] h-[170px]"
+              alt=""
+              src={require("../assets//rectangle-10@2x.png")}
+            />
+            <div className="bg-white shadow-[0px_2px_2px_2px_rgba(71,_142,_117,_0.2)] w-[300px] h-[200px]">
+              <h4 className=" text-4xl mt-2 pl-4 font-bold text-lightseagreen-100">
+                PKR34.9 Lakh to 89.9 Lakh
+              </h4>
+              <p className=" text-4xl mt-2 pl-4 font-medium">
+                30 Inlet Cove Cottage
+              </p>
+              <p className=" text-3xl mt-2 pl-4 font-light text-gray-700">
+                Alexandria, Pakistan
+              </p>
+              <button className="cursor-pointer [border:none] mt-8 ml-1 pl-4 bg-lightseagreen-100 rounded w-[290px] h-[50px]">
+                <div className=" text-4xl font-medium text-white text-center">{`View Property   `}</div>
+              </button>
+            </div>
+          </card>
+          <card className="w-[300px] h-[380px]">
+            <img
+              className="w-[300px] h-[170px]"
+              alt=""
+              src={require("../assets//rectangle-10@2x.png")}
+            />
+            <div className="bg-white shadow-[0px_2px_2px_2px_rgba(71,_142,_117,_0.2)] w-[300px] h-[200px]">
+              <h4 className=" text-4xl mt-2 pl-4 font-bold text-lightseagreen-100">
+                PKR34.9 Lakh to 89.9 Lakh
+              </h4>
+              <p className=" text-4xl mt-2 pl-4 font-medium">
+                30 Inlet Cove Cottage
+              </p>
+              <p className=" text-3xl mt-2 pl-4 font-light text-gray-700">
+                Lahore, Pakistan
+              </p>
+              <button className="cursor-pointer [border:none] mt-8 ml-1 pl-4 bg-lightseagreen-100 rounded w-[290px] h-[50px]">
+                <div className=" text-4xl font-medium text-white text-center">{`View Property   `}</div>
+              </button>
+            </div>
+          </card>
+          <card className="w-[300px] h-[380px]">
+            <img
+              className="w-[300px] h-[170px]"
+              alt=""
+              src={require("../assets//rectangle-10@2x.png")}
+            />
+            <div className="bg-white shadow-[0px_2px_2px_2px_rgba(71,_142,_117,_0.2)] w-[300px] h-[200px]">
+              <h4 className=" text-4xl mt-2 pl-4 font-bold text-lightseagreen-100">
+                PKR34.9 Lakh to 89.9 Lakh
+              </h4>
+              <p className=" text-4xl mt-2 pl-4 font-medium">
+                30 Inlet Cove Cottage
+              </p>
+              <p className=" text-3xl mt-2 pl-4 font-light text-gray-700">
+                Alexandria, Pakistan
+              </p>
+              <button className="cursor-pointer [border:none] mt-8 ml-1 pl-4 bg-lightseagreen-100 rounded w-[290px] h-[50px]">
+                <div className=" text-4xl font-medium text-white text-center">{`View Property   `}</div>
+              </button>
+            </div>
+          </card>
+        </div>
+      </div>
     </>
   );
 };
