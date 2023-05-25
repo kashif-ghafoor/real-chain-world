@@ -19,23 +19,6 @@ const PersonalInfoForm = ({ onNext }) => {
   const validateForm = (values) => {
     const errors = {};
 
-    // Validate each field
-    if (!values.firstname) {
-      errors.firstname = "First Name is required";
-    }
-    if (!values.lastname) {
-      errors.lastname = "Last Name is required";
-    }
-    if (!values.phone) {
-      errors.phone = "Phone Number is required";
-    }
-    if (!values.email) {
-      errors.email = "Email is required";
-    }
-    if (!values.company) {
-      errors.company = "Company is required";
-    }
-
     return errors;
   };
 
@@ -67,24 +50,16 @@ const PersonalInfoForm = ({ onNext }) => {
                   type="text"
                   placeholder="First Name"
                   name="firstname"
+                  required
                 />
                 <Field
                   className="ml-20 w-[175px] h-[32px] border border-gray-600 focus:outline-none"
                   type="text"
                   placeholder="Last Name"
                   name="lastname"
+                  required
                 />
               </div>
-              <ErrorMessage
-                name="firstname"
-                component="div"
-                className="text-red-500"
-              />
-              <ErrorMessage
-                name="lastname"
-                component="div"
-                className="text-red-500"
-              />
 
               <label className="font-medium mt-8" htmlFor="phone">
                 Phone Number *
@@ -95,11 +70,7 @@ const PersonalInfoForm = ({ onNext }) => {
                 name="phone"
                 placeholder="92-1234567890"
                 pattern="[0-9]{2}-[0-9]{10}"
-              />
-              <ErrorMessage
-                name="phone"
-                component="div"
-                className="text-red-500"
+                required
               />
 
               <label className="font-medium mt-8" htmlFor="company">
@@ -110,11 +81,7 @@ const PersonalInfoForm = ({ onNext }) => {
                 type="text"
                 placeholder="xyz"
                 name="company"
-              />
-              <ErrorMessage
-                name="company"
-                component="div"
-                className="text-red-500"
+                required
               />
 
               <label className="font-medium mt-8" htmlFor="email">
@@ -125,11 +92,7 @@ const PersonalInfoForm = ({ onNext }) => {
                 placeholder="example123@com"
                 type="text"
                 name="email"
-              />
-              <ErrorMessage
-                name="email"
-                component="div"
-                className="text-red-500"
+                required
               />
             </div>
 
@@ -142,6 +105,7 @@ const PersonalInfoForm = ({ onNext }) => {
                 className="mt-2 w-[400px]  border border-gray-600 focus:outline-none"
                 type="text"
                 name="goal"
+                required
               />
             </div>
 
