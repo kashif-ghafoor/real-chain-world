@@ -15,6 +15,11 @@ const RequiredDocForm = () => {
       setFormSubmitted(true);
     },
   });
+  const validateForm = (values) => {
+    const errors = {};
+
+    return errors;
+  };
 
   const handleDropFiles = (acceptedFiles) => {
     const filteredFiles = acceptedFiles.filter(

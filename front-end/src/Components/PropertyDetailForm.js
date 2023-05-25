@@ -107,7 +107,7 @@ const PropertyForm = ({ onNext }) => {
               </label>
               <Field
                 as="textarea"
-                className="mt-2 w-[400px]  border border-gray-600 focus:outline-none"
+                className="p-1 mt-2 w-[400px] border border-gray-600 focus:outline-lightseagreen-100 "
                 type="text"
                 name="address"
                 required
@@ -116,7 +116,7 @@ const PropertyForm = ({ onNext }) => {
                 Country *
               </label>
               <Field
-                className="mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-none"
+                className="p-1 mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-lightseagreen-100"
                 type="text"
                 placeholder="Pakistan"
                 name="country"
@@ -126,7 +126,7 @@ const PropertyForm = ({ onNext }) => {
                 City *
               </label>
               <Field
-                className="mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-none"
+                className="p-1 mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-lightseagreen-100"
                 type="text"
                 placeholder="Karachi"
                 name="city"
@@ -136,7 +136,7 @@ const PropertyForm = ({ onNext }) => {
                 Area *
               </label>
               <Field
-                className="mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-none"
+                className="p-1 mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-lightseagreen-100"
                 type="text"
                 placeholder="Street-2 Zone 5"
                 name="area"
@@ -152,7 +152,7 @@ const PropertyForm = ({ onNext }) => {
                 Price
               </label>
               <Field
-                className="mt-2 w-[400px]  border border-gray-600 focus:outline-none"
+                className="p-1 mt-2 w-[300px] h-[35px] border border-gray-600 focus:outline-lightseagreen-100"
                 type="text"
                 placeholder="100,00,000."
                 name="price"
@@ -163,7 +163,7 @@ const PropertyForm = ({ onNext }) => {
                 Specify the Currency *
               </label>
               <Field
-                className="bg-lightseagreen-200"
+                className="bg-lightseagreen-200 w-[300px]"
                 as="select"
                 id="selectedOption"
                 name="selectedOption"

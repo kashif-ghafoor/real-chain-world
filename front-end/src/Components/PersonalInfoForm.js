@@ -40,20 +40,20 @@ const PersonalInfoForm = ({ onNext }) => {
                 <label className="font-medium mt-8" htmlFor="firstname">
                   First Name *
                 </label>
-                <label className="font-medium ml-44 mt-8" htmlFor="lastname">
+                <label className="font-medium ml-40 mt-8" htmlFor="lastname">
                   Last Name *
                 </label>
               </div>
               <div className="flex">
                 <Field
-                  className="w-[175px] h-[32px] border border-gray-600 focus:outline-none"
+                  className="p-1 w-[175px] h-[32px] border border-gray-600 focus:outline-lightseagreen-100"
                   type="text"
                   placeholder="First Name"
                   name="firstname"
                   required
                 />
                 <Field
-                  className="ml-20 w-[175px] h-[32px] border border-gray-600 focus:outline-none"
+                  className="p-1 ml-20 w-[175px] h-[32px] border border-gray-600 focus:outline-lightseagreen-100"
                   type="text"
                   placeholder="Last Name"
                   name="lastname"
@@ -65,7 +65,7 @@ const PersonalInfoForm = ({ onNext }) => {
                 Phone Number *
               </label>
               <Field
-                className="mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-none"
+                className="p-1 mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-lightseagreen-100"
                 type="tel"
                 name="phone"
                 placeholder="92-1234567890"
@@ -77,7 +77,7 @@ const PersonalInfoForm = ({ onNext }) => {
                 Company *
               </label>
               <Field
-                className="mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-none"
+                className="p-1 mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-lightseagreen-100"
                 type="text"
                 placeholder="xyz"
                 name="company"
@@ -88,7 +88,7 @@ const PersonalInfoForm = ({ onNext }) => {
                 Email *
               </label>
               <Field
-                className="mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-none"
+                className="p-1 mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-lightseagreen-100"
                 placeholder="example123@com"
                 type="text"
                 name="email"
@@ -102,10 +102,9 @@ const PersonalInfoForm = ({ onNext }) => {
               </label>
               <Field
                 as="textarea"
-                className="mt-2 w-[400px]  border border-gray-600 focus:outline-none"
+                className="mt-2 w-[400px] p-1 border border-gray-600 focus:outline-lightseagreen-100"
                 type="text"
                 name="goal"
-                required
               />
             </div>
 
