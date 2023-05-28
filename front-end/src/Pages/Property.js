@@ -160,10 +160,10 @@ const Property = () => {
           </div>
           <div className="h-[400px] bg-offwhite"></div>
           <div className="p-4  bg-blue text-white font-medium text-4xl h-[90px]">
-            Register now to make an offer
+            Get your competitive edge
             <Link to="/property-detail">
               <button className="rounded ml-3 border border-lightseagreen-300 text-4xl font-semibold w-[100px] h-12 bg-white text-blue">
-                Buy
+                Bid
               </button>
             </Link>
           </div>
