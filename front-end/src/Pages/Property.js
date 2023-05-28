@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
 import Photos from "../Components/Photos";
+import { Link } from "react-router-dom";
 
 const Property = () => {
   const data = [
@@ -19,6 +20,15 @@ const Property = () => {
     { Owner: 1 },
     { Shares: 5 },
   ];
+
+  const aboutRef = useRef(null);
+  const overviewRef = useRef(null);
+  const locationRef = useRef(null);
+  const photosRef = useRef(null);
+
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <>
@@ -39,22 +49,33 @@ const Property = () => {
       </div>
       <div className="mt-0 h-[50px] bg-offwhite">
         <div className="ml-16 flex justify-left p-1">
-          <button className="rounded text-3xl font-medium w-[120px] h-12  text-lightseagreen-100">
+          <button
+            className="rounded text-3xl font-medium w-[120px] h-12  text-lightseagreen-100"
+            onClick={() => scrollToSection(photosRef)}
+          >
             Photos
           </button>
-          <button className="rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100">
+          <button
+            className="rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
+            onClick={() => scrollToSection(overviewRef)}
+          >
             Overview
           </button>
-          <button className="rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100">
+          <button
+            className="rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
+            onClick={() => scrollToSection(aboutRef)}
+          >
             About
           </button>
-
-          <button className="rounded text-3xl font-medium w-[120px] h-12  text-lightseagreen-100">
+          <button
+            className="rounded text-3xl font-medium w-[120px] h-12  text-lightseagreen-100"
+            onClick={() => scrollToSection(locationRef)}
+          >
             Location
           </button>
         </div>
       </div>
-      <div id="photos" className="mt-2 flex ">
+      <div id="photos" className="mt-2 flex " ref={photosRef}>
         <Photos className="ml-6" />
         <div className="bg-lightseagreen-100 mt-12 w-[330px] h-[230px] rounded-xl">
           <h1 className="mt-6 ml-6  text-5xl text-white font-semibold">
@@ -73,7 +94,7 @@ const Property = () => {
           </div>
         </div>
       </div>
-      <div id="overview" className="mt-32 ml-28 h-[570px] ">
+      <div id="overview" className="mt-32 ml-28 h-[570px] " ref={overviewRef}>
         <h1 className="font-semibold text-4xl text-gray-700">
           Property Overview
         </h1>
@@ -93,7 +114,11 @@ const Property = () => {
           </tbody>
         </table>
       </div>
-      <div id="about" className="mt-16 mr-20 ml-12 flex justify-around">
+      <div
+        id="about"
+        className="mt-16 mr-20 ml-12 flex justify-around"
+        ref={aboutRef}
+      >
         <div>
           <h1 className="font-semibold text-4xl text-gray-700">
             About the Property
@@ -136,14 +161,18 @@ const Property = () => {
           <div className="h-[400px] bg-offwhite"></div>
           <div className="p-4  bg-blue text-white font-medium text-4xl h-[90px]">
             Register now to make an offer
-            <button className="rounded ml-3 border border-lightseagreen-300 text-4xl font-semibold w-[100px] h-12 bg-white text-blue">
-              Buy
-            </button>
+            <Link to="/property-detail">
+              <button className="rounded ml-3 border border-lightseagreen-300 text-4xl font-semibold w-[100px] h-12 bg-white text-blue">
+                Buy
+              </button>
+            </Link>
           </div>
         </div>
       </div>
-      <div id="map" className="mt-16 mr-20 ml-28 ">
-        <h1 className="font-semibold text-4xl text-gray-700">Map Details</h1>
+      <div id="location" className="mt-16 mr-20 ml-28 ">
+        <h1 className="font-semibold text-4xl text-gray-700" ref={locationRef}>
+          Map Details
+        </h1>
       </div>
 
       <Footer />
