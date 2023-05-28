@@ -3,6 +3,7 @@ import About from "./Pages/About";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./Pages/Landing";
 import Tokenization from "./Pages/Tokenization";
+import Property from "./Pages/Property";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="/marketplace" element={<MarketPlace />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/tokenization" element={<Tokenization />}></Route>
+        <Route path="/property" element={<Property />}></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -30,10 +30,10 @@ const PropertyForm = ({ onNext }) => {
       <div className="flex flex-col text-blue text-4xl font-semibold">
         <h2>Property Detail</h2>
         <h2 className="font-medium mt-80">Property Location</h2>
-        <h2 className="font-medium  absolute top-[1090px]">
+        <h2 className="font-medium  absolute top-[1100px]">
           Price and Currency
         </h2>
-        <h2 className="font-medium absolute top-[1370px]">Property Features</h2>
+        <h2 className="font-medium absolute top-[1395px]">Property Features</h2>
       </div>
       <Formik
         initialValues={initialValues}
@@ -202,7 +202,6 @@ const PropertyForm = ({ onNext }) => {
                         name="selectOptions"
                         type="checkbox"
                         value="swimmingpool"
-                        required
                       />
                       Swimming Pool
                     </label>
