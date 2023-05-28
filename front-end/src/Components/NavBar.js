@@ -51,7 +51,7 @@ function NavBar() {
               </b>
             </Link>
 
-            <Link to="/about">
+            <Link to="/general">
               <b className="text-md font-semibold leading-6 text-gray-900">
                 About
               </b>
