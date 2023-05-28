@@ -16,7 +16,7 @@ const Photos = () => {
     },
     {
       image:
-        "https://cdn.pixabay.com/photo/2018/07/15/13/04/living-room-3539587_640.jpg",
+        "https://cdn.pixabay.com/photo/2016/06/10/12/49/gallery-1448047_640.jpg",
     },
     {
       image:
@@ -33,14 +33,12 @@ const Photos = () => {
       <div style={{ textAlign: "center" }}>
         <div
           style={{
-            padding: "20",
+            padding: "0",
           }}
         >
           <Carousel
             data={data}
             time={5000}
-            width="1500px"
-            height="400px"
             radius="10px"
             automatic={true}
             dots={true}
@@ -52,9 +50,9 @@ const Photos = () => {
             thumbnailWidth="100px"
             style={{
               textAlign: "center",
-              maxWidth: "1500px",
+              maxWidth: "1200px",
               maxHeight: "400px",
-              margin: "40px 120px",
+              margin: "40px 110px",
             }}
           />
         </div>
