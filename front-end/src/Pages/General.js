@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Dashboard from "./Dashboard";
+import Portfolio from "./Portfolio";
 import Profile from "./Profile";
 import Wallet from "./Wallet";
 
@@ -14,7 +14,7 @@ const General = () => {
       case "profile":
         return <Profile />;
       case "dashboard":
-        return <Dashboard />;
+        return <Portfolio />;
       case "wallet":
         return <Wallet />;
       default:
