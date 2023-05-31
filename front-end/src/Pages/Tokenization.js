@@ -45,7 +45,7 @@ const Tokenization = () => {
     <>
       <NavBar />
       <div>
-        <div className="w-screen bg-offwhite h-14">
+        <div className="bg-offwhite h-14">
           <div className="flex justify-center p-1">
             <button
               className={`rounded text-3xl font-medium w-[180px] h-12 ${
