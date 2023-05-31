@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Profile from "./Profile";
 import Wallet from "./Wallet";
-import NavBar from "../Components/NavBar";
+
+// Import icons as needed (assuming you have appropriate icons available)
+import { FaUser, FaWallet, FaChartLine } from "react-icons/fa";
 
 const General = () => {
   const [activeComponent, setActiveComponent] = useState("profile");
@@ -23,35 +24,56 @@ const General = () => {
 
   return (
     <>
-      <NavBar />
-      <div className="flex" style={{ height: "100vh" }}>
+      <div className="flex " style={{ height: "100vh" }}>
         <div
-          className="sidebar bg-lightseagreen-100 text-white"
-          style={{ width: "20%" }}
+          className="sidebar bg-white text-gray-500 font-medium font-serif text-4xl shadow-lg fixed inset-0"
+          style={{ width: "22%" }}
         >
-          <ul className="py-4">
+          <img
+            className="h-16 w-16 mt-24 ml-28"
+            src={require("../assets/logo-signin.png")}
+            alt=""
+          />
+          <ul className="py-20 ml-14">
             <li
-              className={`p-2 ${activeComponent === "profile" ? "active" : ""}`}
+              className={`p-3 ${
+                activeComponent === "profile"
+                  ? "text-lightseagreen-100 border-r-4 border-lightseagreen-100 font-semibold"
+                  : ""
+              }`}
               onClick={() => setActiveComponent("profile")}
             >
-              Profile
+              <button>
+                <FaUser className="inline mr-4" /> Profile
+              </button>
             </li>
             <li
-              className={`p-2 ${
-                activeComponent === "dashboard" ? "active" : ""
+              className={`p-3 mt-2 ${
+                activeComponent === "dashboard"
+                  ? "text-lightseagreen-100 border-r-4 border-lightseagreen-100 font-semibold"
+                  : ""
               }`}
               onClick={() => setActiveComponent("dashboard")}
             >
-              Dashboard
+              <button>
+                <FaChartLine className="inline mr-4" /> Portfolio
+              </button>
             </li>
             <li
-              className={`p-2 ${activeComponent === "wallet" ? "active" : ""}`}
+              className={`p-3 mt-2 ${
+                activeComponent === "wallet"
+                  ? "text-lightseagreen-100 border-r-4 border-lightseagreen-100 font-semibold"
+                  : ""
+              }`}
               onClick={() => setActiveComponent("wallet")}
             >
-              Wallet
+              <button>
+                <FaWallet className="inline mr-4" /> Wallet
+              </button>
             </li>
           </ul>
         </div>
+
         {renderComponent()}
       </div>
     </>
