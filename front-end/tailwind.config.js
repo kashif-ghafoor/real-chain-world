@@ -40,6 +40,7 @@ module.exports = {
         h2: "Montserrat",
         h6: "Montserrat",
         h4: "Inter",
+        p: "Helvetica",
         "material-icons": "'Material Icons'",
       },
       borderRadius: { "3xs": "10px", "11xl": "30px", mini: "15px", xl: "20px" },
