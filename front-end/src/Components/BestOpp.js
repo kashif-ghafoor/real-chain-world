@@ -3,7 +3,7 @@ const BestOpp = () => {
   return (
     <>
       <div className="ml-24 mt-28" id="best-opportunties">
-        <div className="w-[1200px] h-[130px] text-left text-gray-700 text-lightseagreen-100 flex">
+        <div className=" h-[130px] text-left text-gray-700 text-lightseagreen-100 flex">
           <div className="flex-column justify-between">
             <h4 className="text-9xl font-h4 tracking-[-0.01em]">
               Best Opportunities
