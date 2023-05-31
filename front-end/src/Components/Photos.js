@@ -38,7 +38,7 @@ const Photos = () => {
         >
           <Carousel
             data={data}
-            time={5000}
+            time={2000}
             radius="10px"
             automatic={true}
             dots={true}
