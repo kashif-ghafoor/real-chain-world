@@ -19,52 +19,6 @@ const PropertyDetail = () => {
 
       <div className="bg-lightseagreen-100 w-full h-[40px]" />
       <div className="w-full h-[1600px] bg-stone-50">
-        <div className="mt-10 ml-24 w-[450px] h-[520px] shadow-lg bg-white">
-          <div className=" rounded h-[100px] bg-blue items-center justify-center text-white">
-            <h1 className="pt-4 text-4xl font-semibold text-center">
-              Make an offer, bid in an auction
-            </h1>
-            <p className="text-center">
-              Submit your offers in a secure, trusted environment.
-            </p>
-          </div>
-          <form className="ml-8 mt-6 mr-14">
-            <h2 className="text-3xl font-bold mb-6">Bidding Offer</h2>
-            <div className="mb-6">
-              <div>
-                <label htmlFor="bidAmount" className="block text-lg mb-2">
-                  Bid Amount:
-                </label>
-                <input
-                  type="number"
-                  id="bidAmount"
-                  name="bidAmount"
-                  className="w-full h-[40px] border border-gray-300 p-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-200"
-                />
-              </div>
-              <div>
-                <label htmlFor="bidMessage" className="block text-lg mb-2">
-                  Message:
-                </label>
-                <textarea
-                  id="bidMessage"
-                  name="bidMessage"
-                  rows={4}
-                  className="w-full border border-gray-300 p-4 rounded resize-none focus:outline-none focus:ring-2 focus:ring-blue-200"
-                />
-              </div>
-            </div>
-
-            <div className="flex justify-center">
-              <button
-                type="submit"
-                className="bg-blue text-white font-semibold py-3 px-6 rounded-lg block w-[150px] hover:bg-lightseagreen-100"
-              >
-                Submit Bid
-              </button>
-            </div>
-          </form>
-        </div>
         <div className="bg-white m-20 w-[550px] h-[350px] rounded shadow-lg">
           <div className="flex items-center m-4 pt-6 pl-4">
             <FontAwesomeIcon
