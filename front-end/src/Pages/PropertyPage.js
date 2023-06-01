@@ -10,6 +10,8 @@ import {
   FaMapMarkerAlt,
   FaUser,
 } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFile } from "@fortawesome/free-solid-svg-icons";
 
 const PropertyPage = () => {
   // Data for table - overiew section
@@ -29,12 +31,21 @@ const PropertyPage = () => {
     { Shares: 5 },
   ];
 
+  //documents
+  const documents = [
+    { name: "Document 1", url: "/path/to/document1.pdf" },
+    { name: "Document 2", url: "/path/to/document2.pdf" },
+    { name: "Document 3", url: "/path/to/document3.pdf" },
+    { name: "Document 4", url: "/path/to/document4.pdf" },
+  ];
+
   // UseRef for scrolling to different sections
   const aboutRef = useRef(null);
   const overviewRef = useRef(null);
   const locationRef = useRef(null);
   const photosRef = useRef(null);
   const holdersRef = useRef(null);
+  const docsRef = useRef(null);
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
@@ -94,38 +105,49 @@ const PropertyPage = () => {
       </div>
 
       {/* button bar below image */}
-      <div className="mt-0 h-[50px] bg-offwhite">
+      <div className="h-[50px] bg-offwhite">
         <div className="ml-16 flex justify-left p-1">
           <button
-            className="rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
+            className="ml-2 rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
             onClick={() => scrollToSection(photosRef)}
           >
             <FaImages className="mr-2 inline" />
             Photos
           </button>
           <button
-            className="rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
+            className=" ml-2 rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
             onClick={() => scrollToSection(overviewRef)}
           >
             <FaInfoCircle className="mr-2 inline" />
             Overview
           </button>
           <button
-            className="rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
+            className=" ml-2 rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
             onClick={() => scrollToSection(aboutRef)}
           >
             <FaUser className="mr-2 inline" />
             About
           </button>
           <button
-            className="rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
+            className="ml-2 rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
+            onClick={() => scrollToSection(docsRef)}
+          >
+            <FontAwesomeIcon
+              icon={faFile}
+              className="text-lightseagreen-100 w-[15px] h-[15px] mr-2 mt-2  
+              inline"
+            />
+            Documents
+          </button>
+          <button
+            className="ml-2 rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
             onClick={() => scrollToSection(locationRef)}
           >
             <FaMapMarkerAlt className="mr-2 inline" />
             Location
           </button>
           <button
-            className="rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
+            className="ml-2 rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
             onClick={() => scrollToSection(holdersRef)}
           >
             <FaHandHoldingUsd className="mr-2 inline" />
@@ -145,11 +167,10 @@ const PropertyPage = () => {
           <h1 className="ml-8 mr-6 mt-2 text-3xl text-white ">
             Join other Investors by buying tokens
           </h1>
-          <Link to="/property-detail">
-            <button className="rounded ml-24 mt-6 font-medium w-[120px] h-12 bg-offwhite ">
-              Invest
-            </button>
-          </Link>
+
+          <button className="rounded ml-24 mt-6 font-medium w-[120px] h-12 bg-offwhite ">
+            Invest
+          </button>
         </div>
       </div>
 
@@ -270,6 +291,35 @@ const PropertyPage = () => {
               </form>
             </div>
           )}
+        </div>
+      </div>
+
+      {/* Documents -sections */}
+      <div id="docs" className="mt-32 h-[400px]" ref={docsRef}>
+        <div className="bg-white m-20 w-[550px] h-[350px] rounded border-y-2 border-lightseagreen-100">
+          <div className="flex items-center m-4 pt-6 pl-4">
+            <FontAwesomeIcon
+              icon={faFile}
+              className="text-lightseagreen-100 w-[25px] h-[25px] mr-4 mt-2"
+            />
+            <h1 className="mt-2 text-4xl text-lightseagreen-100 font-semibold">
+              Documents
+            </h1>
+          </div>
+
+          <ul className="m-12 space-y-2">
+            {documents.map((document, index) => (
+              <li key={index} className="border-b border-gray-300 pb-2">
+                <a
+                  href={document.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {document.name}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
