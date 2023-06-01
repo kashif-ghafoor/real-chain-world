@@ -3,13 +3,13 @@ import SmallNavBar from "../Components/SmallNavBar";
 
 const Wallet = () => {
   return (
-    <div className="bg-gray-200" style={{ width: "100%" }}>
+    <div className="bg-gray-200 w-screen">
       <div className="absolute left-[820px] m-4">
         <SmallNavBar />
       </div>
-      <div className="absolute left-[300px]">
-        <h1 className="font-serif text-4xl font-bold mt-28 ml-16">Wallet</h1>
-        <div className=" mt-8 border-t-2 border-lightseagreen-100 mt-10 ml-16 mb-16 w-[870px] h-[420px] shadow-lg bg-white">
+      <div className="absolute left-[350px] top-[100px]">
+        <h1 className="font-serif text-4xl font-bold">Wallet</h1>
+        <div className="border-t-2 border-lightseagreen-100 mt-10 mb-16 w-[900px] h-[420px] shadow-lg bg-white">
           <div className="flex justify-center">
             <img
               className="w-[220px] h-[220px] overflow-hidden"

@@ -17,15 +17,13 @@ const Profile = () => {
   };
   return (
     <>
-      <div className="bg-gray-200" style={{ width: "100%" }}>
+      <div className="bg-gray-200 w-screen">
         <div className="absolute left-[820px] m-4">
           <SmallNavBar />
         </div>
-        <div className="absolute left-[300px]">
-          <h1 className="font-serif text-4xl font-bold mt-20 ml-16">
-            Edit Your Profile
-          </h1>
-          <div className="border-t-2 border-lightseagreen-100 mt-8 ml-16 mb-16 w-[450px] h-[480px] shadow-lg bg-white">
+        <div className="absolute left-[360px] top-[100px]">
+          <h1 className="font-serif text-4xl font-bold">Edit Your Profile</h1>
+          <div className="border-t-2 border-lightseagreen-100 mt-8  mb-16 w-[450px] h-[480px] shadow-lg bg-white">
             <form className="max-w-sm mx-auto pt-6" onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label

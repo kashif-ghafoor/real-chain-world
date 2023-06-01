@@ -59,7 +59,7 @@ function Landing() {
           How You Can Invest in Real Chain World
         </b>
         <img
-          className="pt-8 ml-64 w-[800px] h-[280px] "
+          className="pt-8 ml-64 w-[800px] h-[280px] flex justify-center "
           alt=""
           src={require("../assets/workflow.png")}
         />

@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import Portfolio from "./Portfolio";
 import Profile from "./Profile";
 import Wallet from "./Wallet";
+import Dashboard from "./Dashboard";
 
-// Import icons as needed (assuming you have appropriate icons available)
-import { FaUser, FaWallet, FaChartLine } from "react-icons/fa";
+// Import icons as needed
+import { FaUser, FaWallet, FaChartLine, FaDashcube } from "react-icons/fa";
 
 const General = () => {
   const [activeComponent, setActiveComponent] = useState("profile");
@@ -13,10 +14,12 @@ const General = () => {
     switch (activeComponent) {
       case "profile":
         return <Profile />;
-      case "dashboard":
+      case "portfolio":
         return <Portfolio />;
       case "wallet":
         return <Wallet />;
+      case "dashboard":
+        return <Dashboard />;
       default:
         return null;
     }
@@ -48,12 +51,24 @@ const General = () => {
               </button>
             </li>
             <li
-              className={`p-3 mt-2 ${
+              className={`p-3 ${
                 activeComponent === "dashboard"
                   ? "text-lightseagreen-100 border-r-4 border-lightseagreen-100 font-semibold"
                   : ""
               }`}
               onClick={() => setActiveComponent("dashboard")}
+            >
+              <button>
+                <FaDashcube className="inline mr-4" /> Dashboard
+              </button>
+            </li>
+            <li
+              className={`p-3 mt-2 ${
+                activeComponent === "portfolio"
+                  ? "text-lightseagreen-100 border-r-4 border-lightseagreen-100 font-semibold"
+                  : ""
+              }`}
+              onClick={() => setActiveComponent("portfolio")}
             >
               <button>
                 <FaChartLine className="inline mr-4" /> Portfolio

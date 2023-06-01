@@ -26,7 +26,7 @@ function NavBar() {
     <>
       <header className="bg-white">
         <nav
-          className="mx-14 flex max-w-6xl items-center justify-between p-5 lg:px-12"
+          className="mx-20 flex max-w-6xl items-center justify-between p-5 lg:px-12"
           aria-label="Global"
         >
           <div className="flex lg:flex-1 ">
@@ -114,7 +114,7 @@ function NavBar() {
             </Popover>
           </Popover.Group>
           <button
-            className="flex ml-56 lg:flex-16 rounded-md bg-blue text-white font-bold py-2 px-6 rounded text-sm font-semibold leading-6 text-white-900"
+            className="flex ml-56 lg:flex rounded-md bg-blue text-white font-bold py-2 px-6 rounded text-sm font-semibold leading-6 text-white-900"
             onClick={() => setOpen(true)}
           >
             Sign in
