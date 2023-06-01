@@ -13,6 +13,7 @@ const RequiredDocForm = () => {
       console.log(values.files);
       console.log(values.videos);
       setFormSubmitted(true);
+      scrollToTop(); // Scroll to the top of the page
     },
   });
 
@@ -65,18 +66,36 @@ const RequiredDocForm = () => {
     multiple: true,
   });
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div className="flex ml-28 mt-12">
+    <div className="flex ml-28 mt-16">
       <div className="flex flex-col text-blue text-4xl font-semibold">
-        <h2 className="mt-10">Property Documents</h2>
+        <h2 className="mt-2">Property Documents</h2>
         <h2 className="mt-44">Property Videos</h2>
       </div>
       <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto p-4">
         {formSubmitted && (
-          <div className="bg-blue rounded w-[360px] h-[40px]">
-            <p className="text-white font-medium mb-4 pt-2 pl-8">
-              Form submitted successfully !
-            </p>
+          <div class="p-4 bg-blue rounded w-[360px] h-[40px] flex items-center text-3xl text-white font-medium">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              class="feather feather-check-circle h-[24px] w-[24px] mr-2"
+            >
+              <circle cx="8" cy="9" r="7" />
+              <path d="M4.5 10l2 2 4-4" />
+            </svg>
+            <span>Form submitted successfully!</span>
           </div>
         )}
         <label className="font-medium mt-28">
@@ -90,9 +109,9 @@ const RequiredDocForm = () => {
         >
           <input {...getFilesInputProps()} />
           {isFilesDragActive ? (
-            <p className="text-blue-500">Drop PDF files here...</p>
+            <p className="text-blue-500 text-3xl">Drop PDF files here...</p>
           ) : (
-            <p className="text-gray-500">
+            <p className="text-gray-500 text-3xl">
               Drag and drop PDF files here, or click to select files
             </p>
           )}
@@ -126,7 +145,7 @@ const RequiredDocForm = () => {
           {isVideosDragActive ? (
             <p className="text-blue-500">Drop MP4 videos here...</p>
           ) : (
-            <p className="text-gray-500">
+            <p className="text-gray-500 text-3xl">
               Drag and drop MP4 videos here, or click to select videos
             </p>
           )}

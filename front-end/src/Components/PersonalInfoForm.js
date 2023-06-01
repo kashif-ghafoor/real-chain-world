@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
 
 const PersonalInfoForm = ({ onNext }) => {
   const initialValues = {
@@ -18,23 +18,6 @@ const PersonalInfoForm = ({ onNext }) => {
 
   const validateForm = (values) => {
     const errors = {};
-
-    // Validate each field
-    if (!values.firstname) {
-      errors.firstname = "First Name is required";
-    }
-    if (!values.lastname) {
-      errors.lastname = "Last Name is required";
-    }
-    if (!values.phone) {
-      errors.phone = "Phone Number is required";
-    }
-    if (!values.email) {
-      errors.email = "Email is required";
-    }
-    if (!values.company) {
-      errors.company = "Company is required";
-    }
 
     return errors;
   };
@@ -57,79 +40,59 @@ const PersonalInfoForm = ({ onNext }) => {
                 <label className="font-medium mt-8" htmlFor="firstname">
                   First Name *
                 </label>
-                <label className="font-medium ml-44 mt-8" htmlFor="lastname">
+                <label className="font-medium ml-40 mt-8" htmlFor="lastname">
                   Last Name *
                 </label>
               </div>
               <div className="flex">
                 <Field
-                  className="w-[175px] h-[32px] border border-gray-600 focus:outline-none"
+                  className="p-1 w-[175px] h-[32px] border border-gray-600 focus:outline-lightseagreen-100"
                   type="text"
                   placeholder="First Name"
                   name="firstname"
+                  required
                 />
                 <Field
-                  className="ml-20 w-[175px] h-[32px] border border-gray-600 focus:outline-none"
+                  className="p-1 ml-20 w-[175px] h-[32px] border border-gray-600 focus:outline-lightseagreen-100"
                   type="text"
                   placeholder="Last Name"
                   name="lastname"
+                  required
                 />
               </div>
-              <ErrorMessage
-                name="firstname"
-                component="div"
-                className="text-red-500"
-              />
-              <ErrorMessage
-                name="lastname"
-                component="div"
-                className="text-red-500"
-              />
 
               <label className="font-medium mt-8" htmlFor="phone">
                 Phone Number *
               </label>
               <Field
-                className="mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-none"
+                className="p-1 mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-lightseagreen-100"
                 type="tel"
                 name="phone"
                 placeholder="92-1234567890"
                 pattern="[0-9]{2}-[0-9]{10}"
-              />
-              <ErrorMessage
-                name="phone"
-                component="div"
-                className="text-red-500"
+                required
               />
 
               <label className="font-medium mt-8" htmlFor="company">
                 Company *
               </label>
               <Field
-                className="mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-none"
+                className="p-1 mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-lightseagreen-100"
                 type="text"
                 placeholder="xyz"
                 name="company"
-              />
-              <ErrorMessage
-                name="company"
-                component="div"
-                className="text-red-500"
+                required
               />
 
               <label className="font-medium mt-8" htmlFor="email">
                 Email *
               </label>
               <Field
-                className="mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-none"
+                className="p-1 mt-2 w-[300px] h-[32px] border border-gray-600 focus:outline-lightseagreen-100"
                 placeholder="example123@com"
                 type="text"
                 name="email"
-              />
-              <ErrorMessage
-                name="email"
-                component="div"
-                className="text-red-500"
+                required
               />
             </div>
 
@@ -139,7 +102,7 @@ const PersonalInfoForm = ({ onNext }) => {
               </label>
               <Field
                 as="textarea"
-                className="mt-2 w-[400px]  border border-gray-600 focus:outline-none"
+                className="mt-2 w-[400px] p-1 border border-gray-600 focus:outline-lightseagreen-100"
                 type="text"
                 name="goal"
               />

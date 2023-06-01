@@ -16,37 +16,11 @@ const PropertyForm = ({ onNext }) => {
   const handleSubmit = (values, { setSubmitting }) => {
     console.log(values); // You can perform further actions with the form values here
     setSubmitting(false);
-    onNext();
+    onNext(); // Call the onNext function when the form is submitted
   };
 
   const validateForm = (values) => {
     const errors = {};
-
-    // Validate each field
-    if (!values.type) {
-      errors.type = "Type is required";
-    }
-    if (!values.address) {
-      errors.address = "Address is required";
-    }
-    if (!values.country) {
-      errors.country = "Country is required";
-    }
-    if (!values.city) {
-      errors.city = "City is required";
-    }
-    if (!values.area) {
-      errors.area = "Area is required";
-    }
-    if (!values.price) {
-      errors.price = "Price is required";
-    }
-    if (!values.selectedOption) {
-      errors.selectedOption = "Currency is required";
-    }
-    if (values.selectOptions.length === 0) {
-      errors.selectOptions = "At least one feature is required";
-    }
 
     return errors;
   };
@@ -56,10 +30,10 @@ const PropertyForm = ({ onNext }) => {
       <div className="flex flex-col text-blue text-4xl font-semibold">
         <h2>Property Detail</h2>
         <h2 className="font-medium mt-80">Property Location</h2>
-        <h2 className="font-medium  absolute top-[1090px]">
+        <h2 className="font-medium  absolute top-[1100px]">
           Price and Currency
         </h2>
-        <h2 className="font-medium absolute top-[1370px]">Property Features</h2>
+        <h2 className="font-medium absolute top-[1395px]">Property Features</h2>
       </div>
       <Formik
         initialValues={initialValues}
@@ -133,36 +107,40 @@ const PropertyForm = ({ onNext }) => {
               </label>
               <Field
                 as="textarea"
-                className="mt-2 w-[400px]  border border-gray-600 focus:outline-none"
+                className="p-1 mt-2 w-[400px] border border-gray-600 focus:outline-lightseagreen-100 "
                 type="text"
                 name="address"
+                required
               />
               <label className="font-medium mt-8" htmlFor="country">
                 Country *
               </label>
               <Field
-                className="mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-none"
+                className="p-1 mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-lightseagreen-100"
                 type="text"
                 placeholder="Pakistan"
                 name="country"
+                required
               />
               <label className="font-medium mt-8" htmlFor="city">
                 City *
               </label>
               <Field
-                className="mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-none"
+                className="p-1 mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-lightseagreen-100"
                 type="text"
                 placeholder="Karachi"
                 name="city"
+                required
               />
               <label className="font-medium mt-8" htmlFor="area">
                 Area *
               </label>
               <Field
-                className="mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-none"
+                className="p-1 mt-2 w-[400px] h-[32px] border border-gray-600 focus:outline-lightseagreen-100"
                 type="text"
                 placeholder="Street-2 Zone 5"
                 name="area"
+                required
               />
             </div>
 
@@ -174,20 +152,22 @@ const PropertyForm = ({ onNext }) => {
                 Price
               </label>
               <Field
-                className="mt-2 w-[400px]  border border-gray-600 focus:outline-none"
+                className="p-1 mt-2 w-[300px] h-[35px] border border-gray-600 focus:outline-lightseagreen-100"
                 type="text"
                 placeholder="100,00,000."
                 name="price"
+                required
               />
 
               <label className="font-medium mt-8" htmlFor="selectedOption">
                 Specify the Currency *
               </label>
               <Field
-                className="bg-lightseagreen-200"
+                className="bg-lightseagreen-200 w-[300px]"
                 as="select"
                 id="selectedOption"
                 name="selectedOption"
+                required
               >
                 <option className="bg-offwhite" value="option1">
                   PKR
@@ -202,128 +182,132 @@ const PropertyForm = ({ onNext }) => {
             </div>
 
             <div className="flex mt-24">
-              <FieldArray className="flex ml-32 mt-20" name="selectOptions">
+              <FieldArray
+                className="flex ml-32 mt-20"
+                name="selectOptions"
+                required
+              >
                 <div>
                   <label className="font-medium">
                     Which features does the property have? *
                   </label>
                   <div
-                    className="mt-4"
+                    className="mt-4 p-1 bg-bgbutton w-[200px] h-[40px]"
                     role="group"
                     aria-labelledby="checkbox-group"
                   >
-                    <Field
-                      className="accent-lightseagreen-100"
-                      name="selectOptions"
-                      type="checkbox"
-                      value="swimmingpool"
-                    />
-                    <label className="pl-4" htmlFor="swimmingpool">
+                    <label className="pl-2 " htmlFor="swimmingpool">
+                      <Field
+                        className="accent-lightseagreen-100 mr-4"
+                        name="selectOptions"
+                        type="checkbox"
+                        value="swimmingpool"
+                      />
                       Swimming Pool
                     </label>
                   </div>
                   <div
-                    className="mt-4"
+                    className="mt-2 p-1 bg-bgbutton w-[200px] h-[40px]"
                     role="group"
                     aria-labelledby="checkbox-group"
                   >
-                    <Field
-                      className="accent-lightseagreen-100"
-                      name="selectOptions"
-                      type="checkbox"
-                      value="garage"
-                    />
-                    <label className="pl-4" htmlFor="garage">
+                    <label className="pl-2" htmlFor="garage">
+                      <Field
+                        className="accent-lightseagreen-100 mr-4"
+                        name="selectOptions"
+                        type="checkbox"
+                        value="garage"
+                      />
                       Garage
                     </label>
                   </div>
                   <div
-                    className="mt-4"
+                    className="mt-2 p-1 bg-bgbutton w-[200px] h-[40px]"
                     role="group"
                     aria-labelledby="checkbox-group"
                   >
-                    <Field
-                      className="accent-lightseagreen-100"
-                      name="selectOptions"
-                      type="checkbox"
-                      value="garden"
-                    />
-                    <label className="pl-4" htmlFor="garden">
+                    <label className="pl-2" htmlFor="garden">
+                      <Field
+                        className="accent-lightseagreen-100 mr-4"
+                        name="selectOptions"
+                        type="checkbox"
+                        value="garden"
+                      />
                       Garden or Yard
                     </label>
                   </div>
                   <div
-                    className="mt-4"
+                    className="mt-2 p-1 bg-bgbutton w-[200px] h-[40px]"
                     role="group"
                     aria-labelledby="checkbox-group"
                   >
-                    <Field
-                      className="accent-lightseagreen-100"
-                      name="selectOptions"
-                      type="checkbox"
-                      value="basement"
-                    />
-                    <label className="pl-4" htmlFor="basement">
+                    <label className="pl-2" htmlFor="basement">
+                      <Field
+                        className="accent-lightseagreen-100  mr-4"
+                        name="selectOptions"
+                        type="checkbox"
+                        value="basement"
+                      />
                       Basement
                     </label>
                   </div>
                   <div
-                    className="mt-4"
+                    className="mt-2 p-1 bg-bgbutton w-[200px] h-[40px]"
                     role="group"
                     aria-labelledby="checkbox-group"
                   >
-                    <Field
-                      className="accent-lightseagreen-100"
-                      name="selectOptions"
-                      type="checkbox"
-                      value="balcony"
-                    />
-                    <label className="pl-4" htmlFor="balcony">
+                    <label className="pl-2" htmlFor="balcony">
+                      <Field
+                        className="accent-lightseagreen-100  mr-4"
+                        name="selectOptions"
+                        type="checkbox"
+                        value="balcony"
+                      />
                       Balcony
                     </label>
                   </div>
                   <div
-                    className="mt-4"
+                    className="mt-2 p-1 bg-bgbutton w-[200px] h-[40px]"
                     role="group"
                     aria-labelledby="checkbox-group"
                   >
-                    <Field
-                      className="accent-lightseagreen-100"
-                      name="selectOptions"
-                      type="checkbox"
-                      value="Study or Home Office"
-                    />
-                    <label className="pl-4" htmlFor="Study or Home Office">
-                      Study or Home Office
+                    <label className="pl-2" htmlFor="Study or Home Office">
+                      <Field
+                        className="accent-lightseagreen-100 mr-4"
+                        name="selectOptions"
+                        type="checkbox"
+                        value="Study or Home Office"
+                      />
+                      Home Office
                     </label>
                   </div>
                   <div
-                    className="mt-4"
+                    className="mt-2 p-1 bg-bgbutton w-[200px] h-[40px]"
                     role="group"
                     aria-labelledby="checkbox-group"
                   >
-                    <Field
-                      className="accent-lightseagreen-100"
-                      name="selectOptions"
-                      type="checkbox"
-                      value="gym"
-                    />
-                    <label className="pl-4" htmlFor="gym">
+                    <label className="pl-2" htmlFor="gym">
+                      <Field
+                        className="accent-lightseagreen-100 mr-4"
+                        name="selectOptions"
+                        type="checkbox"
+                        value="gym"
+                      />
                       Gym
                     </label>
                   </div>
                   <div
-                    className="mt-4"
+                    className="mt-2 p-1 bg-bgbutton w-[200px] h-[40px]"
                     role="group"
                     aria-labelledby="checkbox-group"
                   >
-                    <Field
-                      className="accent-lightseagreen-100"
-                      name="selectOptions"
-                      type="checkbox"
-                      value="other"
-                    />
-                    <label className="pl-4" htmlFor="other">
+                    <label className="pl-2" htmlFor="other">
+                      <Field
+                        className="accent-lightseagreen-100 mr-4"
+                        name="selectOptions"
+                        type="checkbox"
+                        value="other"
+                      />
                       Other
                     </label>
                   </div>

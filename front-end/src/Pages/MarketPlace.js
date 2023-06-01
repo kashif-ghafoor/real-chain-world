@@ -1,8 +1,37 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 import Callout from "../Components/Callout";
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
 
 const MarketPlace = () => {
+  const [propertyData, setPropertyData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const options = {
+        method: "GET",
+        url: "https://zillow56.p.rapidapi.com/property",
+        params: { zpid: "7594920" },
+        headers: {
+          "X-RapidAPI-Key":
+            "b7972a451cmsh5c0ddb5215f77e1p1a4239jsn4f2f4fba7a11",
+          "X-RapidAPI-Host": "zillow56.p.rapidapi.com",
+        },
+      };
+
+      try {
+        const response = await axios.request(options);
+        const { price, currency, city, country, tourPhotos } = response.data;
+        setPropertyData({ price, currency, city, country, tourPhotos });
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <>
       <NavBar />
@@ -25,12 +54,17 @@ const MarketPlace = () => {
       </div>
       <div className="absolute top-[480px] ml-60 rounded-lg w-4/6 h-[160px] bg-white flex">
         <div className="relative top-[05px] ml-2 rounded-lg w-1/5 h-[80px] bg-white">
-          <p className="relative top-[05px] ml-4 left-[05px] text-xxs text-[17px]  text-black font-medium">
+          <label
+            id="city"
+            htmlFor="city"
+            className="relative top-[05px] ml-4 left-[05px] text-xxs text-[17px]  text-black font-medium"
+          >
             City
-          </p>
+          </label>
           <input
             className="relative top-[2px] ml-4 w-4/5 h-[40px] bg-white text-gray-500 text-sm p-2.5 focus:outline-none focus:border-none"
             placeholder="Lahore"
+            name="city"
             required
           />
         </div>
@@ -78,17 +112,25 @@ const MarketPlace = () => {
             <img
               className="w-[300px] h-[170px]"
               alt=""
-              src={require("../assets//rectangle-10@2x.png")}
+              src={
+                propertyData &&
+                propertyData.tourPhotos &&
+                propertyData.tourPhotos[0].url
+              }
             />
             <div className="bg-white shadow-[0px_2px_2px_2px_rgba(71,_142,_117,_0.2)] w-[300px] h-[340px]">
-              <h4 className=" text-4xl mt-2 pl-6 font-bold text-lightseagreen-100">
-                PKR34.9 Lakh to 89.9 Lakh
+              <h4 className="text-4xl mt-2 pl-6 font-bold text-lightseagreen-100">
+                {propertyData
+                  ? `${propertyData.price} ${propertyData.currency}`
+                  : "Loading..."}
               </h4>
               <p className=" text-4xl mt-2 pl-6 font-medium ">
                 30 Inlet Cove Cottage
               </p>
-              <p className=" text-3xl mt-2 pl-6 font-light text-gray-700">
-                Alexandria, Pakistan
+              <p className="text-3xl mt-2 pl-6 font-light text-gray-700">
+                {propertyData
+                  ? `${propertyData.city} ${propertyData.country}`
+                  : "Loading..."}
               </p>
               <div className="p-6 font-semibold text-gray-700 flex justify-between">
                 <p>Rate Per Token:</p>
@@ -102,26 +144,38 @@ const MarketPlace = () => {
               <p className=" text-4xl mt-6 pl-6 font-medium text-lightseagreen-100">
                 0 Investors
               </p>
-              <button className="cursor-pointer [border:none] mt-8 ml-1 pl-4 bg-lightseagreen-100 rounded w-[290px] h-[50px]">
-                <div className=" text-4xl font-medium text-white text-center">{`View Property   `}</div>
-              </button>
+              <Link to="/property">
+                <button className="cursor-pointer [border:none] mt-8 ml-1 pl-4 bg-lightseagreen-100 rounded w-[290px] h-[50px]">
+                  <div className="text-4xl font-medium text-white text-center">
+                    View Property
+                  </div>
+                </button>
+              </Link>
             </div>
           </card>
           <card className="w-[310px] h-[580px]">
             <img
               className="w-[300px] h-[170px]"
               alt=""
-              src={require("../assets//rectangle-10@2x.png")}
+              src={
+                propertyData &&
+                propertyData.tourPhotos &&
+                propertyData.tourPhotos[0].url
+              }
             />
             <div className="bg-white shadow-[0px_2px_2px_2px_rgba(71,_142,_117,_0.2)] w-[300px] h-[340px]">
-              <h4 className=" text-4xl mt-2 pl-6 font-bold text-lightseagreen-100">
-                PKR34.9 Lakh to 89.9 Lakh
+              <h4 className="text-4xl mt-2 pl-6 font-bold text-lightseagreen-100">
+                {propertyData
+                  ? `${propertyData.price} ${propertyData.currency}`
+                  : "Loading..."}
               </h4>
               <p className=" text-4xl mt-2 pl-6 font-medium ">
                 30 Inlet Cove Cottage
               </p>
-              <p className=" text-3xl mt-2 pl-6 font-light text-gray-700">
-                Alexandria, Pakistan
+              <p className="text-3xl mt-2 pl-6 font-light text-gray-700">
+                {propertyData
+                  ? `${propertyData.city} ${propertyData.country}`
+                  : "Loading..."}
               </p>
               <div className="p-6 font-semibold text-gray-700 flex justify-between">
                 <p>Rate Per Token:</p>
@@ -135,75 +189,13 @@ const MarketPlace = () => {
               <p className=" text-4xl mt-6 pl-6 font-medium text-lightseagreen-100">
                 0 Investors
               </p>
-              <button className="cursor-pointer [border:none] mt-8 ml-1 pl-4 bg-lightseagreen-100 rounded w-[290px] h-[50px]">
-                <div className=" text-4xl font-medium text-white text-center">{`View Property   `}</div>
-              </button>
-            </div>
-          </card>
-          <card className="w-[310px] h-[580px]">
-            <img
-              className="w-[300px] h-[170px]"
-              alt=""
-              src={require("../assets//rectangle-10@2x.png")}
-            />
-            <div className="bg-white shadow-[0px_2px_2px_2px_rgba(71,_142,_117,_0.2)] w-[300px] h-[340px]">
-              <h4 className=" text-4xl mt-2 pl-6 font-bold text-lightseagreen-100">
-                PKR34.9 Lakh to 89.9 Lakh
-              </h4>
-              <p className=" text-4xl mt-2 pl-6 font-medium ">
-                30 Inlet Cove Cottage
-              </p>
-              <p className=" text-3xl mt-2 pl-6 font-light text-gray-700">
-                Alexandria, Pakistan
-              </p>
-              <div className="p-6 font-semibold text-gray-700 flex justify-between">
-                <p>Rate Per Token:</p>
-                <p className="">50 ETH</p>
-              </div>
-              <div className="pl-6 pr-6 mt-0 font-semibold text-gray-700 flex justify-between">
-                <p>Available Token:</p>
-                <p className="">50 ETH</p>
-              </div>
-
-              <p className=" text-4xl mt-6 pl-6 font-medium text-lightseagreen-100">
-                0 Investors
-              </p>
-              <button className="cursor-pointer [border:none] mt-8 ml-1 pl-4 bg-lightseagreen-100 rounded w-[290px] h-[50px]">
-                <div className=" text-4xl font-medium text-white text-center">{`View Property   `}</div>
-              </button>
-            </div>
-          </card>
-          <card className="w-[310px] h-[580px]">
-            <img
-              className="w-[300px] h-[170px]"
-              alt=""
-              src={require("../assets//rectangle-10@2x.png")}
-            />
-            <div className="bg-white shadow-[0px_2px_2px_2px_rgba(71,_142,_117,_0.2)] w-[300px] h-[340px]">
-              <h4 className=" text-4xl mt-2 pl-6 font-bold text-lightseagreen-100">
-                PKR34.9 Lakh to 89.9 Lakh
-              </h4>
-              <p className=" text-4xl mt-2 pl-6 font-medium ">
-                30 Inlet Cove Cottage
-              </p>
-              <p className=" text-3xl mt-2 pl-6 font-light text-gray-700">
-                Alexandria, Pakistan
-              </p>
-              <div className="p-6 font-semibold text-gray-700 flex justify-between">
-                <p>Rate Per Token:</p>
-                <p className="">50 ETH</p>
-              </div>
-              <div className="pl-6 pr-6 mt-0 font-semibold text-gray-700 flex justify-between">
-                <p>Available Token:</p>
-                <p className="">50 ETH</p>
-              </div>
-
-              <p className=" text-4xl mt-6 pl-6 font-medium text-lightseagreen-100">
-                0 Investors
-              </p>
-              <button className="cursor-pointer [border:none] mt-8 ml-1 pl-4 bg-lightseagreen-100 rounded w-[290px] h-[50px]">
-                <div className="text-4xl font-medium text-white text-center">{`View Property   `}</div>
-              </button>
+              <Link to="/property">
+                <button className="cursor-pointer [border:none] mt-8 ml-1 pl-4 bg-lightseagreen-100 rounded w-[290px] h-[50px]">
+                  <div className="text-4xl font-medium text-white text-center">
+                    View Property
+                  </div>
+                </button>
+              </Link>
             </div>
           </card>
         </div>

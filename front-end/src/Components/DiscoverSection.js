@@ -4,15 +4,17 @@ const DiscoverSection = memo(() => {
   return (
     <>
       <section
-        className="mt-10 w-[1100px] h-[550px] text-left text-3xl text-gray-700 "
+        className="mt-10  h-[550px] text-left text-3xl text-gray-700 "
         id="discover"
         data-scroll-to="exploreSection"
       >
-        <div className="absolute bg-whitesmoke w-[1300px] h-[580px]">
-          <h4 className="absolute ml-80 mt-20  text-9xl  tracking-[-0.01em] text-blue-for-button font-h4">
-            Discover the Power of Real Chain World
-          </h4>
-          <div className="flex mt-36 ml-24 space-around">
+        <div className="bg-whitesmoke h-[580px]">
+          <div className="flex justify-center">
+            <h4 className=" absolute  mt-12 p-2 text-9xl tracking-[-0.01em] text-blue-for-button font-h4">
+              Discover the Power of Real Chain World
+            </h4>
+          </div>
+          <div className="flex pt-36 ml-24 space-around">
             <div className="flex m-10">
               <div className=" rounded-md bg-darkslategray w-32 h-[110px]">
                 <img

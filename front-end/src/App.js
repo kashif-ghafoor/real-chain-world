@@ -3,6 +3,9 @@ import About from "./Pages/About";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./Pages/Landing";
 import Tokenization from "./Pages/Tokenization";
+import Property from "./Pages/PropertyPage";
+import PropertyDetail from "./Pages/PropertyDetail";
+import General from "./Pages/General";
 
 const App = () => {
   return (
@@ -12,6 +15,9 @@ const App = () => {
         <Route path="/marketplace" element={<MarketPlace />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/tokenization" element={<Tokenization />}></Route>
+        <Route path="/property" element={<Property />}></Route>
+        <Route path="/property-detail" element={<PropertyDetail />}></Route>
+        <Route path="/general" element={<General />}></Route>
       </Routes>
     </BrowserRouter>
   );
