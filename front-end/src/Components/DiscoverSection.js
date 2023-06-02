@@ -4,94 +4,81 @@ const DiscoverSection = memo(() => {
   return (
     <>
       <section
-        className="mt-10  h-[550px] text-left text-3xl text-gray-700 "
+        className="mt-10 h-[550px] text-left text-gray-700 "
         id="discover"
         data-scroll-to="exploreSection"
       >
         <div className="bg-whitesmoke h-[580px]">
-          <div className="flex justify-center">
-            <h4 className=" absolute  mt-12 p-2 text-9xl tracking-[-0.01em] text-blue-for-button font-h4">
+          <div className="flex justify-center ">
+            <h4 className="absolute mt-12 p-2 text-9xl tracking-[-0.01em] text-blue-for-button font-h4 sm:text-9xl md:text-9xl lg:text-11xl ">
               Discover the Power of Real Chain World
             </h4>
           </div>
-          <div className="flex pt-36 ml-24 space-around">
-            <div className="flex m-10">
-              <div className=" rounded-md bg-darkslategray w-32 h-[110px]">
-                <img
-                  className="m-6 ml-10 w-[50px] h-[50px] overflow-hidden"
-                  alt=""
-                  src="/real-estate.svg"
-                />
-              </div>
-              <p className="p-6 font-medium leading-6 inline-block w-[182px]">
-                Best Investments Opportunities
-              </p>
-            </div>
-            <div className="flex m-10">
-              <div className="rounded-md bg-lightseagreen-300 w-32 h-[110px]">
-                <img
-                  className="m-8 ml-10 w-[50px] h-[50px] overflow-hidden"
-                  alt=""
-                  src="/contract-approve.svg"
-                />
-              </div>
-              <p className="p-6 font-medium leading-6 inline-block w-[182px]">
-                Secure Investments
-              </p>
-            </div>
 
-            <div className="flex m-10">
-              <div className="rounded-md bg-slategray-100 w-32 h-[110px]">
-                <img
-                  className="m-8 w-[50px] h-[50px] overflow-hidden"
-                  alt=""
-                  src="/demographic-tracking.svg"
-                />
-              </div>
-              <p className="p-6 font-medium leading-6 inline-block w-[182px]">
-                Track Your Assets
-              </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-8 m-32 pt-12">
+            <div className="rounded-md bg-darkslategray h-[110px] flex items-center justify-center">
+              <img
+                className="w-[50px] h-[50px] overflow-hidden"
+                alt=""
+                src="/real-estate.svg"
+              />
             </div>
-          </div>
+            <p className="p-6 font-medium leading-6 text-left">
+              Best Investments Opportunities
+            </p>
 
-          <div className="flex mt-8 ml-24 space-around">
-            <div className="flex m-10">
-              <div className=" rounded-md  bg-mediumpurple w-32 h-[110px]">
-                <img
-                  className="m-6 ml-10 w-[50px] h-[50px] overflow-hidden"
-                  alt=""
-                  src="/bitcoin-tokenized.svg"
-                />
-              </div>
-              <p className="p-6 font-medium leading-6 inline-block w-[182px]">
-                Tokenize Your Property
-              </p>
+            <div className="rounded-md bg-lightseagreen-300 h-[110px] flex items-center justify-center">
+              <img
+                className="w-[50px] h-[50px] overflow-hidden"
+                alt=""
+                src="/contract-approve.svg"
+              />
             </div>
-            <div className="flex m-10">
-              <div className="rounded-md bg-lightseagreen-300 w-32 h-[110px]">
-                <img
-                  className="m-8 ml-10 w-[50px] h-[50px] overflow-hidden"
-                  alt=""
-                  src="/investment.svg"
-                />
-              </div>
-              <p className="p-6 font-medium leading-6 inline-block w-[182px]">
-                Invest with $10
-              </p>
-            </div>
+            <p className="p-6 font-medium leading-6 text-left">
+              Secure Investments
+            </p>
 
-            <div className="flex m-10">
-              <div className="rounded-md bg-steelblue w-32 h-[110px]">
-                <img
-                  className="m-8 ml-10 w-[50px] h-[50px] overflow-hidden"
-                  alt=""
-                  src="/pie-chart.svg"
-                />
-              </div>
-              <p className="p-6 font-medium leading-6 inline-block w-[182px]">
-                Get Revenue
-              </p>
+            <div className="rounded-md bg-slategray-100 h-[110px] flex items-center justify-center">
+              <img
+                className="w-[50px] h-[50px] overflow-hidden"
+                alt=""
+                src="/demographic-tracking.svg"
+              />
             </div>
+            <p className="p-6 font-medium leading-6 text-left">
+              Track Your Assets
+            </p>
+
+            <div className="rounded-md bg-mediumpurple h-[110px] flex items-center justify-center">
+              <img
+                className="w-[50px] h-[50px] overflow-hidden "
+                alt=""
+                src="/bitcoin-tokenized.svg"
+              />
+            </div>
+            <p className="p-6 font-medium leading-6 text-left">
+              Tokenize Your Property
+            </p>
+
+            <div className="rounded-md bg-lightseagreen-300 h-[110px] flex items-center justify-center">
+              <img
+                className="w-[50px] h-[50px] overflow-hidden"
+                alt=""
+                src="/investment.svg"
+              />
+            </div>
+            <p className="p-6 font-medium leading-6 text-left">
+              Invest with $10
+            </p>
+
+            <div className="rounded-md bg-steelblue h-[110px] flex items-center justify-center">
+              <img
+                className="w-[50px] h-[50px] overflow-hidden"
+                alt=""
+                src="/pie-chart.svg"
+              />
+            </div>
+            <p className="p-6 font-medium leading-6 text-left">Get Revenue</p>
           </div>
         </div>
       </section>
