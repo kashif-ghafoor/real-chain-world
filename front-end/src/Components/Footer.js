@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
 
-const Footer = memo(() => {
+const Footer = () => {
   return (
     <footer
       className="mt-8 md:mt-56 h-[360px] text-left text-gray-100 "
@@ -76,6 +76,6 @@ const Footer = memo(() => {
       </div>
     </footer>
   );
-});
+};
 
 export default Footer;

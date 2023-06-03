@@ -1,6 +1,6 @@
 import { memo } from "react";
 
-const DiscoverSection = memo(() => {
+const DiscoverSection = () => {
   return (
     <>
       <section
@@ -84,6 +84,6 @@ const DiscoverSection = memo(() => {
       </section>
     </>
   );
-});
+};
 
 export default DiscoverSection;
