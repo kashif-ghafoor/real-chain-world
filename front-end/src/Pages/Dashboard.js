@@ -5,14 +5,15 @@ import SingleProperty from "../Components/SingleProperty";
 const Dashboard = () => {
   return (
     <>
-      <div className="bg-gray-200 w-screen">
+      <div className="bg-gray-200 w-screen" style={{ width: "78%" }}>
         <div className="absolute left-[820px] m-4">
           <SmallNavBar />
         </div>
-        <div className="absolute left-[360px] top-[100px]">
+        <div className="absolute left-[410px] top-[100px]">
           <h1 className="font-serif text-4xl font-bold">Dashboard</h1>
 
-          <div className="pt-4">
+          <div className="m-6 flex flex-wrap gap-5 w-[90%] md:w-[1100px] xl:w-[1400px]">
+            <SingleProperty buttonText="Distribute Revenue" />
             <SingleProperty buttonText="Distribute Revenue" />
           </div>
         </div>

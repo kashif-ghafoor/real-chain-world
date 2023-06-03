@@ -67,10 +67,10 @@ const Footer = memo(() => {
           </Link>
         </div>
       </div>
-      <div className="justify-center">
+      <div className=" justify-center">
         <div className="m-4 bg-lightseagreen-100 w-[98%] md:w-[96%] h-[2px]" />
 
-        <div className="pl-4 md:pl-28 ml-4 md:ml-96 text-gray-500">
+        <div className="text-gray-500 text-center">
           All Rights Reserved, 2023 © Real Chain World
         </div>
       </div>
