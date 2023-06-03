@@ -23,7 +23,7 @@ const PersonalInfoForm = ({ onNext }) => {
   };
 
   return (
-    <div className="flex ml-28 mt-20">
+    <div className="flex ml-40 mt-20">
       <div className="flex flex-col text-blue text-4xl font-semibold">
         <h2>Personal Information</h2>
       </div>
@@ -33,7 +33,7 @@ const PersonalInfoForm = ({ onNext }) => {
         validate={validateForm}
       >
         {({ isSubmitting }) => (
-          <Form className="ml-52">
+          <Form className="pl-96">
             <div className="flex flex-col">
               <label className="font-medium">Who are you?</label>
               <div className="flex">

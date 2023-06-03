@@ -28,7 +28,7 @@ const ResetPassword = ({ open, onClose }) => {
             </Transition.Child>
 
             <div className="fixed inset-0 z-10 overflow-y-auto">
-              <div className="flex min-h-full justify-center p-4 text-center sm:items-center sm:p-0">
+              <div className="flex  justify-center text-center sm:items-center sm:pt-12">
                 <Transition.Child
                   as={Fragment}
                   enter="ease-out duration-300"
@@ -38,58 +38,60 @@ const ResetPassword = ({ open, onClose }) => {
                   leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                   leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 >
-                  <Dialog.Panel className="relative transform overflow-hidden rounded-md bg-white text-center shadow-xl transition-all h-full w-1/2">
-                    <div className="bg-white pb-48 pt-64 ">
-                      <div className="absolute top-[40px] left-[600px]">
+                  <Dialog.Panel className="transform overflow-hidden rounded-md bg-white  shadow-xl transition-all h-full w-2/5 flex items-center justify-center">
+                    <div className="bg-white pb-32 pt-10">
+                      <div>
                         <button
-                          className="bg-transparent text-lightseagreen-100 font-bold text-5xl "
+                          className="absolute right-[70px] top-[30px] bg-transparent text-lightseagreen-100 font-bold text-5xl "
                           onClick={() => onClose(false)}
                         >
                           x
                         </button>
                       </div>
-                      <h3 className="absolute top-[100px] left-[275px] text-lightseagreen-100 text-4xl font-medium  ">
-                        Reset Password
-                      </h3>
                       <div className="absolute top-[55px] left-[57px]  ">
                         <img
-                          className="h-15 w-16"
+                          className="h-15 w-12"
                           src={require("../assets/logo-signin.png")}
                           alt=""
                         />
                       </div>
-                      <div>
+                      <div className="pt-20 flex justify-center">
+                        <h3 className="text-lightseagreen-100 text-4xl font-semibold ">
+                          Reset Password
+                        </h3>
+                      </div>
+
+                      <div className="pt-10 text-left ">
                         <label
-                          for="email"
-                          className="absolute top-[180px] left-[220px] text-lightseagreen-100 text-xs"
+                          htmlFor="email"
+                          className="text-lightseagreen-100 text-xs "
                         >
                           Email
                         </label>
+
                         <input
                           type="email"
                           id="email"
-                          className="absolute top-[200px] left-[220px] h-[40px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 focus:outline-none focus:border-none"
+                          name="email"
+                          className="h-[40px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 focus:outline-none"
                           placeholder="xyz@example.com"
                           required
                         />
                       </div>
 
-                      <button
-                        className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[270px] left-[220px] w-240px] h-10"
-                        onClick={() => {
-                          setLinksend(true);
-                          onClose(false);
-                        }}
-                      >
-                        <div className="absolute top-[0px] left-[0px] rounded-lg bg-lightseagreen-100 w-[240px] h-10" />
-                        <div className="absolute top-[4px] left-[85px] text-4xl font-medium  text-white text-left flex items-center w-[86px]">
+                      <div className="text-center pt-12">
+                        <button
+                          type="submit"
+                          onClick={() => {
+                            setLinksend(true);
+                            onClose(false);
+                          }}
+                          className="pt-2  flex justify-center w-[247px] h-10 font-semibold text-white text-3xl cursor-pointer [border:none] bg-lightseagreen-100 "
+                        >
                           Submit
-                        </div>
-                      </button>
-                      <button
-                        className="absolute top-[315px] left-[375px] 
-                          text-gray-700 text-2xl font-medium flex w-[247px] "
-                      >
+                        </button>
+                      </div>
+                      <button className="text-gray-700 text-3xl font-medium flex w-[247px] ">
                         Back to Login
                       </button>
                     </div>

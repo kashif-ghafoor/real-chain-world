@@ -1,7 +1,7 @@
 import { Transition, Dialog } from "@headlessui/react";
 import { Fragment, useRef, useState } from "react";
 import Signup from "./Signup";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
 import ResetPassword from "./ResetPassword";
 
 const Signin = ({ open, onClose }) => {
@@ -53,7 +53,7 @@ const Signin = ({ open, onClose }) => {
             </Transition.Child>
 
             <div className="fixed inset-0 z-10 overflow-y-auto">
-              <div className="flex min-h-full justify-center p-4 text-center sm:items-center sm:p-0">
+              <div className="flex  justify-center p-4 text-center sm:items-center sm:pt-6">
                 <Transition.Child
                   as={Fragment}
                   enter="ease-out duration-300"
@@ -63,38 +63,38 @@ const Signin = ({ open, onClose }) => {
                   leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                   leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 >
-                  <Dialog.Panel className="relative transform overflow-hidden rounded-md bg-white text-center shadow-xl transition-all h-full w-3/5">
-                    <div className="bg-white pb-72 pt-96">
-                      <div className="absolute top-[20px] left-[730px]">
-                        <button
-                          className="bg-transparent text-lightseagreen-100 font-bold text-5xl "
-                          onClick={() => onClose(false)}
-                        >
-                          x
-                        </button>
-                      </div>
-                      <h3 className="absolute top-[120px] left-[290px] text-lightseagreen-100 text-3xl font-medium ">
+                  <Dialog.Panel className="overflow-hidden rounded-md bg-white  shadow-xl h-[740px] w-3/5 ">
+                    <div className="flex justify-end pr-10 pt-6">
+                      <button
+                        className="bg-transparent text-lightseagreen-100 font-bold text-5xl"
+                        onClick={() => onClose(false)}
+                      >
+                        x
+                      </button>
+                    </div>
+                    <div className="pt-2 flex justify-center items-center flex-col">
+                      <img
+                        className="h-12 w-12"
+                        src={require("../assets/logo-signin.png")}
+                        alt=""
+                      />
+                      <h3 className="pt-4 text-lightseagreen-100 text-3xl font-medium">
                         Log in to Real Chain world
                       </h3>
-                      <div className="absolute top-[58px] left-[360px]  ">
-                        <img
-                          className="h-12 w-12"
-                          src={require("../assets/logo-signin.png")}
-                          alt=""
-                        />
-                      </div>
+                    </div>
 
+                    <div className="pt-8 flex justify-center">
                       <Formik
                         initialValues={initialValues}
                         validate={validate}
                         onSubmit={handleSubmit}
                       >
                         {({ isSubmitting }) => (
-                          <Form>
+                          <Form className="text-left">
                             <div>
                               <label
                                 htmlFor="email"
-                                className="absolute top-[180px] left-[270px] text-lightseagreen-100 text-xs"
+                                className="text-lightseagreen-100 text-xs"
                               >
                                 Email
                               </label>
@@ -102,20 +102,15 @@ const Signin = ({ open, onClose }) => {
                                 type="email"
                                 id="email"
                                 name="email"
-                                className="absolute top-[200px] left-[270px] h-[40px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 focus:outline-none"
+                                className="bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 focus:outline-none"
                                 placeholder="xyz@example.com"
                                 required
                               />
-                              <ErrorMessage
-                                name="email"
-                                component="div"
-                                className="text-red-500 text-xs absolute top-[210px] left-[530px]"
-                              />
                             </div>
-                            <div>
+                            <div className="pt-4 ">
                               <label
                                 htmlFor="password"
-                                className="absolute top-[255px] left-[270px] text-lightseagreen-100 text-xs"
+                                className="text-lightseagreen-100 text-xs"
                               >
                                 Password
                               </label>
@@ -123,19 +118,13 @@ const Signin = ({ open, onClose }) => {
                                 type="password"
                                 id="password"
                                 name="password"
-                                className="absolute top-[275px] left-[270px] h-[40px]  bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 focus:outline-none"
+                                className="h-[40px] bg-white border-2 border-b-lightseagreen-100 text-gray-900 text-sm block w-60 p-2.5 focus:outline-none"
                                 placeholder="•••••••••"
                                 required
                               />
-                              <ErrorMessage
-                                name="password"
-                                component="div"
-                                className="text-red-500 text-xs  absolute top-[285px] left-[520px] h-[40px]"
-                              />
                               <button
                                 type="button"
-                                className="absolute top-[315px] left-[385px] 
-              text-gray-700 text-xs font-medium flex w-[247px]"
+                                className="pt-1 text-gray-700 text-xs font-medium flex w-[247px]"
                                 onClick={() => {
                                   setReset(true);
                                   onClose(false);
@@ -144,52 +133,61 @@ const Signin = ({ open, onClose }) => {
                                 Forget Password?
                               </button>
                             </div>
-                            <button
-                              type="submit"
-                              disabled={isSubmitting}
-                              className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[360px] left-[270px] w-240px] h-10"
-                            >
-                              <div className="absolute top-[0px] left-[0px] rounded bg-lightseagreen-100 w-[240px] h-10" />
-                              <div className="absolute top-[4px] left-[95px] text-4xl font-medium  text-white text-left flex items-center w-[86px]">
+                            <div className="pt-4 text-center">
+                              <button
+                                type="submit"
+                                disabled={isSubmitting}
+                                className="pt-2 flex justify-center w-[247px] h-10 font-semibold text-white text-3xl cursor-pointer border-none bg-lightseagreen-100"
+                              >
                                 Login
-                              </div>
-                            </button>
+                              </button>
+                            </div>
                           </Form>
                         )}
                       </Formik>
+                    </div>
+
+                    <div className="flex justify-center mt-2">
+                      <div className="flex items-center">
+                        <h3 className="text-gray-500 text-2xl mr-2">
+                          New to Real Chain World?
+                        </h3>
+                        <button
+                          className="text-2xl font-medium text-lightseagreen-100 flex "
+                          onClick={() => {
+                            setOpenn(true);
+                            onClose(false);
+                          }}
+                        >
+                          Sign Up
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="flex justify-center mt-8">
                       <img
-                        className="absolute top-[445px] left-[260px] w-[250px]"
+                        className="w-[250px]"
                         alt=""
                         src={require("../assets/or.PNG")}
                       />
+                    </div>
 
-                      <button className="cursor-pointer rounded-md  border-2 border-lightseagreen-300 absolute top-[495px] left-[265px] w-[240px] h-10">
+                    <div className="flex justify-center mt-4">
+                      <button className="rounded-md pt-2 flex justify-center w-[247px] h-10 font-semibold text-white text-3xl cursor-pointer border-2 border-offwhite">
                         <img
                           className="w-[240px]"
                           alt=""
                           src={require("../assets/google.png")}
                         />
                       </button>
-                      <button className="cursor-pointer rounded-md  border-2 border-lightseagreen-200 absolute top-[545px] left-[265px] w-[240px] h-10">
+                    </div>
+                    <div className="flex justify-center mt-4">
+                      <button className="rounded-md p-1 flex justify-center w-[240px] h-10 font-semibold text-white text-3xl cursor-pointer border-2 border-lightseagreen-100">
                         <img
-                          className="pl-8 w-[220px]"
+                          className="w-[160px]"
                           alt=""
                           src={require("../assets/metamask@2x.png")}
                         />
-                      </button>
-
-                      <h3 className="absolute top-[405px] left-[275px] text-gray-500 text-2xl ">
-                        New to Real Chain World?
-                      </h3>
-
-                      <button
-                        className="absolute top-[405px] left-[430px] text-2xl font-medium text-lightseagreen-100 flex items-center w-[110px]"
-                        onClick={() => {
-                          setOpenn(true);
-                          onClose(false);
-                        }}
-                      >
-                        Sign Up
                       </button>
                     </div>
                   </Dialog.Panel>

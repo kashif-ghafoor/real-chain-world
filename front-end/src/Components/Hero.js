@@ -1,6 +1,6 @@
-import { memo, useCallback } from "react";
+import { useCallback } from "react";
 
-const Hero = memo(() => {
+const Hero = () => {
   const onFrameButton1Click = useCallback(() => {
     const anchor = document.querySelector("[data-scroll-to='exploreSection']");
     if (anchor) {
@@ -42,6 +42,6 @@ const Hero = memo(() => {
       </div>
     </div>
   );
-});
+};
 
 export default Hero;

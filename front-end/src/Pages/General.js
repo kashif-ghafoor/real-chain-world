@@ -27,7 +27,7 @@ const General = () => {
 
   return (
     <>
-      <div className="flex " style={{ height: "100vh" }}>
+      <div className="flex" style={{ height: "100vh" }}>
         <div
           className="sidebar bg-white text-gray-500 font-medium font-serif text-4xl shadow-lg fixed inset-0"
           style={{ width: "22%" }}
@@ -89,7 +89,7 @@ const General = () => {
           </ul>
         </div>
 
-        {renderComponent()}
+        <div>{renderComponent()}</div>
       </div>
     </>
   );

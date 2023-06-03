@@ -1,10 +1,8 @@
-import { memo } from "react";
-
-const DiscoverSection = memo(() => {
+const DiscoverSection = () => {
   return (
     <>
       <section
-        className="mt-10 h-[550px] text-left text-gray-700 "
+        className="mt-32 h-[550px] text-left text-gray-700 "
         id="discover"
         data-scroll-to="exploreSection"
       >
@@ -23,7 +21,7 @@ const DiscoverSection = memo(() => {
                 src="/real-estate.svg"
               />
             </div>
-            <p className="p-6 font-medium leading-6 text-left">
+            <p className="pt-5 font-medium leading-6 text-left">
               Best Investments Opportunities
             </p>
 
@@ -34,7 +32,7 @@ const DiscoverSection = memo(() => {
                 src="/contract-approve.svg"
               />
             </div>
-            <p className="p-6 font-medium leading-6 text-left">
+            <p className="pt-8  font-medium leading-6 text-left">
               Secure Investments
             </p>
 
@@ -45,7 +43,7 @@ const DiscoverSection = memo(() => {
                 src="/demographic-tracking.svg"
               />
             </div>
-            <p className="p-6 font-medium leading-6 text-left">
+            <p className="pt-8  font-medium leading-6 text-left">
               Track Your Assets
             </p>
 
@@ -56,7 +54,7 @@ const DiscoverSection = memo(() => {
                 src="/bitcoin-tokenized.svg"
               />
             </div>
-            <p className="p-6 font-medium leading-6 text-left">
+            <p className="pt-5  font-medium leading-6 text-left">
               Tokenize Your Property
             </p>
 
@@ -67,7 +65,7 @@ const DiscoverSection = memo(() => {
                 src="/investment.svg"
               />
             </div>
-            <p className="p-6 font-medium leading-6 text-left">
+            <p className="pt-8  font-medium leading-6 text-left">
               Invest with $10
             </p>
 
@@ -78,12 +76,12 @@ const DiscoverSection = memo(() => {
                 src="/pie-chart.svg"
               />
             </div>
-            <p className="p-6 font-medium leading-6 text-left">Get Revenue</p>
+            <p className="pt-8 font-medium leading-6 text-left">Get Revenue</p>
           </div>
         </div>
       </section>
     </>
   );
-});
+};
 
 export default DiscoverSection;

@@ -48,7 +48,7 @@ const Tokenization = () => {
         <div className="bg-offwhite h-14">
           <div className="flex justify-center p-1">
             <button
-              className={`rounded text-3xl font-medium w-[180px] h-12 ${
+              className={`rounded text-xl sm:text-2xl md:text-3xl font-medium w-[40%] sm:w-[180px] h-12 ${
                 activeForm === "form1"
                   ? "bg-lightseagreen-100 text-white"
                   : "bg-white text-lightseagreen-100"
@@ -58,7 +58,7 @@ const Tokenization = () => {
               Property Detail
             </button>
             <button
-              className={`rounded ml-1 border border-lightseagreen-300 text-3xl font-medium w-[180px] h-12 ${
+              className={`rounded ml-1 border border-lightseagreen-300 text-xl sm:text-2xl md:text-3xl font-medium w-[40%] sm:w-[180px] h-12 ${
                 activeForm === "form2"
                   ? "bg-lightseagreen-100 text-white"
                   : "bg-white text-lightseagreen-100"
@@ -68,7 +68,7 @@ const Tokenization = () => {
               Who are you?
             </button>
             <button
-              className={`rounded ml-1 border border-lightseagreen-300 text-3xl font-medium w-[180px] h-12 ${
+              className={`rounded ml-1 border border-lightseagreen-300 text-xl sm:text-2xl md:text-3xl font-medium w-[40%] sm:w-[180px] h-12 ${
                 activeForm === "form3"
                   ? "bg-lightseagreen-100 text-white"
                   : "bg-white text-lightseagreen-100"

@@ -17,11 +17,11 @@ const Profile = () => {
   };
   return (
     <>
-      <div className="bg-gray-200 w-screen">
+      <div className="pl-6 bg-gray-200 w-screen">
         <div className="absolute left-[820px] m-4">
           <SmallNavBar />
         </div>
-        <div className="absolute left-[360px] top-[100px]">
+        <div className="absolute left-[420px] top-[100px]">
           <h1 className="font-serif text-4xl font-bold">Edit Your Profile</h1>
           <div className="border-t-2 border-lightseagreen-100 mt-8  mb-16 w-[450px] h-[480px] shadow-lg bg-white">
             <form className="max-w-sm mx-auto pt-6" onSubmit={handleSubmit}>
