@@ -39,7 +39,7 @@ function NavBar() {
             </Link>
           </div>
 
-          <Popover.Group className="hidden lg:flex sm:gap-x-6 lg:gap-x-12 text-4xl sm:text-2xl lg:text-4xl">
+          <Popover.Group className="hidden lg:flex sm:gap-x-6 lg:gap-x-10 text-4xl sm:text-2xl lg:text-3xl">
             <Link to="/marketplace">
               <b className="font-semibold leading-6 text-gray-900">
                 Marketplace

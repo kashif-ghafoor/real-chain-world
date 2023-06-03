@@ -7,32 +7,8 @@ import Footer from "../Components/Footer";
 import SingleProperty from "../Components/SingleProperty";
 
 const MarketPlace = () => {
-  // const [propertyData, setPropertyData] = useState(null);
+  // Rest of your code...
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const options = {
-  //       method: "GET",
-  //       url: "https://zillow56.p.rapidapi.com/property",
-  //       params: { zpid: "7594920" },
-  //       headers: {
-  //         "X-RapidAPI-Key":
-  //           "b7972a451cmsh5c0ddb5215f77e1p1a4239jsn4f2f4fba7a11",
-  //         "X-RapidAPI-Host": "zillow56.p.rapidapi.com",
-  //       },
-  //     };
-
-  //     try {
-  //       const response = await axios.request(options);
-  //       const { price, currency, city, country, tourPhotos } = response.data;
-  //       setPropertyData({ price, currency, city, country, tourPhotos });
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
   return (
     <>
       <NavBar />
@@ -47,18 +23,18 @@ const MarketPlace = () => {
           <p className="relative top-[05px] left-[10px] text-9xl tracking-[-0.02em] text-white font-bold w-[450px]">
             Find New Projects in Pakistan
           </p>
-          <p className="relative top-[15px] left-[10px] text-xxxs  text-[14px] tracking-[-0.001em] text-white font-normal w-[480px]">
+          <p className="relative top-[15px] left-[10px] text-xxxs text-[14px] tracking-[-0.001em] text-white font-normal w-[480px]">
             Real Chain World provides you with a vibe of what every day looks
             like in different housing societies of Pakistan
           </p>
         </div>
       </div>
-      <div className="absolute top-[480px] ml-60 rounded-lg w-4/6 h-[160px] bg-white flex">
-        <div className="relative top-[05px] ml-2 rounded-lg w-1/5 h-[80px] bg-white">
+      <div className="absolute top-[480px] left-1/2 transform -translate-x-1/2 rounded-lg w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 h-[160px] bg-white flex justify-center">
+        <div className="relative top-[05px] ml-2 rounded-lg w-1/3 md:w-1/4 lg:w-1/5 h-[80px] bg-white">
           <label
             id="city"
             htmlFor="city"
-            className="relative top-[05px] ml-4 left-[05px] text-xxs text-[17px]  text-black font-medium"
+            className="relative top-[05px] ml-4 left-[05px] text-xxs text-[17px] text-black font-medium"
           >
             City
           </label>
@@ -70,8 +46,8 @@ const MarketPlace = () => {
           />
         </div>
         <div className="relative top-[15px] w-0.5 h-[60px] bg-gray-300"></div>
-        <div className="relative top-[05px] ml-2 rounded-lg w-3/5 h-[80px] bg-white">
-          <p className="relative top-[05px] ml-4 left-[05px] text-xxs text-[17px]  text-black font-medium">
+        <div className="relative top-[05px] ml-2 rounded-lg w-2/3 md:w-3/4 lg:w-3/5 h-[80px] bg-white">
+          <p className="relative top-[05px] ml-4 left-[05px] text-xxs text-[17px] text-black font-medium">
             Property Name
           </p>
           <input
@@ -86,29 +62,29 @@ const MarketPlace = () => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 20 20"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="currentColor"
-            class="w-4 h-4 mr-2"
+            className="w-4 h-4 mr-2"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
             />
           </svg>
-
           <span>Search</span>
         </button>
       </div>
-      <h1 className="mt-10 ml-28  text-9xl tracking-[-0.02em] font-bold font-h2 text-lightseagreen-100">
+
+      <h1 className="mt-10 ml-4 md:ml-28 text-4xl md:text-9xl tracking-[-0.02em] font-bold font-h2 text-lightseagreen-100">
         Projects on our Platform
       </h1>
-      <h3 className=" ml-28 text-4xl tracking-[-0.02em] font-medium w-[650px] text-gray-500">
+      <h3 className="ml-4 md:ml-28 text-xl md:text-4xl tracking-[-0.02em] font-medium w-[650px] lg:w-[900px] text-gray-500">
         Giving you the trust you need to own your share of tokenized real
         estate.
       </h3>
-      <div className="ml-24 mt-12" id="best-opportunties">
-        <div className="m-6 flex flex-wrap gap-16 w-[1100px]">
+      <div className="ml-4 md:ml-24 mt-12" id="best-opportunities">
+        <div className="m-6 flex flex-wrap gap-16 w-[90%] md:w-[1100px] xl:w-[1400px]">
           {/* <card className="w-[310px] h-[580px]">
             <img
               className="w-[300px] h-[170px]"

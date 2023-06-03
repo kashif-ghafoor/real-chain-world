@@ -74,7 +74,7 @@ const RequiredDocForm = () => {
   };
 
   return (
-    <div className="flex ml-28 mt-16">
+    <div className="flex ml-40 mt-16">
       <div className="flex flex-col text-blue text-4xl font-semibold">
         <h2 className="mt-2">Property Documents</h2>
         <h2 className="mt-44">Property Videos</h2>

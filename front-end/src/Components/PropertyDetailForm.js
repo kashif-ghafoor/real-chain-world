@@ -26,11 +26,11 @@ const PropertyForm = ({ onNext }) => {
   };
 
   return (
-    <div className="flex ml-32 mt-20">
+    <div className="flex ml-40 mt-20">
       <div className="flex flex-col text-blue text-4xl font-semibold">
         <h2>Property Detail</h2>
         <h2 className="font-medium mt-80">Property Location</h2>
-        <h2 className="font-medium  absolute top-[1100px]">
+        <h2 className="font-medium absolute top-[1100px]">
           Price and Currency
         </h2>
         <h2 className="font-medium absolute top-[1395px]">Property Features</h2>
@@ -41,7 +41,7 @@ const PropertyForm = ({ onNext }) => {
         validate={validateForm}
       >
         {({ isSubmitting }) => (
-          <Form className="ml-56">
+          <Form className="pl-96">
             {/* Form fields */}
             <div className="text-3xl ">
               {/* Type of property */}
@@ -107,7 +107,7 @@ const PropertyForm = ({ onNext }) => {
               </label>
               <Field
                 as="textarea"
-                className="p-1 mt-2 w-[400px] border border-gray-600 focus:outline-lightseagreen-100 "
+                className="p-1 mt-2 w-[400px] border border-gray-600 focus:outline-lightseagreen-100"
                 type="text"
                 name="address"
                 required
@@ -315,9 +315,9 @@ const PropertyForm = ({ onNext }) => {
               </FieldArray>
             </div>
 
-            <div className="rounded bg-lightseagreen-100 mt-14 ml-72 mb-2 w-[120px]  h-[40px]">
+            <div className="rounded bg-lightseagreen-100 mt-14 mx-auto mb-2 ml-72 w-20% h-10 flex items-center justify-center">
               <button
-                className="text-white p-2 pl-10 text-3xl font-medium"
+                className="text-white p-2 pl-2 text-3xl font-medium"
                 type="submit"
                 disabled={isSubmitting}
               >
