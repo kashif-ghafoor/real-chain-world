@@ -1,4 +1,4 @@
-import { memo, useCallback } from "react";
+import { useCallback } from "react";
 
 const Hero = () => {
   const onFrameButton1Click = useCallback(() => {
