@@ -24,7 +24,7 @@ const SingleProperty = ({ buttonText }) => {
             </p>
           </div>
           <Link to={buttonText === "View Property" ? "/property" : ""}>
-            <button className="text-xl md:text-4xl font-medium text-white text-center cursor-pointer border-none ml-1 pl-4 bg-lightseagreen-100 rounded w-full md:w-[290px] h-[50px]">
+            <button className="text-xl md:text-4xl font-medium text-white text-center cursor-pointer border-none ml-1 pl-4 mb-2 bg-lightseagreen-100 rounded w-full md:w-[290px] h-[50px]">
               {buttonText}
             </button>
           </Link>
