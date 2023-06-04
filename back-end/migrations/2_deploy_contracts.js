@@ -1,5 +1,5 @@
-const RealEstate = artifacts.require("PropertyRegistry");
+const PropertyFactory = artifacts.require("PropertyFactory");
 
-module.exports = function (deployer) {
-  deployer.deploy(RealEstate);
+module.exports = function(deployer) {
+  deployer.deploy(PropertyFactory);
 };
