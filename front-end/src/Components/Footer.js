@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer
-      className="mt-8 md:mt-56 h-[360px] text-left text-gray-100 "
+      className="bg-gray-200 mt-8 md:mt-56 h-[400px] text-left text-gray-100 "
       id="footer"
     >
       <div className="box-border h-[1px] border-t-[1px] border-solid border-gray-600" />
@@ -23,7 +23,7 @@ const Footer = () => {
               src="/biinstagram.svg"
             />
             <img
-              className="w-[25px] h-[25px] overflow-hidden"
+              className="w-[40px] h-[25px] overflow-hidden"
               alt=""
               src="/bitwitter.svg"
             />
@@ -34,15 +34,15 @@ const Footer = () => {
             />
           </div>
         </div>
-        <div className="flex-col m-4 md:m-14">
-          <b className="text-4xl text-lightseagreen-100">Support</b>
+        <div className="flex-col m-4 md:m-14 text-4xl">
+          <b className="text-5xl text-lightseagreen-100">Support</b>
           <div className="mt-2 text-gray-500">Contact Us</div>
           <div className="mt-2 text-gray-500">FAQ's</div>
           <div className="mt-2 text-gray-500">Privacy Policy</div>
           <div className="mt-2 text-gray-500">Terms and Conditions</div>
         </div>
         <div className="flex-col m-4 md:m-14">
-          <b className="text-4xl text-lightseagreen-100">Investors</b>
+          <b className="text-5xl text-lightseagreen-100">Investors</b>
           <Link to="/MarketPlace">
             <div className="mt-2 text-gray-500">Marketplace</div>
           </Link>
@@ -52,7 +52,7 @@ const Footer = () => {
           <div className="mt-2 text-gray-500">Platform</div>
         </div>
         <div className="flex-col m-4 md:m-14">
-          <b className="text-4xl text-lightseagreen-100">Sellers</b>
+          <b className="text-5xl text-lightseagreen-100">Sellers</b>
           <Link to="/Learn">
             <div className="mt-2 text-gray-500">
               Learn About Real Chain World
@@ -69,7 +69,7 @@ const Footer = () => {
       <div className=" justify-center">
         <div className="m-4 bg-lightseagreen-100 w-[98%] md:w-[96%] h-[2px]" />
 
-        <div className="text-gray-500 text-center">
+        <div className="pb-2 text-4xl text-gray-500 text-center">
           All Rights Reserved, 2023 © Real Chain World
         </div>
       </div>

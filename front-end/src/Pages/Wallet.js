@@ -4,20 +4,20 @@ import SmallNavBar from "../Components/SmallNavBar";
 const Wallet = () => {
   return (
     <div className="bg-gray-200 w-screen">
-      <div className="absolute left-[820px] m-4">
+      <div className="absolute left-[1320px] m-6">
         <SmallNavBar />
       </div>
-      <div className="pl-16 absolute left-[350px] top-[100px]">
-        <h1 className="font-serif text-4xl font-bold">Wallet</h1>
-        <div className="border-t-2 border-lightseagreen-100 mt-10 mb-16 w-[700px] h-[420px] shadow-lg bg-white">
+      <div className="pl-16 absolute left-[400px] top-[140px]">
+        <h1 className="font-serif text-5xl font-bold">Wallet</h1>
+        <div className="border-t-2 border-lightseagreen-100 mt-10 mb-16 w-[1200px] h-[520px] shadow-lg bg-white">
           <div className="flex justify-center">
             <img
-              className="w-[220px] h-[220px] overflow-hidden"
+              className="w-[270px] h-[290px] overflow-hidden"
               alt=""
               src="/wallet.svg"
             />
           </div>
-          <h1 className=" flex justify-center text-lightseagreen-100 font-serif text-4xl font-bold mt-6">
+          <h1 className=" flex justify-center text-lightseagreen-100 font-serif text-5xl font-bold mt-6">
             Do you already have a wallet?
           </h1>
           <p className="flex justify-center">

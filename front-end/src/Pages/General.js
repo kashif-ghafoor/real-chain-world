@@ -29,11 +29,11 @@ const General = () => {
     <>
       <div className="flex" style={{ height: "100vh" }}>
         <div
-          className="sidebar bg-white text-gray-500 font-medium font-serif text-4xl shadow-lg fixed inset-0"
-          style={{ width: "22%" }}
+          className="sidebar bg-white text-gray-500 font-medium font-serif text-5xl shadow-lg fixed inset-0"
+          style={{ width: "18%" }}
         >
           <img
-            className="h-16 w-16 mt-24 ml-28"
+            className="h-20 w-20 mt-32 ml-32"
             src={require("../assets/logo-signin.png")}
             alt=""
           />

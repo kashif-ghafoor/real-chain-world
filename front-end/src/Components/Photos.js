@@ -30,32 +30,28 @@ const Photos = () => {
 
   return (
     <div className="App">
-      <div style={{ textAlign: "center" }}>
-        <div
+      <div>
+        <Carousel
+          data={data}
+          time={2000}
+          radius="10px"
+          width="1000px"
+          height="500px"
+          automatic={true}
+          dots={true}
+          pauseIconColor="white"
+          pauseIconSize="40px"
+          slideBackgroundColor="lightseagreen-100"
+          slideImageFit="cover"
+          thumbnails={true}
+          thumbnailWidth="150px"
           style={{
-            padding: "0",
+            textAlign: "center",
+            maxWidth: "1000px",
+            maxHeight: "500px",
+            margin: "40px auto",
           }}
-        >
-          <Carousel
-            data={data}
-            time={2000}
-            radius="10px"
-            automatic={true}
-            dots={true}
-            pauseIconColor="white"
-            pauseIconSize="40px"
-            slideBackgroundColor="lightseagreen-100"
-            slideImageFit="cover"
-            thumbnails={true}
-            thumbnailWidth="100px"
-            style={{
-              textAlign: "center",
-              maxWidth: "1200px",
-              maxHeight: "400px",
-              margin: "40px 110px",
-            }}
-          />
-        </div>
+        />
       </div>
     </div>
   );

@@ -18,13 +18,13 @@ const Profile = () => {
   return (
     <>
       <div className="pl-6 bg-gray-200 w-screen">
-        <div className="absolute left-[820px] m-4">
+        <div className="absolute left-[1320px] m-6">
           <SmallNavBar />
         </div>
-        <div className="absolute left-[420px] top-[100px]">
-          <h1 className="font-serif text-4xl font-bold">Edit Your Profile</h1>
-          <div className="border-t-2 border-lightseagreen-100 mt-8  mb-16 w-[450px] h-[480px] shadow-lg bg-white">
-            <form className="max-w-sm mx-auto pt-6" onSubmit={handleSubmit}>
+        <div className="absolute left-[450px] top-[160px]">
+          <h1 className="font-serif text-5xl font-bold">Edit Your Profile</h1>
+          <div className="border-t-2 border-lightseagreen-100 mt-8 mb-16 w-[530px] h-[540px] shadow-lg bg-white">
+            <form className="max-w-sm mx-auto pt-10" onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label
                   className="block mb-2 font-bold text-gray-700"
@@ -33,7 +33,7 @@ const Profile = () => {
                   Name
                 </label>
                 <input
-                  className="w-full px-3 py-2 leading-tight text-gray-700 border border-gray-300 p-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-200"
+                  className="w-full px-4 py-3 leading-tight text-gray-700 border border-gray-300 p-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-200"
                   id="name"
                   type="text"
                   placeholder="Your name"
@@ -50,7 +50,7 @@ const Profile = () => {
                   Email
                 </label>
                 <input
-                  className="w-full px-3 py-2 leading-tight text-gray-700 border border-gray-300 p-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-200"
+                  className="w-full px-4 py-3 leading-tight text-gray-700 border border-gray-300 p-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-200"
                   id="email"
                   type="email"
                   placeholder="Your email"
@@ -66,7 +66,7 @@ const Profile = () => {
                   Cell Number
                 </label>
                 <input
-                  className="w-full px-3 py-2 leading-tight text-gray-700 border border-gray-300 p-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-200"
+                  className="w-full px-4 py-3 leading-tight text-gray-700 border border-gray-300 p-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-200"
                   id="number"
                   type="text"
                   placeholder="Mobile number"
@@ -83,7 +83,7 @@ const Profile = () => {
                   Description
                 </label>
                 <textarea
-                  className="w-full px-3 py-2 leading-tight text-gray-700 border border-gray-300 p-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-200"
+                  className="w-full px-4  py-5 leading-tight text-gray-700 border border-gray-300 p-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-200"
                   id="bio"
                   placeholder="Write something about yourself"
                   value={bio}

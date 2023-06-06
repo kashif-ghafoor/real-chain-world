@@ -24,22 +24,23 @@ function NavBar() {
 
   return (
     <>
-      <header className="bg-white">
+      <header className="mt-6 bg-white">
         <nav
-          className="flex items-center justify-between p-5 pl-8 sm:pl-16 lg:pl-24 pr-8 sm:pr-16 lg:pr-24 text-3xl sm:text-4xl lg:text-3xl"
+          className="flex items-center justify-between p-5 pl-8 sm:pl-16 lg:pl-24 pr-8 sm:pr-16 lg:pr-24 text-7xl sm:text-4xl lg:text-7xl"
           aria-label="Global"
         >
-          <div className="flex">
+          <div className="flex ml-8">
             <Link to="/">
               <img
-                className="h-15 w-40"
+                className="h-20
+                 w-70"
                 src={require("../assets/logo.png")}
                 alt=""
               />
             </Link>
           </div>
 
-          <Popover.Group className="hidden lg:flex sm:gap-x-6 lg:gap-x-10 text-4xl sm:text-2xl lg:text-3xl">
+          <Popover.Group className="hidden lg:flex sm:gap-x-3 lg:gap-x-10 text-5xl sm:text-3xl lg:text-5xl">
             <Link to="/marketplace">
               <b className="font-semibold leading-6 text-gray-900">
                 Marketplace
@@ -56,7 +57,7 @@ function NavBar() {
             </Link>
 
             <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x font-semibold leading-6 text-gray-900">
+              <Popover.Button className="mt-1 flex items-center gap-x-2 font-semibold leading-6 text-gray-900">
                 Learn
                 <ChevronDownIcon
                   className="h-5 w-5 flex-none text-gray-400"
@@ -112,7 +113,7 @@ function NavBar() {
             </Popover>
           </Popover.Group>
           <button
-            className="flex ml-4 lg:ml-56 lg:flex rounded-md bg-blue text-white font-bold py-2 px-6 sm:px-4 lg:px-6 rounded text-xs sm:text-sm lg:text-xs font-semibold leading-6 text-white-900"
+            className="mr-16 flex ml-4 lg:ml-56 lg:flex rounded-md bg-blue text-white font-bold py-5 px-6 sm:px-4 lg:px-10 rounded text-3xl sm:text-3xl lg:text-5xl font-semibold leading-6 text-white-900"
             onClick={() => setOpen(true)}
           >
             Sign in

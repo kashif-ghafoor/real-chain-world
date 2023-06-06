@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
 import Photos from "../Components/Photos";
-import { Link } from "react-router-dom";
 import {
   FaHandHoldingUsd,
   FaImages,
@@ -89,65 +88,72 @@ const PropertyPage = () => {
     <>
       {/* Navbar component */}
       <NavBar />
-      <div className="h-[265px] text-left text-17xl text-lightseagreen-100 font-h2">
+      <div className="h-[405px] text-left text-17xl text-lightseagreen-100 font-h2">
         <img
-          className="w-screen h-[260px] object-cover"
+          className="w-screen h-[400px] object-cover"
           alt=""
           src={require("../assets/hero1.jpg")}
         />
 
-        <p className="absolute top-[270px] left-[100px] text-9xl tracking-[-0.02em] text-white font-bold w-[450px]">
+        <p className="absolute top-[410px] left-[100px] text-17xl tracking-[-0.02em] text-white font-bold w-[450px]">
           30 Inlet Cove Cottage
         </p>
-        <p className="absolute top-[320px] left-[100px] text-3xl tracking-[-0.02em] text-white font-normal w-[450px]">
+        <p className="absolute top-[460px] left-[100px] text-5xl tracking-[-0.02em] text-white font-normal w-[700px]">
           2972 Westheimer Rd. Santa Ana, Illinois 85486
         </p>
       </div>
 
       {/* button bar below image */}
-      <div className="h-[50px] bg-offwhite">
-        <div className="ml-16 flex justify-left p-1">
+      <div className="h-[70px] bg-offwhite">
+        <div className="ml-16 flex justify-left p-1 text-4xl ">
           <button
-            className="ml-2 rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
+            className="ml-2 rounded  font-medium w-[120px] h-12 text-lightseagreen-100"
             onClick={() => scrollToSection(photosRef)}
           >
             <FaImages className="mr-2 inline" />
             Photos
           </button>
           <button
-            className=" ml-2 rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
+            className=" ml-2 rounded font-medium w-[120px] h-12 text-lightseagreen-100"
             onClick={() => scrollToSection(overviewRef)}
           >
             <FaInfoCircle className="mr-2 inline" />
             Overview
           </button>
           <button
-            className=" ml-2 rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
+            className=" ml-2 rounded  font-medium w-[120px] h-12 text-lightseagreen-100"
             onClick={() => scrollToSection(aboutRef)}
           >
             <FaUser className="mr-2 inline" />
             About
           </button>
           <button
-            className="ml-2 rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
+            className=" ml-2 rounded  font-medium w-[120px] h-12 text-lightseagreen-100"
+            onClick={() => scrollToSection(docsRef)}
+          >
+            <FontAwesomeIcon icon={faFile} className="mr-2 inline" />
+            Docs
+          </button>
+          {/* <button
+            className="ml-2 rounded  font-medium w-[120px] h-12 text-lightseagreen-100 inline"
             onClick={() => scrollToSection(docsRef)}
           >
             <FontAwesomeIcon
               icon={faFile}
               className="text-lightseagreen-100 w-[15px] h-[15px] mr-2 mt-2  
-              inline"
+              "
             />
             Documents
-          </button>
+          </button> */}
           <button
-            className="ml-2 rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
+            className="ml-4 rounded  font-medium w-[120px] h-12 text-lightseagreen-100"
             onClick={() => scrollToSection(locationRef)}
           >
             <FaMapMarkerAlt className="mr-2 inline" />
             Location
           </button>
           <button
-            className="ml-2 rounded text-3xl font-medium w-[120px] h-12 text-lightseagreen-100"
+            className="ml-2 rounded font-medium w-[120px] h-12 text-lightseagreen-100"
             onClick={() => scrollToSection(holdersRef)}
           >
             <FaHandHoldingUsd className="mr-2 inline" />
@@ -156,38 +162,45 @@ const PropertyPage = () => {
         </div>
       </div>
 
-      <div id="photos" className="mt-2 flex " ref={photosRef}>
+      <div
+        id="photos"
+        className="ml-16 mt-2 flex justify-around"
+        ref={photosRef}
+      >
         {/* photos section  */}
         <Photos className="ml-6" />
         {/* Investor callout section */}
-        <div className="bg-lightseagreen-100 mt-12 w-[320px] h-[200px] rounded-xl">
-          <h1 className="mt-6 ml-6  text-5xl text-white font-semibold">
+        <div className="p-10 bg-lightseagreen-100 mt-12 w-[480px] h-[260px] rounded-xl">
+          <h1 className="ml-8 text-11xl text-white font-semibold">
             Want to invest in project
           </h1>
-          <h1 className="ml-8 mr-6 mt-2 text-3xl text-white ">
+          <h1 className="mt-2 text-5xl text-white ">
             Join other Investors by buying tokens
           </h1>
 
-          <button className="rounded ml-24 mt-6 font-medium w-[120px] h-12 bg-offwhite ">
+          <button className="rounded ml-24 mt-6 text-7xl font-medium w-[180px] h-[60px] bg-offwhite ">
             Invest
           </button>
         </div>
       </div>
 
       {/* overview section */}
-      <div id="overview" className="mt-32 ml-28 h-[570px] " ref={overviewRef}>
-        <h1 className="font-semibold text-4xl text-gray-700">
+      <div id="overview" className="mt-40 ml-32 h-[650px] " ref={overviewRef}>
+        <h1 className="font-semibold text-5xl text-gray-700">
           Property Overview
         </h1>
-        <table className="w-[1000px] h-[530px] bg-white">
-          <thead className="bg-lightseagreen-100 h-[35px]">
-            <tr className="text-white text-3xl font-medium">
+        <table className="w-[1000px] h-[300px] bg-white">
+          <thead className="bg-lightseagreen-100 h-[40px]">
+            <tr className="text-white text-5xl font-medium">
               <th colSpan="2">Details</th>
             </tr>
           </thead>
           <tbody>
             {data.map((item, index) => (
-              <tr key={index} className="border-b border-lightseagreen-200">
+              <tr
+                key={index}
+                className="h-[40px] border-b-2 border-lightseagreen-200"
+              >
                 <td className="pr-96 font-medium">{Object.keys(item)[0]}</td>
                 <td>{item[Object.keys(item)[0]]}</td>
               </tr>
@@ -199,14 +212,14 @@ const PropertyPage = () => {
       {/* About section */}
       <div
         id="about"
-        className="mt-16 mr-6 ml-12 flex justify-around"
+        className="w-[1600px] ml-32   mt-16 flex justify-between "
         ref={aboutRef}
       >
         <div>
           <h1 className="font-semibold text-4xl text-gray-700">
             About the Property
           </h1>
-          <p className="w-[550px] mt-4 text-3xl text-gray-700 leading-relaxed">
+          <p className="w-[800px] mt-4 text-3xl text-gray-700 leading-relaxed">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet. <br />
@@ -295,19 +308,19 @@ const PropertyPage = () => {
       </div>
 
       {/* Documents -sections */}
-      <div id="docs" className="mt-32 h-[400px]" ref={docsRef}>
-        <div className="bg-white m-20 w-[550px] h-[350px] rounded border-y-2 border-lightseagreen-100">
+      <div id="docs" className="ml-12 mt-32 h-[400px]" ref={docsRef}>
+        <div className="bg-white m-20 w-[650px] h-[390px] rounded border-y-2 border-lightseagreen-100">
           <div className="flex items-center m-4 pt-6 pl-4">
             <FontAwesomeIcon
               icon={faFile}
               className="text-lightseagreen-100 w-[25px] h-[25px] mr-4 mt-2"
             />
-            <h1 className="mt-2 text-4xl text-lightseagreen-100 font-semibold">
+            <h1 className="mt-2 text-5xl text-lightseagreen-100 font-semibold">
               Documents
             </h1>
           </div>
 
-          <ul className="m-12 space-y-2">
+          <ul className="m-12 space-y-2 text-5xl ">
             {documents.map((document, index) => (
               <li key={index} className="border-b border-gray-300 pb-2">
                 <a
@@ -325,27 +338,27 @@ const PropertyPage = () => {
 
       {/* Representation of Map */}
       <div id="location" className="mt-16 mr-20 ml-28 h-[300px]">
-        <h1 className="font-semibold text-4xl text-gray-700" ref={locationRef}>
+        <h1 className="font-semibold text-7xl text-gray-700" ref={locationRef}>
           <FaMapMarkerAlt className="mr-4 inline" />
           Map Details
         </h1>
       </div>
 
       {/* Share holders section */}
-      <div id="holders" className="mt-16 mr-10 ml-20">
-        <h1 className="font-semibold text-4xl text-gray-700" ref={holdersRef}>
+      <div id="holders" className="mt-16 mr-16 ml-28">
+        <h1 className="font-semibold text-7xl text-gray-700" ref={holdersRef}>
           <FaHandHoldingUsd className="mr-4 inline" />
           Share Holders
         </h1>
-        <div className="mt-6 flex bg-whitesmoke">
-          <div className="w-[700px] ">
-            <p className="font-medium ml-56">Shares</p>
+        <div className=" text-5xl mt-6 flex bg-whitesmoke">
+          <div className="w-[800px] ">
+            <p className="pt-4 font-semibold ml-56">Shares</p>
             {/* rendering the bars */}
             {bars.map((bar) => (
               <>
                 <div
                   key={bar.id}
-                  className="text-2xl p-1 h-[27px] bg-lightseagreen-100 text-white "
+                  className="text-3xl p-2  h-[40px] bg-lightseagreen-100 text-white "
                   style={{
                     width: `${bar.amount}%`,
                     margin: "36px 0px",
@@ -357,11 +370,11 @@ const PropertyPage = () => {
             ))}
           </div>
           <div>
-            <p className="font-medium ml-12">Volume</p>
+            <p className="pt-4 font-semibold ml-32">Volume</p>
             {/* Rendering the Amount */}
             {bars.map((bar) => (
               <div
-                className="bg-lightseagreen ml-16 mt-8 pb-2 text-black border-b-2 border-lightseagreen-300"
+                className="bg-lightseagreen ml-40 mt-8 pb-2 text-black border-b-2 border-lightseagreen-300"
                 key={bar.id}
               >
                 <ul>
@@ -371,11 +384,11 @@ const PropertyPage = () => {
             ))}
           </div>
           <div>
-            <p className="font-medium ml-20">Holders</p>
+            <p className="pt-4 font-semibold ml-32">Holders</p>
             {/* Rendering account holder name */}
             {bars.map((bar) => (
               <div
-                className="bg-lightseagreen ml-20 mt-8 pb-2 text-black  border-b-2 border-lightseagreen-300"
+                className="bg-lightseagreen ml-32 mt-8 pb-2 text-black  border-b-2 border-lightseagreen-300"
                 key={bar.id}
               >
                 <ul>
@@ -385,11 +398,11 @@ const PropertyPage = () => {
             ))}
           </div>
           <div>
-            <p className="font-medium ml-16">Contact Holders</p>
+            <p className="pt-4 font-semibold ml-48">Contact Holders</p>
             {/* bid button */}
             {bars.map((bar) => (
               <div
-                className="bg-lightseagreen ml-28 mt-8 pb-2 text-white bg-blue pl-5  "
+                className="bg-lightseagreen ml-64 mt-8 pb-2 text-white bg-blue pl-10  "
                 key={bar.id}
               >
                 <ul>
