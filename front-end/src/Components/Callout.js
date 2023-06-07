@@ -17,7 +17,7 @@ const Callout = () => {
         <Link to="/Tokenization">
           <button className="cursor-pointer [border:none] bg-[transparent] relative w-[290px] h-[70px] shrink-0">
             <div className="absolute top-[0px] left-[0px] rounded-3xs bg-blue-for-button w-[280px] h-[70px]" />
-            <div className="p-y-4 absolute top-[12px] left-[15px] text-5xl font-medium text-white text-left">
+            <div className="p-y-4 absolute top-[16px] left-[15px] text-5xl font-medium text-white text-left">
               Tokenize your property
             </div>
           </button>

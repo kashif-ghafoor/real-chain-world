@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
 import Photos from "../Components/Photos";
+
 import {
   FaHandHoldingUsd,
   FaImages,
@@ -216,10 +217,10 @@ const PropertyPage = () => {
         ref={aboutRef}
       >
         <div>
-          <h1 className="font-semibold text-4xl text-gray-700">
+          <h1 className="font-semibold text-7xl text-gray-700">
             About the Property
           </h1>
-          <p className="w-[800px] mt-4 text-3xl text-gray-700 leading-relaxed">
+          <p className="w-[800px] mt-4 text-4xl text-gray-700 leading-relaxed">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet. <br />
@@ -353,6 +354,7 @@ const PropertyPage = () => {
         <div className=" text-5xl mt-6 flex bg-whitesmoke">
           <div className="w-[800px] ">
             <p className="pt-4 font-semibold ml-56">Shares</p>
+            <div className="h-[1px] w-[100%] bg-lightseagreen-100"></div>
             {/* rendering the bars */}
             {bars.map((bar) => (
               <>
@@ -371,6 +373,8 @@ const PropertyPage = () => {
           </div>
           <div>
             <p className="pt-4 font-semibold ml-32">Volume</p>
+            <div className="h-[1px] w-[100%] bg-lightseagreen-100"></div>
+
             {/* Rendering the Amount */}
             {bars.map((bar) => (
               <div
@@ -385,6 +389,7 @@ const PropertyPage = () => {
           </div>
           <div>
             <p className="pt-4 font-semibold ml-32">Holders</p>
+            <div className="h-[1px] w-[100%] bg-lightseagreen-100"></div>
             {/* Rendering account holder name */}
             {bars.map((bar) => (
               <div
@@ -399,6 +404,7 @@ const PropertyPage = () => {
           </div>
           <div>
             <p className="pt-4 font-semibold ml-48">Contact Holders</p>
+            <div className="h-[1px] w-[100%] bg-lightseagreen-100"></div>
             {/* bid button */}
             {bars.map((bar) => (
               <div

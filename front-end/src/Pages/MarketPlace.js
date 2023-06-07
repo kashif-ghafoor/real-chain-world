@@ -19,11 +19,11 @@ const MarketPlace = () => {
           alt=""
           src={require("../assets/hero1.jpg")}
         />
-        <div className="absolute top-[400px] left-[100px] w-[600px] h-[140px] bg-gray-500">
-          <p className="relative top-[05px] left-[10px] text-11xl tracking-[-0.02em] text-white font-bold w-[500px]">
+        <div className="absolute top-[400px] left-[100px] w-[610px] h-[170px] bg-gray-500">
+          <p className="relative top-[05px] left-[10px] text-17xl tracking-[-0.02em] text-white font-bold w-[550px]">
             Find New Projects in Pakistan
           </p>
-          <p className="relative top-[15px] left-[10px] text-xxxs text-[16px] tracking-[-0.001em] text-white font-normal w-[500px]">
+          <p className="relative top-[15px] left-[10px] text-4xl tracking-[-0.001em] text-white font-normal w-[570px]">
             Real Chain World provides you with a vibe of what every day looks
             like in different housing societies of Pakistan
           </p>
@@ -34,7 +34,7 @@ const MarketPlace = () => {
           <p
             id="city"
             htmlFor="city"
-            className="relative top-[05px] ml-4 left-[05px] text-4xl  text-lightseagreen-100 font-medium"
+            className="relative top-[05px] ml-4 left-[05px] text-5xl  text-lightseagreen-100 font-medium"
           >
             City
           </p>
@@ -47,7 +47,7 @@ const MarketPlace = () => {
         </div>
         <div className="relative top-[15px] w-1 h-[70px] bg-lightseagreen-100"></div>
         <div className="relative top-[05px] ml-2 rounded-lg w-2/3 md:w-3/4 lg:w-3/5 h-[80px] bg-white">
-          <p className="relative top-[05px] ml-4 left-[05px] text-4xl text-lightseagreen-100 font-medium">
+          <p className="relative top-[05px] ml-4 left-[05px] text-5xl text-lightseagreen-100 font-medium">
             Property Name
           </p>
           <input
@@ -58,14 +58,14 @@ const MarketPlace = () => {
           />
         </div>
         <div className="relative top-[15px] w-1 h-[70px] bg-lightseagreen-100"></div>
-        <button className="relative top-[22px] px-6 ml-6 mr-6 rounded w-1/6 h-[55px] bg-lightseagreen-100 text-[22px] text-white font-medium inline-flex items-center">
+        <button className="relative top-[22px] px-6 ml-6 mr-6 rounded w-1/6 h-[55px] bg-lightseagreen-100 text-[24px] text-white font-medium inline-flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 20 20"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-4 h-4 mr-2"
+            className="w-6 h-6 mr-4"
           >
             <path
               strokeLinecap="round"

@@ -22,9 +22,9 @@ const Profile = () => {
           <SmallNavBar />
         </div>
         <div className="absolute left-[450px] top-[160px]">
-          <h1 className="font-serif text-5xl font-bold">Edit Your Profile</h1>
-          <div className="border-t-2 border-lightseagreen-100 mt-8 mb-16 w-[530px] h-[540px] shadow-lg bg-white">
-            <form className="max-w-sm mx-auto pt-10" onSubmit={handleSubmit}>
+          <h1 className="font-serif text-7xl font-bold">Edit Your Profile</h1>
+          <div className="text-4xl border-t-2 border-lightseagreen-100 mt-8 mb-16 w-[650px] h-[600px] shadow-lg bg-white">
+            <form className="mx-24 pt-10" onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label
                   className="block mb-2 font-bold text-gray-700"
@@ -33,7 +33,7 @@ const Profile = () => {
                   Name
                 </label>
                 <input
-                  className="w-full px-4 py-3 leading-tight text-gray-700 border border-gray-300 p-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-200"
+                  className="w-full px-1 py-3 leading-tight text-gray-700 border border-gray-300  rounded focus:outline-none focus:ring-2 focus:ring-blue-200"
                   id="name"
                   type="text"
                   placeholder="Your name"

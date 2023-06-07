@@ -10,7 +10,7 @@ const Dashboard = () => {
           <SmallNavBar />
         </div>
         <div className="absolute left-[450px] top-[160px]">
-          <h1 className="font-serif text-5xl font-bold">Dashboard</h1>
+          <h1 className="font-serif text-7xl font-bold">Dashboard</h1>
 
           <div className="m-6 flex flex-wrap gap-5 w-[90%] md:w-[1100px] xl:w-[1400px]">
             <SingleProperty buttonText="Distribute Revenue" />

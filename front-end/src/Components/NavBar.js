@@ -112,12 +112,14 @@ function NavBar() {
               </Transition>
             </Popover>
           </Popover.Group>
-          <button
-            className="mr-16 flex ml-4 lg:ml-56 lg:flex rounded-md bg-blue text-white font-bold py-5 px-6 sm:px-4 lg:px-10 rounded text-3xl sm:text-3xl lg:text-5xl font-semibold leading-6 text-white-900"
-            onClick={() => setOpen(true)}
-          >
-            Sign in
-          </button>
+          <div>
+            <button
+              className="mr-16 flex ml-4 lg:ml-56 lg:flex rounded-md bg-blue text-white font-bold py-5 px-6 sm:px-4 lg:px-10 rounded text-3xl sm:text-3xl lg:text-5xl font-semibold leading-6 text-white-900"
+              onClick={() => setOpen(true)}
+            >
+              Sign in
+            </button>
+          </div>
         </nav>
       </header>
       <Signin open={open} onClose={() => setOpen(false)} />

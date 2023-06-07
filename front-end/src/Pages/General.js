@@ -29,7 +29,7 @@ const General = () => {
     <>
       <div className="flex" style={{ height: "100vh" }}>
         <div
-          className="sidebar bg-white text-gray-500 font-medium font-serif text-5xl shadow-lg fixed inset-0"
+          className="sidebar bg-white text-gray-500 font-medium font-serif text-7xl shadow-lg fixed inset-0"
           style={{ width: "18%" }}
         >
           <img
