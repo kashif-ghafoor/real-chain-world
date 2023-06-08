@@ -170,7 +170,7 @@ const Tokenization = () => {
               <h2 className="mt-96">Property Location</h2>
               <h2 className="absolute top-[1330px]">Price and Currency</h2>
               <h2 className="absolute top-[1800px]">Property Features</h2>
-              <h2 ref={personalInfoRef} className="pt-8 absolute top-[2370px]">
+              <h2 className="pt-8 absolute top-[2370px]">
                 Personal Information
               </h2>
               <h2 ref={DocsRef} className="absolute mt-2 top-[3110px]">
@@ -469,7 +469,7 @@ const Tokenization = () => {
                     </div>
                   </FieldArray>
                 </div>
-                <div className="mt-24 flex flex-col">
+                <div ref={personalInfoRef} className="mt-24 flex flex-col">
                   <label className="font-medium">Who are you?</label>
                   <div className="flex">
                     <label className="font-medium mt-8" htmlFor="firstname">

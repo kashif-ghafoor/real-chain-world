@@ -59,7 +59,8 @@ const General = () => {
               onClick={() => setActiveComponent("dashboard")}
             >
               <button>
-                <FaDashcube className="inline mr-4" /> Dashboard
+                <FaDashcube className="inline mr-4" />
+                <a href="/general/dashboard"> Dashboard</a>
               </button>
             </li>
             <li

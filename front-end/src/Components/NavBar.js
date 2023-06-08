@@ -4,20 +4,34 @@ import { Popover, Transition } from "@headlessui/react";
 import { ChartPieIcon, CursorArrowRaysIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import Signin from "../Pages/Signin";
+import {
+  FaGripVertical,
+  FaUser,
+  FaWallet,
+  FaChartLine,
+  FaDashcube,
+} from "react-icons/fa";
 
 const learn = [
   {
     name: "How to Invest",
-    href: "#",
-    icon: ChartPieIcon,
+    href: "/learn/howtoinvest",
   },
   {
     name: "How to Tokenize",
-    href: "#",
-    icon: CursorArrowRaysIcon,
+    href: "/learn/howtotokenize",
   },
 ];
 const callsToAction = [{ name: "Watch demo", href: "#", icon: PlayCircleIcon }];
+
+// New button data
+const customButton = [
+  {
+    name: "Profile",
+    href: "/general",
+    icon: FaUser,
+  },
+];
 
 function NavBar() {
   const [open, setOpen] = useState(false);
@@ -32,8 +46,7 @@ function NavBar() {
           <div className="flex ml-8">
             <Link to="/">
               <img
-                className="h-20
-                 w-70"
+                className="h-20 w-70"
                 src={require("../assets/logo.png")}
                 alt=""
               />
@@ -52,7 +65,7 @@ function NavBar() {
               </b>
             </Link>
 
-            <Link to="/general">
+            <Link to="/about">
               <b className="font-semibold leading-6 text-gray-900">About</b>
             </Link>
 
@@ -74,34 +87,34 @@ function NavBar() {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute -left-6 top-full z-10 mt-3 w-screen max-w-max overflow-hidden rounded-1xl bg-white shadow-lg ring-1 ring-gray-900/5 border-t-4 border-sky-blue">
-                  <div className="p-4 divide-y divide-slate-200 divide-sky-blue">
+                <Popover.Panel className="absolute -left-20 top-full z-10 mt-3 w-[350px] overflow-hidden rounded-1xl bg-white shadow-lg ring-1 ring-gray-900/5 border-t-4 border-sky-blue">
+                  <div className="ml-1 p-6 divide-y  divide-sky-blue">
                     {learn.map((item) => (
                       <div
                         key={item.name}
-                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-4 hover:bg-lightseagreen-200"
+                        className="group relative flex items-center gap-x-6 rounded-lg p-6 text-sm leading-4 hover:bg-lightseagreen-200"
                       >
                         <div className="flex-auto">
-                          <a
-                            href={item.href}
-                            className="block font-semibold text-gray-900"
+                          <Link
+                            to={item.href}
+                            className="block font-semibold text-blue"
                           >
                             {item.name}
                             <span className="absolute inset-0" />
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     ))}
                   </div>
-                  <div className="grid grid-cols-2 divide-x divide-gray-900/5  hover:bg-lightseagreen-200">
+                  <div className="grid grid-cols-2  hover:bg-lightseagreen-200">
                     {callsToAction.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
-                        className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 "
+                        className="flex items-center w-[350px] gap-x-3 p-3 text-sm font-medium leading-6 text-blue "
                       >
                         <item.icon
-                          className="h-5 w-5 flex-none text-gray-400"
+                          className="ml-4 h-12 w-10 flex-none text-blue"
                           aria-hidden="true"
                         />
                         {item.name}
@@ -112,13 +125,55 @@ function NavBar() {
               </Transition>
             </Popover>
           </Popover.Group>
-          <div>
+
+          {/* Updated Sign in button */}
+          <div className="flex mr-10">
             <button
-              className="mr-16 flex ml-4 lg:ml-56 lg:flex rounded-md bg-blue text-white font-bold py-5 px-6 sm:px-4 lg:px-10 rounded text-3xl sm:text-3xl lg:text-5xl font-semibold leading-6 text-white-900"
+              className="ml-4 lg:ml-0 lg:flex rounded-md bg-blue text-white font-bold py-5 px-6 sm:px-4 lg:px-10 rounded text-3xl sm:text-3xl lg:text-5xl font-semibold leading-6 text-white-900"
               onClick={() => setOpen(true)}
             >
               Sign in
             </button>
+            {/* Custom Button */}
+            <Popover className="relative">
+              <Popover.Button className="ml-6 mt-5 flex items-center gap-x-2 font-semibold leading-6 text-gray-900">
+                <FaGripVertical className=" text-lightseagreen-100 " />
+              </Popover.Button>
+
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-200"
+                enterFrom="opacity-0 translate-y-1"
+                enterTo="opacity-100 translate-y-0"
+                leave="transition ease-in duration-150"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 translate-y-1"
+              >
+                <Popover.Panel className="absolute top-full right-1 z-10 mt-3 w-[250px] overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5 border-t-4 border-sky-blue">
+                  <div className="ml-1 p-2 divide-y  divide-sky-blue">
+                    {customButton.map((item) => (
+                      <div
+                        key={item.name}
+                        className="group relative flex justify-center items-center gap-x-6 rounded-lg p-6 text-sm leading-4 hover:bg-lightseagreen-200"
+                      >
+                        <div className="flex-auto">
+                          <Link
+                            to={item.href}
+                            className="block font-semibold text-lightseagreen-100"
+                          >
+                            <div className="flex gap-5">
+                              <item.icon />
+                              {item.name}
+                            </div>
+                          </Link>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  {/* Action for the custom button */}
+                </Popover.Panel>
+              </Transition>
+            </Popover>
           </div>
         </nav>
       </header>
