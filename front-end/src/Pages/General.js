@@ -60,7 +60,7 @@ const General = () => {
             >
               <button>
                 <FaDashcube className="inline mr-4" />
-                <a href="/general/dashboard"> Dashboard</a>
+                Dashboard
               </button>
             </li>
             <li
