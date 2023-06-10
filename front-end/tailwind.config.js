@@ -34,6 +34,7 @@ module.exports = {
         darkslategray: "rgba(34, 54, 91, 0.1)",
         offwhite: "#ede9fe",
         bgbutton: "#dcfce7",
+        seagreen: "rgb(255 237 213)",
         "blue-for-button": "#4c7489",
       },
       fontFamily: {

@@ -86,7 +86,7 @@ const MarketPlace = () => {
       </h3>
       <div className="ml-4 md:ml-24 mt-12" id="best-opportunities">
         <div className="m-6 flex flex-wrap gap-16 w-[90%] md:w-[1100px] xl:w-[1400px]">
-          {/* <card className="w-[310px] h-[580px]">
+          {/* <div className="w-[310px] h-[580px]">
             <img
               className="w-[300px] h-[170px]"
               alt=""
@@ -130,7 +130,7 @@ const MarketPlace = () => {
                 </button>
               </Link>
             </div>
-          </card> */}
+          </div> */}
           <SingleProperty buttonText="View Property" />
           <SingleProperty buttonText="View Property" />
         </div>
