@@ -251,45 +251,48 @@ const PropertyPage = () => {
 
         {/* Project status  */}
         <div>
-          <div className="w-[430px] ml-4 h-[50px] text-5xl  pt-2 text-blue font-bold bg-white border-2 border-blue flex justify-center">
+          <div className="w-[470px] ml-4 h-[50px] text-5xl  pt-2 text-blue font-bold bg-white border-2 border-blue flex justify-center">
             {statusText}
           </div>
 
           {/* The form is only displayed, if the statusText is equal to funraising inititated  */}
           {isFundraisingCompleted && (
             // Bidding form
-            <div className="mt-6 ml-4 w-[430px] h-[460px] shadow-lg bg-white border-b-2 border-blue">
-              <div className=" rounded h-[100px] bg-blue items-center justify-center text-white">
-                <h1 className="pt-4 text-4xl font-semibold text-center">
+            <div className="mt-6 ml-4 w-[470px] h-[500px] shadow-lg bg-white border-b-2 border-blue">
+              <div className=" rounded h-[110px] bg-blue items-center justify-center text-white">
+                <h1 className="pt-4 text-7xl font-semibold text-center">
                   Make an offer, bid in an auction
                 </h1>
-                <p className="text-center">
+                <p className="text-center text-3xl">
                   Submit your offers in a secure, trusted environment.
                 </p>
               </div>
               <form className="ml-8 mt-6 mr-14">
-                <h2 className="text-3xl font-bold mb-6">Bidding Offer</h2>
+                <h2 className="text-5xl font-bold mb-6">Bidding Offer</h2>
                 <div className="mb-6">
                   <div>
-                    <label htmlFor="bidAmount" className="block text-lg mb-2">
+                    <label htmlFor="bidAmount" className="block text-4xl mb-2">
                       Bid Amount:
                     </label>
                     <input
                       type="number"
                       id="bidAmount"
                       name="bidAmount"
-                      className="w-full h-[40px] border border-gray-300 p-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-200"
+                      className="w-full h-[45px] border border-gray-300 p-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-200"
                     />
                   </div>
                   <div>
-                    <label htmlFor="Shares" className="block text-lg mb-2 mt-4">
+                    <label
+                      htmlFor="Shares"
+                      className="block text-4xl  mb-2 mt-4"
+                    >
                       Shares:
                     </label>
                     <input
                       type="number"
                       id="shares"
                       name="shares"
-                      className="w-full h-[40px] border border-gray-300 p-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-200"
+                      className="w-full h-[45px] border border-gray-300 p-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-200"
                     />
                   </div>
                 </div>
@@ -297,7 +300,7 @@ const PropertyPage = () => {
                 <div className="flex justify-center mt-8">
                   <button
                     type="submit"
-                    className="bg-blue text-white font-semibold py-3 px-6 rounded-lg block w-[150px] hover:bg-lightseagreen-100"
+                    className="text-4xl bg-blue text-white font-semibold py-3 px-6 rounded-lg block w-[150px] hover:bg-lightseagreen-100"
                   >
                     Submit Bid
                   </button>

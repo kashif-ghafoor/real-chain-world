@@ -42,7 +42,7 @@ function NavBar() {
     <>
       <header className="mt-6 bg-white">
         <nav
-          className="flex items-center justify-between p-5 pl-8 sm:pl-16 lg:pl-24 pr-8 sm:pr-16 lg:pr-20 text-7xl sm:text-4xl lg:text-7xl"
+          className="flex items-center justify-between p-5 pl-8 sm:pl-16 lg:pl-24 pr-8 sm:pr-16 lg:pr-20 text-1xl sm:text-4xl lg:text-7xl"
           aria-label="Global"
         >
           <div className="flex ml-4">
@@ -55,7 +55,7 @@ function NavBar() {
             </Link>
           </div>
 
-          <Popover.Group className="hidden lg:flex sm:gap-x-3 lg:gap-x-8 text-5xl sm:text-3xl lg:text-5xl">
+          <Popover.Group className="hidden lg:flex sm:gap-x-3 lg:gap-x-8 text-1xl sm:text-3xl lg:text-1xl">
             <Link to="/marketplace">
               <b className="font-semibold leading-6 text-gray-900">
                 Marketplace
@@ -68,7 +68,7 @@ function NavBar() {
             </Link>
             {/* property assessment */}
             <Popover className="relative">
-              <Popover.Button className="mt-1 flex items-center gap-x-2 font-semibold leading-6 text-gray-900">
+              <Popover.Button className="flex items-center gap-x-2 font-semibold leading-6 text-gray-900">
                 Property Assessment
                 <ChevronDownIcon
                   className="mt-1 h-6 w-5 flex-none text-lightseagreen-100 font-bold"
@@ -114,7 +114,7 @@ function NavBar() {
             </Link>
 
             <Popover className="relative">
-              <Popover.Button className="mt-1 flex items-center gap-x-2 font-semibold leading-6 text-gray-900">
+              <Popover.Button className="flex items-center gap-x-2 font-semibold leading-6 text-gray-900">
                 Learn
                 <ChevronDownIcon
                   className="mt-1 h-6 w-5 flex-none text-lightseagreen-100 font-bold"

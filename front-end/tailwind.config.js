@@ -50,6 +50,7 @@ module.exports = {
       "2xl": "13px",
       "3xl": "16px",
       "4xl": "20px",
+      "1xl": "22px",
       "5xl": "24px",
       "7xl": "26px",
       "9xl": "28px",

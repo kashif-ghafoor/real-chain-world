@@ -23,7 +23,13 @@ const SingleProperty = ({ buttonText }) => {
               Alexandria, Pakistan
             </p>
           </div>
-          <Link to={buttonText === "View Property" ? "/property" : ""}>
+          <Link
+            to={
+              buttonText === "View Property" || "View Details"
+                ? "/property"
+                : ""
+            }
+          >
             <button className="text-7xl md:text-7xl font-medium text-white text-center cursor-pointer border-none ml-1 pl-4 mb-2 bg-lightseagreen-100 rounded w-full md:w-[340px] h-[55px]">
               {buttonText}
             </button>

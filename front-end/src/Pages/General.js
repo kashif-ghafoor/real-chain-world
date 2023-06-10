@@ -166,13 +166,13 @@ const General = () => {
 
   return (
     <>
-      <div className="flex" style={{ height: "100vh" }}>
+      <div className="flex" style={{ height: "1800px" }}>
         <div
           className="sidebar bg-white text-gray-500 font-medium font-serif text-7xl shadow-lg fixed inset-0 "
-          style={{ width: "20%" }}
+          style={{ width: "20%", height: "100vh" }}
         >
           <img
-            className="h-24 w-24 mt-32 ml-32"
+            className="h-24 w-24 mt-40 ml-32"
             src={require("../assets/logo-signin.png")}
             alt=""
           />
@@ -182,9 +182,7 @@ const General = () => {
           <ul className="py-20 ml-14">{renderTabs()}</ul>
         </div>
 
-        <div style={{ width: "100%" }} className="bg-black">
-          {renderComponent()}
-        </div>
+        <div className="w-[100%] bg-whitesmoke">{renderComponent()}</div>
       </div>
     </>
   );
