@@ -25,7 +25,7 @@ const SingleProperty = ({ buttonText }) => {
           </div>
           <Link
             to={
-              buttonText === "View Property" || "View Details"
+              buttonText === ("View Property" || "View Details")
                 ? "/property"
                 : ""
             }

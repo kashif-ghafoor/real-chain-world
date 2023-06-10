@@ -57,19 +57,22 @@ function NavBar() {
 
           <Popover.Group className="hidden lg:flex sm:gap-x-3 lg:gap-x-8 text-1xl sm:text-3xl lg:text-1xl">
             <Link to="/marketplace">
-              <b className="font-semibold leading-6 text-gray-900">
+              <b className="font-semibold leading-6 text-gray-900 hover:border-b-4 border-lightseagreen-100">
                 Marketplace
               </b>
             </Link>
             <Link to="/tokenization">
-              <b className="font-semibold leading-6 text-gray-900">
+              <b className="font-semibold leading-6 text-gray-900 hover:border-b-4 border-lightseagreen-100">
                 Tokenize Your Real Estate
               </b>
             </Link>
             {/* property assessment */}
             <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-2 font-semibold leading-6 text-gray-900">
-                Property Assessment
+              <Popover.Button className="flex items-center gap-x-2 font-semibold leading-6 text-gray-900 ">
+                <span className="hover:border-b-4 border-lightseagreen-100">
+                  Property Assessment
+                </span>
+
                 <ChevronDownIcon
                   className="mt-1 h-6 w-5 flex-none text-lightseagreen-100 font-bold"
                   aria-hidden="true"
@@ -110,12 +113,16 @@ function NavBar() {
               </Transition>
             </Popover>
             <Link to="/about">
-              <b className="font-semibold leading-6 text-gray-900">About</b>
+              <b className="font-semibold leading-6 text-gray-900 hover:border-b-4 border-lightseagreen-100">
+                About
+              </b>
             </Link>
 
             <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-2 font-semibold leading-6 text-gray-900">
-                Learn
+              <Popover.Button className="flex items-center gap-x-2 font-semibold leading-6 text-gray-900 ">
+                <span className="hover:border-b-4 border-lightseagreen-100">
+                  Learn
+                </span>
                 <ChevronDownIcon
                   className="mt-1 h-6 w-5 flex-none text-lightseagreen-100 font-bold"
                   aria-hidden="true"

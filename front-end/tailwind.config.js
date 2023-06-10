@@ -63,6 +63,7 @@ module.exports = {
       "29xl": "48px",
       "32xl": "54px",
       "39xl": "58px",
+      "33xl": "70px",
     },
   },
   plugins: [],
