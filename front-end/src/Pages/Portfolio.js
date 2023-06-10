@@ -5,7 +5,7 @@ import SingleProperty from "../Components/SingleProperty";
 const Portfolio = () => {
   return (
     <>
-      <div className="pl-10 bg-gray-200 ">
+      <div>
         <div className="absolute left-[1320px] m-6">
           <SmallNavBar />
         </div>

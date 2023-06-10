@@ -63,8 +63,8 @@ const AssessmentCompanies = () => {
             src="/assess.svg"
           />
         </div>
-        <div className="ml-32 md:ml-40 mt-24 mr-40 " id="best-opportunities">
-          <div className="flex flex-row flex-wrap gap-24">
+        <div className="ml-32 md:ml-40 mt-24 mr-28 " id="best-opportunities">
+          <div className="flex flex-row flex-wrap gap-20">
             {cardData.map((card) => (
               <CompanyCard
                 key={card.id}

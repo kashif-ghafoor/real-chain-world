@@ -186,13 +186,13 @@ const PropertyPage = () => {
       </div>
 
       {/* overview section */}
-      <div id="overview" className="mt-40 ml-32 h-[650px] " ref={overviewRef}>
-        <h1 className="font-semibold text-5xl text-gray-700">
+      <div id="overview" className="mt-40 ml-32 h-[700px] " ref={overviewRef}>
+        <h1 className="font-semibold text-7xl  text-gray-700">
           Property Overview
         </h1>
-        <table className="w-[1000px] h-[300px] bg-white">
-          <thead className="bg-lightseagreen-100 h-[40px]">
-            <tr className="text-white text-5xl font-medium">
+        <table className="w-[1200px] h-[300px] bg-white text-4xl">
+          <thead className="bg-lightseagreen-100 h-[45px]">
+            <tr className="text-white  font-medium">
               <th colSpan="2">Details</th>
             </tr>
           </thead>
@@ -200,7 +200,7 @@ const PropertyPage = () => {
             {data.map((item, index) => (
               <tr
                 key={index}
-                className="h-[40px] border-b-2 border-lightseagreen-200"
+                className="h-[45px] border-b-2 border-lightseagreen-200"
               >
                 <td className="pr-96 font-medium">{Object.keys(item)[0]}</td>
                 <td>{item[Object.keys(item)[0]]}</td>

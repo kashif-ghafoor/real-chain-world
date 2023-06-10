@@ -3,7 +3,7 @@ import SmallNavBar from "../Components/SmallNavBar";
 
 const Wallet = () => {
   return (
-    <div className="bg-gray-200 w-screen">
+    <div>
       <div className="absolute left-[1320px] m-6">
         <SmallNavBar />
       </div>

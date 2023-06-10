@@ -11,6 +11,11 @@ const CompanyCard = ({ companyName, description, imageSrc }) => {
       <div className="flex flex-col p-6">
         <h5 className="mb-2 text-9xl font-bold text-gray-100">{companyName}</h5>
         <p className="mb-4 text-center text-blue text-7xl">{description}</p>
+        <div className="mt-6">
+          <button className="rounded-lg w-[170px] h-[50px] bg-lightseagreen-100 text-white font-medium text-4xl">
+            Contact Us
+          </button>
+        </div>
       </div>
     </div>
   );

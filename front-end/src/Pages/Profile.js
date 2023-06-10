@@ -17,7 +17,7 @@ const Profile = () => {
   };
   return (
     <>
-      <div className="pl-6 bg-gray-200 w-screen">
+      <div>
         <div className="absolute left-[1320px] m-6">
           <SmallNavBar />
         </div>
