@@ -5,6 +5,9 @@ import Landing from "./Pages/Landing";
 import Tokenization from "./Pages/Tokenization";
 import Property from "./Pages/PropertyPage";
 import General from "./Pages/General";
+import HowToTokenize from "./Pages/HowToTokenize";
+import HowToInvest from "./Pages/HowToInvest";
+import AssessmentCompanies from "./Pages/AssessmentCompanies";
 
 const App = () => {
   return (
@@ -16,6 +19,12 @@ const App = () => {
         <Route path="/tokenization" element={<Tokenization />}></Route>
         <Route path="/property" element={<Property />}></Route>
         <Route path="/general" element={<General />}></Route>
+        <Route path="/learn/howtotokenize" element={<HowToTokenize />}></Route>
+        <Route path="/learn/howtoinvest" element={<HowToInvest />}></Route>
+        <Route
+          path="/assessmentcompanies"
+          element={<AssessmentCompanies />}
+        ></Route>
       </Routes>
     </BrowserRouter>
   );

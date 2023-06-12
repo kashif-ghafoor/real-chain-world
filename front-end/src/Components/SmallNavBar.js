@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const SmallNavBar = () => {
   return (
     <div>
-      <ul className="flex font-medium">
+      <ul className="text-4xl flex font-semibold">
         <Link to="/marketplace">
           <li>Marketplace </li>
         </Link>
@@ -12,7 +12,7 @@ const SmallNavBar = () => {
           <li className="pl-6">Tokenize your Real Estate </li>
         </Link>
         <Link to="/">
-          <button className="ml-8 bg-lightseagreen-100 w-[90px] h-[40px]">
+          <button className="ml-8 bg-lightseagreen-100 w-[100px] h-[50px]">
             <li className=" text-white">Logout </li>
           </button>
         </Link>

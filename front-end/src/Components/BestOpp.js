@@ -3,19 +3,19 @@ import SingleProperty from "./SingleProperty";
 const BestOpp = () => {
   return (
     <>
-      <div className="ml-32 mt-28" id="best-opportunties">
+      <div className="ml-40 mt-28" id="best-opportunties">
         <div className=" h-[130px] text-left text-gray-700 text-lightseagreen-100 flex">
           <div className="flex-column justify-between">
-            <h4 className="text-5xl md:text-9xl lg:text-11xl font-h4 tracking-[-0.01em]">
+            <h4 className="text-13xl md:text-9xl lg:text-13xl font-h4 tracking-[-0.01em]">
               Best Opportunities
             </h4>
-            <p className="mt-4 text-2xl md:text-3xl lg:text-4xl font-medium text-gray-500">
+            <p className="mt-4 text-5xl md:text-3xl lg:text-5xl font-medium text-gray-500">
               Start investing flexibly, wherever you are in the world
             </p>
           </div>
 
           <Link to="/marketplace">
-            <button className="cursor-pointer [border:none] mt-16 ml-40 pl-96 bg-[transparent] text-3xl font-medium items-center flex">
+            <button className="cursor-pointer [border:none] mt-16 ml-96 pl-96 bg-[transparent] text-5xl font-medium items-center flex">
               See More
               <svg
                 aria-hidden="true"
@@ -33,7 +33,8 @@ const BestOpp = () => {
             </button>
           </Link>
         </div>
-        <div className="ml-4 mr-40 flex flex-wrap justify-center md:justify-between">
+        <div className="ml-2 mr-40 flex flex-wrap justify-center md:justify-between">
+          <SingleProperty buttonText="View Property" />
           <SingleProperty buttonText="View Property" />
           <SingleProperty buttonText="View Property" />
           <SingleProperty buttonText="View Property" />

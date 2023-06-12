@@ -15,56 +15,57 @@ const MarketPlace = () => {
 
       <div className="h-[535px] text-left text-17xl text-lightseagreen-100 font-h2">
         <img
-          className="w-screen h-[460px] object-cover"
+          className="w-screen h-[600px] object-cover"
           alt=""
           src={require("../assets/hero1.jpg")}
         />
-        <div className="absolute top-[300px] left-[100px] w-[550px] h-[120px] bg-gray-500">
-          <p className="relative top-[05px] left-[10px] text-9xl tracking-[-0.02em] text-white font-bold w-[450px]">
+        <div className="absolute top-[400px] left-[100px] w-[610px] h-[170px] bg-gray-500">
+          <p className="relative top-[05px] left-[10px] text-17xl tracking-[-0.02em] text-white font-bold w-[550px]">
             Find New Projects in Pakistan
           </p>
-          <p className="relative top-[15px] left-[10px] text-xxxs text-[14px] tracking-[-0.001em] text-white font-normal w-[480px]">
+          <p className="relative top-[15px] left-[10px] text-4xl tracking-[-0.001em] text-white font-normal w-[570px]">
             Real Chain World provides you with a vibe of what every day looks
             like in different housing societies of Pakistan
           </p>
         </div>
       </div>
-      <div className="absolute top-[480px] left-1/2 transform -translate-x-1/2 rounded-lg w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 h-[160px] bg-white flex justify-center">
-        <div className="relative top-[05px] ml-2 rounded-lg w-1/3 md:w-1/4 lg:w-1/5 h-[80px] bg-white">
-          <label
+      <div className="absolute top-[640px] left-1/2 transform -translate-x-1/2 rounded-lg w-3/5   h-[160px] bg-white flex justify-center">
+        <div className="relative top-[05px] ml-2 rounded-lg w-1/9 md:w-1/4 lg:w-1/9 h-[80px] bg-white">
+          <p
             id="city"
             htmlFor="city"
-            className="relative top-[05px] ml-4 left-[05px] text-xxs text-[17px] text-black font-medium"
+            className="relative top-[05px] ml-4 left-[05px] text-5xl  text-lightseagreen-100 font-medium"
           >
             City
-          </label>
+          </p>
           <input
-            className="relative top-[2px] ml-4 w-4/5 h-[40px] bg-white text-gray-500 text-sm p-2.5 focus:outline-none focus:border-none"
+            className="relative top-[8px] ml-4 w-4/5 h-[50px] bg-white text-gray-500 text-sm p-2.5 focus:outline-none focus:border-none"
             placeholder="Lahore"
-            name="city"
+            style={{ color: "black", fontSize: "20px" }}
             required
           />
         </div>
-        <div className="relative top-[15px] w-0.5 h-[60px] bg-gray-300"></div>
+        <div className="relative top-[15px] w-1 h-[70px] bg-lightseagreen-100"></div>
         <div className="relative top-[05px] ml-2 rounded-lg w-2/3 md:w-3/4 lg:w-3/5 h-[80px] bg-white">
-          <p className="relative top-[05px] ml-4 left-[05px] text-xxs text-[17px] text-black font-medium">
+          <p className="relative top-[05px] ml-4 left-[05px] text-5xl text-lightseagreen-100 font-medium">
             Property Name
           </p>
           <input
-            className="relative top-[2px] ml-4 w-5/6 h-[40px] bg-white text-gray-500 text-sm p-2.5 focus:outline-none focus:border-none"
+            className="relative top-[8px] ml-4 w-5/6 h-[50px] bg-white text-gray-500 text-sm p-2.5 focus:outline-none focus:border-none"
             placeholder="Search Property"
+            style={{ color: "black", fontSize: "20px" }}
             required
           />
         </div>
-        <div className="relative top-[15px] w-0.5 h-[60px] bg-gray-300"></div>
-        <button className="relative top-[22px] px-6 ml-6 mr-6 rounded w-1/6 h-[45px] bg-lightseagreen-100 text-[18px] text-white font-medium inline-flex items-center">
+        <div className="relative top-[15px] w-1 h-[70px] bg-lightseagreen-100"></div>
+        <button className="relative top-[22px] px-6 ml-6 mr-6 rounded w-1/6 h-[55px] bg-lightseagreen-100 text-[24px] text-white font-medium inline-flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 20 20"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-4 h-4 mr-2"
+            className="w-6 h-6 mr-4"
           >
             <path
               strokeLinecap="round"
@@ -76,16 +77,16 @@ const MarketPlace = () => {
         </button>
       </div>
 
-      <h1 className="mt-10 ml-4 md:ml-28 text-4xl md:text-9xl tracking-[-0.02em] font-bold font-h2 text-lightseagreen-100">
+      <h1 className="mt-48 ml-4 md:ml-28 text-11xl md:text-9xl tracking-[-0.02em] font-bold font-h2 text-lightseagreen-100">
         Projects on our Platform
       </h1>
-      <h3 className="ml-4 md:ml-28 text-xl md:text-4xl tracking-[-0.02em] font-medium w-[650px] lg:w-[900px] text-gray-500">
+      <h3 className="ml-4 md:ml-28 text-9xl md:text-7xl tracking-[-0.02em] font-medium w-[650px] lg:w-[900px] text-gray-500">
         Giving you the trust you need to own your share of tokenized real
         estate.
       </h3>
       <div className="ml-4 md:ml-24 mt-12" id="best-opportunities">
         <div className="m-6 flex flex-wrap gap-16 w-[90%] md:w-[1100px] xl:w-[1400px]">
-          {/* <card className="w-[310px] h-[580px]">
+          {/* <div className="w-[310px] h-[580px]">
             <img
               className="w-[300px] h-[170px]"
               alt=""
@@ -129,7 +130,7 @@ const MarketPlace = () => {
                 </button>
               </Link>
             </div>
-          </card> */}
+          </div> */}
           <SingleProperty buttonText="View Property" />
           <SingleProperty buttonText="View Property" />
         </div>
