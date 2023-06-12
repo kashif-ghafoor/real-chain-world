@@ -42,7 +42,7 @@ function NavBar() {
     <>
       <header className="mt-6 bg-white">
         <nav
-          className="flex items-center justify-between p-5 pl-8 sm:pl-16 lg:pl-24 pr-8 sm:pr-16 lg:pr-20 text-1xl sm:text-4xl lg:text-7xl"
+          className="flex items-center justify-between p-5 pl-8 sm:pl-16 lg:pl-24 pr-8 sm:pr-16 lg:pr-20 text-4xl sm:text-3xl lg:text-4xl"
           aria-label="Global"
         >
           <div className="flex ml-4">
@@ -55,26 +55,26 @@ function NavBar() {
             </Link>
           </div>
 
-          <Popover.Group className="hidden lg:flex sm:gap-x-3 lg:gap-x-8 text-1xl sm:text-3xl lg:text-1xl">
+          <Popover.Group className="hidden lg:flex sm:gap-x-3 lg:gap-x-8 text-4xl sm:text-3xl lg:text-4xl">
             <Link to="/marketplace">
-              <b className="font-semibold leading-6 text-gray-900 hover:border-b-4 border-lightseagreen-100">
+              <b className="font-medium leading-6 text-gray-900 hover:border-b-4 border-lightseagreen-100">
                 Marketplace
               </b>
             </Link>
             <Link to="/tokenization">
-              <b className="font-semibold leading-6 text-gray-900 hover:border-b-4 border-lightseagreen-100">
+              <b className="font-medium leading-6 text-gray-900 hover:border-b-4 border-lightseagreen-100">
                 Tokenize Your Real Estate
               </b>
             </Link>
             {/* property assessment */}
             <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-2 font-semibold leading-6 text-gray-900 ">
+              <Popover.Button className="mt-1 flex items-center gap-x-2 font-medium leading-6 text-gray-900 ">
                 <span className="hover:border-b-4 border-lightseagreen-100">
                   Property Assessment
                 </span>
 
                 <ChevronDownIcon
-                  className="mt-1 h-6 w-5 flex-none text-lightseagreen-100 font-bold"
+                  className="h-6 w-5 flex-none text-lightseagreen-100 font-medium"
                   aria-hidden="true"
                 />
               </Popover.Button>
@@ -98,7 +98,7 @@ function NavBar() {
                         <div className="flex-auto">
                           <Link
                             to={item.href}
-                            className="block font-semibold text-blue"
+                            className="block font-medium text-blue"
                           >
                             <div className="flex gap-5">
                               <item.icon className="-mt-3 w-10 h-10" />
@@ -113,14 +113,14 @@ function NavBar() {
               </Transition>
             </Popover>
             <Link to="/about">
-              <b className="font-semibold leading-6 text-gray-900 hover:border-b-4 border-lightseagreen-100">
+              <b className="font-medium leading-6 text-gray-900 hover:border-b-4 border-lightseagreen-100">
                 About
               </b>
             </Link>
 
             <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-2 font-semibold leading-6 text-gray-900 ">
-                <span className="hover:border-b-4 border-lightseagreen-100">
+              <Popover.Button className="flex items-center gap-x-2 font-medium leading-6 text-gray-900 ">
+                <span className=" hover:border-b-4 border-lightseagreen-100">
                   Learn
                 </span>
                 <ChevronDownIcon
@@ -148,7 +148,7 @@ function NavBar() {
                         <div className="flex-auto">
                           <Link
                             to={item.href}
-                            className="block font-semibold text-blue"
+                            className="block font-medium text-blue"
                           >
                             {item.name}
                             <span className="absolute inset-0" />
@@ -180,14 +180,14 @@ function NavBar() {
           {/* Updated Sign in button */}
           <div className="flex mr-4">
             <button
-              className="ml-4 lg:ml-0 lg:flex rounded-md bg-blue text-white font-bold py-5 px-6 sm:px-4 lg:px-10 rounded text-3xl sm:text-3xl lg:text-5xl font-semibold leading-6 text-white-900"
+              className="ml-4 lg:ml-0 lg:flex rounded-md bg-blue text-white font-bold py-5 px-6 sm:px-4 lg:px-10 rounded text-3xl sm:text-3xl lg:text-4xl font-medium leading-6 text-white-900"
               onClick={() => setOpen(true)}
             >
               Sign in
             </button>
             {/* general, Profile and dashboard */}
             <Popover className="relative">
-              <Popover.Button className="ml-6 mt-5 flex items-center gap-x-2 font-semibold leading-6 text-gray-900">
+              <Popover.Button className="ml-6 mt-5 flex items-center gap-x-2 font-medium leading-6 text-gray-900">
                 <FaGripVertical className=" text-lightseagreen-100 " />
               </Popover.Button>
 
@@ -210,7 +210,7 @@ function NavBar() {
                         <div className="flex-auto">
                           <Link
                             to={item.href}
-                            className="block font-semibold text-blue"
+                            className="block font-medium text-blue"
                           >
                             <div className="flex gap-5">
                               <item.icon />
