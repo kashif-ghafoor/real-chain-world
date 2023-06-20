@@ -9,6 +9,16 @@ function Landing() {
     <>
       <NavBar />
       <Hero />
+      <div className="bg-whitesmoke flex justify-around items-center mt-16 h-[200px] pr-96  ">
+        <h4 className="text-gray-500 text-7xl ">
+          Real Chain World connects you
+        </h4>
+        <img
+          className="w-[200px] h-[200px] overflow-hidden"
+          alt=""
+          src="/metamask.svg"
+        />
+      </div>
       <DiscoverSection />
       <BestOpp />
 

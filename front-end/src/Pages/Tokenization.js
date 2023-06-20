@@ -192,7 +192,7 @@ const Tokenization = () => {
                   <label className="font-medium">
                     What type of property is it? *
                   </label>
-                  <div className="mt-4 flex flex-col">
+                  <div className="text-4xl mt-4 flex flex-col">
                     <label className="bg-bgbutton w-[270px] h-[46px]">
                       <Field
                         className="m-3 mr-6 accent-lightseagreen-100 custom-radio h-5 w-5"
@@ -347,7 +347,7 @@ const Tokenization = () => {
                         Which features does the property have? *
                       </label>
                       <div
-                        className="mt-4 p-1 bg-bgbutton w-[290px] h-[50px]"
+                        className="text-4xl mt-4 p-1 bg-bgbutton w-[290px] h-[50px]"
                         role="group"
                         aria-labelledby="checkbox-group"
                       >
@@ -362,7 +362,7 @@ const Tokenization = () => {
                         </label>
                       </div>
                       <div
-                        className="mt-2 p-1 bg-bgbutton w-[290px] h-[50px]"
+                        className="text-4xl mt-2 p-1 bg-bgbutton w-[290px] h-[50px]"
                         role="group"
                         aria-labelledby="checkbox-group"
                       >
@@ -377,7 +377,7 @@ const Tokenization = () => {
                         </label>
                       </div>
                       <div
-                        className="mt-2 p-1 bg-bgbutton w-[290px] h-[50px]"
+                        className="text-4xl mt-2 p-1 bg-bgbutton w-[290px] h-[50px]"
                         role="group"
                         aria-labelledby="checkbox-group"
                       >
@@ -392,7 +392,7 @@ const Tokenization = () => {
                         </label>
                       </div>
                       <div
-                        className="mt-2 p-1 bg-bgbutton w-[290px] h-[50px]"
+                        className="text-4xl mt-2 p-1 bg-bgbutton w-[290px] h-[50px]"
                         role="group"
                         aria-labelledby="checkbox-group"
                       >
@@ -407,7 +407,7 @@ const Tokenization = () => {
                         </label>
                       </div>
                       <div
-                        className="mt-2 p-1 bg-bgbutton w-[290px] h-[50px]"
+                        className="text-4xl mt-2 p-1 bg-bgbutton w-[290px] h-[50px]"
                         role="group"
                         aria-labelledby="checkbox-group"
                       >
@@ -422,7 +422,7 @@ const Tokenization = () => {
                         </label>
                       </div>
                       <div
-                        className="mt-2 p-1 bg-bgbutton w-[290px] h-[50px]"
+                        className="text-4xl mt-2 p-1 bg-bgbutton w-[290px] h-[50px]"
                         role="group"
                         aria-labelledby="checkbox-group"
                       >
@@ -437,7 +437,7 @@ const Tokenization = () => {
                         </label>
                       </div>
                       <div
-                        className="mt-2 p-1 bg-bgbutton w-[290px] h-[50px]"
+                        className="text-4xl mt-2 p-1 bg-bgbutton w-[290px] h-[50px]"
                         role="group"
                         aria-labelledby="checkbox-group"
                       >
@@ -452,7 +452,7 @@ const Tokenization = () => {
                         </label>
                       </div>
                       <div
-                        className="mt-2 p-1 bg-bgbutton w-[290px] h-[50px]"
+                        className="text-4xl mt-2 p-1 bg-bgbutton w-[290px] h-[50px]"
                         role="group"
                         aria-labelledby="checkbox-group"
                       >

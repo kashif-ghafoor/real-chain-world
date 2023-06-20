@@ -40,9 +40,9 @@ function NavBar() {
 
   return (
     <>
-      <header className="mt-6 bg-white">
+      <header className="mt-1 bg-white">
         <nav
-          className="flex items-center justify-between p-5 pl-8 sm:pl-16 lg:pl-24 pr-8 sm:pr-16 lg:pr-20 text-4xl sm:text-3xl lg:text-4xl"
+          className="flex items-center justify-between p-3 pl-8 sm:pl-16 lg:pl-24 pr-8 sm:pr-16 lg:pr-20 text-4xl sm:text-3xl lg:text-4xl"
           aria-label="Global"
         >
           <div className="flex ml-4">
