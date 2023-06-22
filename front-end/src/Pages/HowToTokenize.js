@@ -119,7 +119,7 @@ const HowToTokenize = () => {
             </p>
           </div>
 
-          <div className="ml-16 m-32">
+          <div className="ml-12 m-32">
             <div className="flex gap-10">
               <img
                 className="w-[600px] h-[200px] overflow-hidden"
@@ -171,9 +171,9 @@ const HowToTokenize = () => {
                 </button>
               </div>
             </div>
-            <div className="pb-32 mt-48 flex gap-10">
+            <div className="mt-48 flex gap-10">
               <img
-                className="w-[600px] h-[200px] overflow-hidden"
+                className="w-[480px] h-[200px] overflow-hidden"
                 alt=""
                 src={require("../assets/track.png")}
               />
@@ -186,7 +186,7 @@ const HowToTokenize = () => {
                   whole building, you can track the performance of the sale at
                   any time. We are more than happy to support you with setting
                   up your sales parameters and more before the crowd-sale can
-                  start.
+                  start
                 </p>
               </div>
             </div>
