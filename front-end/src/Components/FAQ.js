@@ -24,13 +24,14 @@ export default function FAQ() {
           </div>
         </details>
         <details className="p-4 rounded-lg">
-          <summary className="font-semibold">Who is allowed to invest?</summary>
+          <summary className="font-semibold">
+            Who is allowed to Tokenize?
+          </summary>
           <div className="mt-3">
             <p className="text-sm leading-10 text-gray-500">
-              Anyone who is sucessfully login can invest on our platform. There
-              are no minimum capital requirements or complicated processes to go
-              through. Simply go through the KYC/AML process and you’re ready to
-              start investing today.
+              Anyone who is log in to this platform and fill the form for the
+              tokenization of property. After that our team will assess the
+              documents and that property will list on our platform.
             </p>
           </div>
         </details>
