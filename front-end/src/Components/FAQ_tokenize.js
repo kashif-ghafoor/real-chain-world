@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function FAQ() {
+export default function FAQ_tokenize() {
   return (
     <div>
       <div className="text-5xl ml-20 mt-12  text-gray-100 space-y-2 s">

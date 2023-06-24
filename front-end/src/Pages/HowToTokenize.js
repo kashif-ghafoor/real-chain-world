@@ -1,6 +1,6 @@
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
-import FAQ from "../Components/FAQ";
+import FAQ_tokenize from "../Components/FAQ_tokenize";
 import React, { useState, useEffect } from "react";
 
 const HowToTokenize = () => {
@@ -195,7 +195,7 @@ const HowToTokenize = () => {
           <h2 className="pt-24 pl-20 text-13xl font-semibold text-lightseagreen-100">
             Frequently Asked Questions
           </h2>
-          <FAQ />
+          <FAQ_tokenize />
         </div>
       </div>
       <Footer />
