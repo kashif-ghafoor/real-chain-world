@@ -1,5 +1,6 @@
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
+import FAQ from "../Components/FAQ";
 import React, { useState, useEffect } from "react";
 
 const HowToTokenize = () => {
@@ -130,7 +131,7 @@ const HowToTokenize = () => {
                 <h2 className="text-17xl text-lightseagreen-100 font-semibold">
                   User Verification
                 </h2>
-                <p className="pt-5 text-5xl text-gray-100  w-[80%]">
+                <p className="pt-5 text-5xl text-gray-500 w-[80%]">
                   Before using our platform, you first need to be verified and
                   approved. The entire process is completed online via the real
                   Chain world website. You will be prompted to provide or verify
@@ -155,7 +156,7 @@ const HowToTokenize = () => {
                 <h2 className="text-17xl text-lightseagreen-100 font-semibold">
                   Property Submission
                 </h2>
-                <p className="pt-5 text-5xl text-gray-100  w-[80%]">
+                <p className="pt-5 text-5xl text-gray-500  w-[80%]">
                   All submitted properties are carefully curated by our team of
                   experts. Once approved, your property (or a share of your
                   property) is tokenized making the pool of potential investors
@@ -181,7 +182,7 @@ const HowToTokenize = () => {
                 <h2 className="text-17xl text-lightseagreen-100 font-semibold">
                   Track The Sale
                 </h2>
-                <p className="pt-5 text-5xl text-gray-100  w-[80%]">
+                <p className="pt-5 text-5xl text-gray-500  w-[80%]">
                   Whether you’re selling a small portion of your property or the
                   whole building, you can track the performance of the sale at
                   any time. We are more than happy to support you with setting
@@ -191,6 +192,10 @@ const HowToTokenize = () => {
               </div>
             </div>
           </div>
+          <h2 className="pt-24 pl-20 text-13xl font-semibold text-lightseagreen-100">
+            Frequently Asked Questions
+          </h2>
+          <FAQ />
         </div>
       </div>
       <Footer />
