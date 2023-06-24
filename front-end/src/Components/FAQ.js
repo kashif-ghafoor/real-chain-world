@@ -25,7 +25,7 @@ export default function FAQ() {
         </details>
         <details className="p-4 rounded-lg">
           <summary className="font-semibold">
-            Who is allowed to Tokenize?
+            Who is allowed to tokenize?
           </summary>
           <div className="mt-3">
             <p className="text-sm leading-10 text-gray-500">
