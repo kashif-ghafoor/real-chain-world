@@ -2,12 +2,12 @@ const DiscoverSection = () => {
   return (
     <>
       <section
-        className="mt-32 h-[750px] text-left text-gray-700 "
+        className=" h-[750px] text-left text-gray-700 "
         id="discover"
         data-scroll-to="exploreSection"
       >
-        <div className="bg-whitesmoke h-[690px]">
-          <div className="flex justify-center ">
+        <div className="bg-whitesmoke h-[730px]">
+          <div className="pt-10 flex justify-center ">
             <h4 className="absolute mt-12 p-2  tracking-[-0.01em] text-blue-for-button font-h4 text-23xl sm:text-11xl md:text-23xl lg:text-23xl ">
               Discover the Power of Real Chain World
             </h4>
