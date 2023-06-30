@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Portfolio from "./Portfolio";
+import InvestorPortfolio from "./InvestorPortfolio";
+import OwnerPortfolio from "./OwnerPortfolio";
 import Profile from "./Profile";
 import Wallet from "./Wallet";
 import OwnerDashboard from "./OwnerDashboard";
@@ -18,7 +19,10 @@ const General = () => {
       case "profile":
         return <Profile />;
       case "portfolio":
-        return <Portfolio />;
+        if (userRole === "investor") {
+          return <InvestorPortfolio />;
+        }
+        return <OwnerPortfolio />;
       case "wallet":
         return <Wallet />;
       case "dashboard":
