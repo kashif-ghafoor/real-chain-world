@@ -2,7 +2,7 @@ import React from "react";
 import SmallNavBar from "../Components/SmallNavBar";
 import SingleProperty from "../Components/SingleProperty";
 
-const Portfolio = () => {
+const OwnerPortfolio = () => {
   return (
     <>
       <div>
@@ -10,7 +10,7 @@ const Portfolio = () => {
           <SmallNavBar />
         </div>
         <div className="absolute left-[450px] top-[140px]">
-          <h1 className="font-serif text-7xl font-bold">Investor Portfolio</h1>
+          <h1 className="font-serif text-7xl font-bold">Owner Portfolio</h1>
           <div className=" m-6 flex flex-wrap gap-8 w-[90%] md:w-[1100px] xl:w-[1400px]">
             <SingleProperty buttonText="Withdraw Revenue" />
           </div>
@@ -20,4 +20,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default OwnerPortfolio;

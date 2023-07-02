@@ -87,13 +87,10 @@ const Tokenization = () => {
         <div className="mt-4">
           <div
             {...getRootProps()}
-            className="p-10 bg-whitesmoke border border-gray-300 rounded cursor-pointer focus:outline-lightseagreen-100"
+            className="p-16 rounded-lg border border-gray-300 rounded cursor-pointer focus:outline-lightseagreen-100"
           >
             <input {...getInputProps()} />
-            <p>
-              <FiUpload className="w-4 h-8 inline-block mr-2 text-lightseagreen-100" />
-              Drag and drop PDF files here, or click to select files
-            </p>
+            <p>Drag and drop PDF files here, or click to select files</p>
           </div>
           {form.errors[field.name] && (
             <ErrorMessage
@@ -162,18 +159,18 @@ const Tokenization = () => {
             </div>
           </div>
         </div>
-        <ToastContainer className="text-3xl w-[500px]" ref={alertRef} />
+        <ToastContainer className="text-3xl w-[600px]" ref={alertRef} />
         <div className="flex ">
           <div className="bg-offwhite pr-32">
             <div className="ml-40 mt-20 flex flex-col text-blue text-7xl font-semibold">
               <h2 ref={propertydetailRef}>Property Detail</h2>
               <h2 className="mt-96">Property Location</h2>
-              <h2 className="absolute top-[1330px]">Price and Currency</h2>
-              <h2 className="absolute top-[1800px]">Property Features</h2>
-              <h2 className="pt-8 absolute top-[2370px]">
+              <h2 className="absolute top-[1360px]">Price and Currency</h2>
+              <h2 className="absolute top-[1860px]">Property Features</h2>
+              <h2 className="pt-8 absolute top-[2430px]">
                 Personal Information
               </h2>
-              <h2 ref={DocsRef} className="absolute mt-2 top-[3110px]">
+              <h2 ref={DocsRef} className="absolute mt-2 top-[3250px]">
                 Property Documents
               </h2>
             </div>
@@ -185,11 +182,11 @@ const Tokenization = () => {
             validate={validateForm}
           >
             {({ isSubmitting }) => (
-              <Form className="mt-20  pl-72 text-5xl">
+              <Form className="mt-20 pl-72 text-5xl">
                 {/* Form fields */}
                 <div className="text-5xl  ">
                   {/* Type of property */}
-                  <label className="font-medium">
+                  <label className="font-semibold text-gray-500">
                     What type of property is it? *
                   </label>
                   <div className="text-4xl mt-4 flex flex-col">
@@ -243,7 +240,7 @@ const Tokenization = () => {
                 </div>
 
                 <div className="flex flex-col mt-28">
-                  <label className="font-medium ">
+                  <label className="font-semibold text-gray-500">
                     Please share the location of your Property
                   </label>
                   <label className="font-medium mt-6" htmlFor="address">
@@ -251,7 +248,7 @@ const Tokenization = () => {
                   </label>
                   <Field
                     as="textarea"
-                    className="bg-whitesmoke p-2 mt-2 w-[500px] border border-gray-600 focus:outline-lightseagreen-100"
+                    className="rounded-lg p-1 mt-2 w-[550px] border border-gray-600 focus:outline-lightseagreen-100"
                     type="text"
                     name="address"
                     required
@@ -260,7 +257,7 @@ const Tokenization = () => {
                     Country *
                   </label>
                   <Field
-                    className="bg-whitesmoke p-1 mt-2 w-[500px] h-[40px] border border-gray-600 focus:outline-lightseagreen-100"
+                    className="rounded-lg p-1 mt-2 w-[550px] h-[60px] border border-gray-600 focus:outline-lightseagreen-100"
                     type="text"
                     placeholder="Pakistan"
                     name="country"
@@ -270,7 +267,7 @@ const Tokenization = () => {
                     City *
                   </label>
                   <Field
-                    className="bg-whitesmoke p-1 mt-2 w-[500px] h-[40px] border border-gray-600 focus:outline-lightseagreen-100"
+                    className="rounded-lg p-1 mt-2 w-[550px] h-[60px] border border-gray-600 focus:outline-lightseagreen-100"
                     type="text"
                     placeholder="Karachi"
                     name="city"
@@ -280,7 +277,7 @@ const Tokenization = () => {
                     Area *
                   </label>
                   <Field
-                    className="bg-whitesmoke p-1 mt-2 w-[500px] h-[40px] border border-gray-600 focus:outline-lightseagreen-100"
+                    className="rounded-lg p-1 mt-2 w-[550px] h-[60px] border border-gray-600 focus:outline-lightseagreen-100"
                     type="text"
                     placeholder="Street-2 Zone 5"
                     name="area"
@@ -289,25 +286,28 @@ const Tokenization = () => {
                 </div>
 
                 <div ref={personalInfoRef} className="flex flex-col mt-24">
-                  <label className="font-medium ">
+                  <label className="font-semibold text-gray-500">
                     Please Enter the desired price of your Property *
                   </label>
                   <label className="font-medium mt-6" htmlFor="price">
                     Price
                   </label>
                   <Field
-                    className="p-1 mt-2 w-[400px] h-[40px] border border-gray-600 focus:outline-lightseagreen-100"
+                    className="rounded-lg p-1 mt-2 w-[550px] h-[60px] border border-gray-600 focus:outline-lightseagreen-100"
                     type="text"
                     placeholder="100,00,000."
                     name="price"
                     required
                   />
 
-                  <label className="font-medium mt-8" htmlFor="selectedOption">
+                  <label
+                    className=" mt-8 font-semibold text-gray-500"
+                    htmlFor="selectedOption"
+                  >
                     Specify the Currency *
                   </label>
                   <Field
-                    className="p-1 bg-whitesmoke bg-lightseagreen-200 w-[300px]"
+                    className="rounded-md p-1 bg-lightseagreen-200 w-[550px] h-[40px]"
                     as="select"
                     id="selectedOption"
                     name="selectedOption"
@@ -324,11 +324,11 @@ const Tokenization = () => {
                     </option>
                   </Field>
 
-                  <label className="font-medium mt-8" htmlFor="price">
+                  <label className="mt-8" htmlFor="price">
                     Enter suppliers
                   </label>
                   <Field
-                    className="p-1 mt-2 w-[400px] h-[40px] border border-gray-600 focus:outline-lightseagreen-100"
+                    className="rounded p-1 mt-2 w-[550px] h-[60px] border border-gray-600 focus:outline-lightseagreen-100"
                     type="number"
                     placeholder=""
                     name="suppliers"
@@ -343,7 +343,7 @@ const Tokenization = () => {
                     required
                   >
                     <div>
-                      <label className="font-medium">
+                      <label className="font-semibold text-gray-500">
                         Which features does the property have? *
                       </label>
                       <div
@@ -470,13 +470,15 @@ const Tokenization = () => {
                   </FieldArray>
                 </div>
                 <div ref={personalInfoRef} className="mt-24 flex flex-col">
-                  <label className="font-medium">Who are you?</label>
+                  <label className="font-semibold text-gray-500">
+                    Who are you?
+                  </label>
                   <div className="flex">
                     <label className="font-medium mt-8" htmlFor="firstname">
                       First Name *
                     </label>
                     <label
-                      className="font-medium ml-40 mt-8"
+                      className="font-medium ml-56 mt-8"
                       htmlFor="lastname"
                     >
                       Last Name *
@@ -484,14 +486,14 @@ const Tokenization = () => {
                   </div>
                   <div className="flex">
                     <Field
-                      className="bg-whitesmoke p-1 w-[200px] h-[40px] border border-gray-600 focus:outline-lightseagreen-100"
+                      className="rounded p-1 w-[250px] h-[55px] border border-gray-600 focus:outline-lightseagreen-100"
                       type="text"
                       placeholder="First Name"
                       name="firstname"
                       required
                     />
                     <Field
-                      className="bg-whitesmoke p-1 ml-24 w-[200px] h-[40px] border border-gray-600 focus:outline-lightseagreen-100"
+                      className="rounded p-1 ml-28 w-[250px] h-[55px] border border-gray-600 focus:outline-lightseagreen-100"
                       type="text"
                       placeholder="Last Name"
                       name="lastname"
@@ -503,7 +505,7 @@ const Tokenization = () => {
                     Phone Number *
                   </label>
                   <Field
-                    className="bg-whitesmoke p-1 mt-2 w-[500px] h-[40px] border border-gray-600 focus:outline-lightseagreen-100"
+                    className="rounded-lg  p-1 mt-2 w-[550px] h-[55px] border border-gray-600 focus:outline-lightseagreen-100"
                     type="tel"
                     name="phone"
                     placeholder="92-1234567890"
@@ -515,7 +517,7 @@ const Tokenization = () => {
                     Company *
                   </label>
                   <Field
-                    className="bg-whitesmoke p-1 mt-2 w-[500px] h-[40px] border border-gray-600 focus:outline-lightseagreen-100"
+                    className="rounded-lg p-1 mt-2 w-[550px] h-[55px] border border-gray-600 focus:outline-lightseagreen-100"
                     type="text"
                     placeholder="xyz"
                     name="company"
@@ -526,27 +528,32 @@ const Tokenization = () => {
                     Email *
                   </label>
                   <Field
-                    className="bg-whitesmoke p-1 mt-2 w-[500px] h-[40px] border border-gray-600 focus:outline-lightseagreen-100"
+                    className="rounded-lg p-1 mt-2 w-[550px] h-[55px] border border-gray-600 focus:outline-lightseagreen-100"
                     placeholder="example123@com"
                     type="text"
                     name="email"
                     required
                   />
-                  <label className="font-medium mt-10 " htmlFor="goal">
+                  <label
+                    className="font-semibold text-gray-500 mt-10 "
+                    htmlFor="goal"
+                  >
                     What’s your goal with tokenizing your asset? (optional)
                   </label>
                   <Field
                     as="textarea"
-                    className="bg-whitesmoke mt-2 w-[500px] p-1 border border-gray-600 focus:outline-lightseagreen-100"
+                    className="rounded-lg mt-2 w-[550px] p-1 border border-gray-600 focus:outline-lightseagreen-100"
                     type="text"
                     name="goal"
                   />
                 </div>
                 {/* New file upload field */}
                 <div className="mt-16">
-                  <label className="font-medium">Upload PDF Files</label>
+                  <label className="font-semibold text-gray-500">
+                    Upload PDF Files
+                  </label>
                   <Field
-                    className="w-[400px]"
+                    className="w-[460px]"
                     name="files"
                     component={FileUpload}
                   />
