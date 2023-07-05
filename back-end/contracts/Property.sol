@@ -1,14 +1,23 @@
-pragma solidity >=0.4.22 <0.7.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+// struct PropertyInfo {
+//     uint id;
+//     string title;
+//     string _address;
+//     string _description;
+//     uint price;
+//    uint supply;
+// }
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/math/SafeMath.sol";
-import "@openzeppelin/contracts/ownership/Ownable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
 
 ///@notice A digital represntation of a property, which allows owner to tokenize his property into shares,
 ///created by the owner of the property through the PropertyFactory contract
 ///@dev Extends ERC20 and Ownable contracts, uses SafeMath library
 contract Property is ERC20, Ownable {
-    using SafeMath for uint256;
 
     bool internal paused = false;
 
@@ -39,7 +48,7 @@ contract Property is ERC20, Ownable {
     ///@param _price uint, the total price of property
     ///@param _supply uint, the number of shares the property will be splitted to
     ///@param _owner address, the owner who deployed this property using the factory contract
-    constructor(uint _id, string memory _address, string memory _description, uint _price, uint _supply, address _owner) public {
+    constructor(uint _id, string memory _address, string memory _description, uint _price, uint _supply, address _owner) ERC20("Property", "PROP") {
         transferOwnership(_owner);
         holders.push(_owner);
         propertyRevenue = 0;
@@ -49,8 +58,8 @@ contract Property is ERC20, Ownable {
 
     ///@notice A fall back, allows contract to recieve ETH
     ///@dev Adds sent the amount of ETH to porperty revenure
-    function () external payable {
-       propertyRevenue += msg.value;
+    receive () external payable {
+        propertyRevenue += msg.value;
     }
 
     ///@notice Allows owner to stop some functionalities in case of emergency
@@ -122,7 +131,8 @@ contract Property is ERC20, Ownable {
         for(uint i = 0; i < holders.length; i++){
           if(holders[i] == _holderAddress){
             holders[i] = holders[holders.length-1];
-            holders.length--;
+            delete holders[holders.length-1];
+            holders.pop();
             break;
           }
         }
@@ -138,7 +148,7 @@ contract Property is ERC20, Ownable {
         if(balanceOf(msg.sender) == 0){
             removeHolder(msg.sender);
         }
-        address(msg.sender).transfer(holderRevenueToWithdraw);
+        payable(msg.sender).transfer(holderRevenueToWithdraw);
         emit RevenueWithdrawal(msg.sender, holderRevenueToWithdraw);
     }
 
