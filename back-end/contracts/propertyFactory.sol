@@ -20,7 +20,7 @@ contract PropertyFactory {
     struct PropertyRequest {
         uint id;
         string _address;
-        string _description;
+        string _apiId;
         uint _supply;
         uint price;
         address owner;
@@ -37,7 +37,7 @@ contract PropertyFactory {
     uint public requestCounter = 0;
 
     event NewPropertyAdded(address owner, address property);
-    event NewPropertyValidationRequested(uint indexed id, string _address, string _description);
+    event NewPropertyValidationRequested(uint indexed id, string _address, string _apiId);
     event PriceSuggested(uint indexed id, uint suggestedPrice);
     event PriceAccepted(uint indexed id, uint acceptedPrice);
     event DataInvalidated(uint indexed id);
@@ -46,11 +46,11 @@ contract PropertyFactory {
         company = _company; // Set the company's address
     }
 
-    function createPropertyTokenizeRequest(string memory _address, string memory _description,uint _price, uint _supply) public {
+    function createPropertyTokenizeRequest(string memory _address, string memory _apiId,uint _price, uint _supply) public {
         PropertyRequest memory newRequest = PropertyRequest({
             id: requestCounter, 
             _address:_address,
-            _description: _description,
+            _apiId: _apiId,
             price: _price,
             _supply: _supply,
             validationStatus: ValidationStatus.pending,
@@ -60,7 +60,7 @@ contract PropertyFactory {
 
         propertyRequests[requestCounter] = newRequest;
 
-        emit NewPropertyValidationRequested(requestCounter, _address, _description);
+        emit NewPropertyValidationRequested(requestCounter, _address, _apiId);
 
         requestCounter++;
     }
@@ -105,7 +105,7 @@ contract PropertyFactory {
         // Assuming supply as a property of PropertyInfo structure in PropertyRequest
         uint _supply = request._supply; 
 
-        Property newProperty = new Property(request.id, request._address, request._description, request.price, _supply, request.owner);
+        Property newProperty = new Property(request.id, request._address, request._apiId, request.price, _supply, request.owner);
         
         properties.push(address(newProperty));
 

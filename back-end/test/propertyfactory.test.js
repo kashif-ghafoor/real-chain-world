@@ -3,7 +3,7 @@ const Property = artifacts.require("Property");
 
 contract("PropertyFactory", ([deployer, user, ...accounts]) => {
   let propertyFactory;
-  const propertyDescription = "Property 1 description";
+  const apiId = "this is apiId";
   const propertyAddress = "Property 1 address";
   const initialPrice = 500; // let's say 500 wei
   const supply = 1000; // let's say 1000 tokens
@@ -16,7 +16,7 @@ contract("PropertyFactory", ([deployer, user, ...accounts]) => {
   it("User should create a new property tokenization request", async function () {
     const response = await propertyFactory.createPropertyTokenizeRequest(
       propertyAddress,
-      propertyDescription,
+      apiId,
       initialPrice,
       supply,
       { from: user }
@@ -47,12 +47,8 @@ contract("PropertyFactory", ([deployer, user, ...accounts]) => {
     const propertyInfo = await property.propertyInfo();
 
     // Here you can perform more checks on the property contract if needed
-    const propertyDescription = propertyInfo._description;
-    assert.equal(
-      propertyDescription,
-      "Property 1 description",
-      "Property description does not match"
-    );
+    const propertyApiId = propertyInfo._apiId;
+    assert.equal(propertyApiId, "this is apiId", "Property apiId does not match");
 
     const propertyOwner = await property.owner();
     assert.equal(propertyOwner, user, "Property owner does not match");
@@ -61,6 +57,16 @@ contract("PropertyFactory", ([deployer, user, ...accounts]) => {
   it("owner should have one property now", async function () {
     const properties = await propertyFactory.getPropertiesOfOwner(user);
     assert.equal(properties.length, 1, "One property should exist for the owner now");
+  });
+
+  it("show property info", async function () {
+    const properties = await propertyFactory.getPropertiesOfOwner(user);
+    const property = await Property.at(properties[0]);
+    const propertyInfo = await property.propertyInfo();
+    console.log("propertyInfo", propertyInfo._price);
+    assert.equal(propertyInfo._apiId, "this is apiId", "Property apiId does not match");
+    assert.equal(propertyInfo._address, "Property 1 address", "Property address does not match");
+    assert.equal(propertyInfo.price, 1000, "Property price does not match");
   });
 });
 

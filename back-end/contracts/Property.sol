@@ -35,7 +35,7 @@ contract Property is ERC20, Ownable {
     struct PropertyInfo {
         uint id;
         string _address;
-        string _description;
+        string _apiId;
         uint price;
     }
 
@@ -44,15 +44,15 @@ contract Property is ERC20, Ownable {
     ///@dev setting properties specs on instatiation
     ///@param _id uint, unique id and the property address's index in the list of properties deployed by the factory contract
     ///@param _address string, property physical address, the real address
-    ///@param _description string, property description, eg: view, number of bedrooms
+    ///@param _apiId string, property apiId, is the id of the property in the api in mongoDB
     ///@param _price uint, the total price of property
     ///@param _supply uint, the number of shares the property will be splitted to
     ///@param _owner address, the owner who deployed this property using the factory contract
-    constructor(uint _id, string memory _address, string memory _description, uint _price, uint _supply, address _owner) ERC20("Property", "PROP") {
+    constructor(uint _id, string memory _address, string memory _apiId, uint _price, uint _supply, address _owner) ERC20("Property", "PROP") {
         transferOwnership(_owner);
         holders.push(_owner);
         propertyRevenue = 0;
-        propertyInfo = PropertyInfo(_id, _address, _description, _price);
+        propertyInfo = PropertyInfo(_id, _address, _apiId, _price);
         _mint(_owner, _supply);
     }
 
@@ -86,7 +86,8 @@ contract Property is ERC20, Ownable {
     function buyShare(address _from, uint  _amount) public payable checkIfPaused(){
         require(holdersSelling[_from], "The requested shareholder is not selling");
         uint holderBalance = balanceOf(_from);
-        uint price = (propertyInfo.price/totalSupply())*_amount;
+        // uint price = (propertyInfo.price/totalSupply())*_amount;
+        uint price = (_amount * propertyInfo.price) / totalSupply();
         require(_amount <= holderBalance, "Shareholder doesn't have this much tokens");
         require(msg.value >= price, "Insufficient funds");
         if(balanceOf(msg.sender) == 0){
