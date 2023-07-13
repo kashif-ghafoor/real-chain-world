@@ -51,13 +51,13 @@ const About = () => {
           <img
             className="h-[200px] w-[200px] rounded-full object-cover rounded-11xl"
             alt=""
-            src="/Global .svg"
+            src={require("../assets/drAdnan.jpeg")}
           />
           <div className="flex flex-col p-6">
-            <h5 className="mb-2 text-9xl font-bold text-gray-100">John G.</h5>
-            <p className="mb-4 text-center text-blue text-7xl">
-              CEO & Co-Founder
-            </p>
+            <h5 className="mb-2 text-9xl font-bold text-gray-100">
+              Dr. Adnan Idris
+            </h5>
+            <p className="mb-4 text-center text-blue text-7xl">Supervisor</p>
             <div className="mt-6">
               <button className="rounded-lg w-[170px] h-[50px] bg-lightseagreen-100 text-white font-medium text-4xl">
                 Contact Us
@@ -69,13 +69,13 @@ const About = () => {
           <img
             className="h-[200px] w-[200px] rounded-full object-cover rounded-11xl"
             alt=""
-            src="/Global .svg"
+            src={require("../assets/Kashif.jpeg")}
           />
           <div className="flex flex-col p-6">
-            <h5 className="mb-2 text-9xl font-bold text-gray-100">John G.</h5>
-            <p className="mb-4 text-center text-blue text-7xl">
-              CEO & Co-Founder
-            </p>
+            <h5 className="mb-2 text-9xl font-bold text-gray-100">
+              Kashif Ghafoor.
+            </h5>
+            <p className="mb-4 text-center text-blue text-7xl">Group Leader</p>
             <div className="mt-6">
               <button className="rounded-lg w-[170px] h-[50px] bg-lightseagreen-100 text-white font-medium text-4xl">
                 Contact Us
@@ -87,13 +87,13 @@ const About = () => {
           <img
             className="h-[200px] w-[200px] rounded-full object-cover rounded-11xl"
             alt=""
-            src="/Global .svg"
+            src={require("../assets/Nazia.jpeg")}
           />
           <div className="flex flex-col p-6">
-            <h5 className="mb-2 text-9xl font-bold text-gray-100">John G.</h5>
-            <p className="mb-4 text-center text-blue text-7xl">
-              CEO & Co-Founder
-            </p>
+            <h5 className="mb-2 text-9xl font-bold text-gray-100">
+              Nazia Suleman
+            </h5>
+            <p className="mb-4 text-center text-blue text-7xl">Member</p>
             <div className="mt-6">
               <button className="rounded-lg w-[170px] h-[50px] bg-lightseagreen-100 text-white font-medium text-4xl">
                 Contact Us
@@ -105,13 +105,31 @@ const About = () => {
           <img
             className="h-[200px] w-[200px] rounded-full object-cover rounded-11xl"
             alt=""
-            src="/Global .svg"
+            src={require("../assets/faizan.jpeg")}
           />
           <div className="flex flex-col p-6">
-            <h5 className="mb-2 text-9xl font-bold text-gray-100">John G.</h5>
-            <p className="mb-4 text-center text-blue text-7xl">
-              CEO & Co-Founder
-            </p>
+            <h5 className="mb-2 text-9xl font-bold text-gray-100">
+              Faizan Faryad
+            </h5>
+            <p className="mb-4 text-center text-blue text-7xl">Member</p>
+            <div className="mt-6">
+              <button className="rounded-lg w-[170px] h-[50px] bg-lightseagreen-100 text-white font-medium text-4xl">
+                Contact Us
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="p-8 w-[380px] flex flex-col text-center justify-center items-center rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+          <img
+            className="h-[200px] w-[200px] rounded-full object-cover rounded-11xl"
+            alt=""
+            src={require("../assets/Waqar.jpeg")}
+          />
+          <div className="flex flex-col p-6">
+            <h5 className="mb-2 text-9xl font-bold text-gray-100">
+              Waqar Ahmed
+            </h5>
+            <p className="mb-4 text-center text-blue text-7xl">Member</p>
             <div className="mt-6">
               <button className="rounded-lg w-[170px] h-[50px] bg-lightseagreen-100 text-white font-medium text-4xl">
                 Contact Us

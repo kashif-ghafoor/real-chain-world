@@ -7,7 +7,7 @@ const Wallet = () => {
       <div className="absolute left-[1320px] m-6">
         <SmallNavBar />
       </div>
-      <div className="pl-16 absolute left-[400px] top-[140px]">
+      <div className="pl-16 absolute left-[600px] top-[140px]">
         <h1 className="font-serif text-5xl font-bold">Wallet</h1>
         <div className="border-t-2 border-lightseagreen-100 mt-10 mb-16 w-[1200px] h-[520px] shadow-lg bg-white">
           <div className="flex justify-center">

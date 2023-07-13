@@ -12,7 +12,7 @@ import { FaUser, FaWallet, FaChartLine, FaDashcube } from "react-icons/fa";
 
 const General = () => {
   const [activeComponent, setActiveComponent] = useState("dashboard"); // Updated initial value
-  const [userRole] = useState("owner"); // Change userRole to "owner" or "investor" or "company"
+  const [userRole] = useState("investor"); // Change userRole to "owner" or "investor" or "company"
 
   const renderComponent = () => {
     switch (activeComponent) {

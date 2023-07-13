@@ -8,7 +8,7 @@ const InvestorDashboard = () => {
         <div className="absolute left-[1320px] m-6">
           <SmallNavBar />
         </div>
-        <div className="absolute left-[450px] top-[160px]">
+        <div className="absolute left-[600px] top-[160px]">
           <h1 className="font-serif text-7xl font-bold">Investor Dashboard</h1>
         </div>
       </div>

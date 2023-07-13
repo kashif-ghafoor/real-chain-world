@@ -6,34 +6,11 @@ const AssessmentCompanies = () => {
   const cardData = [
     {
       id: 1,
-      companyName: "Trust Estate",
-      description: "Description about companies",
+      companyName: "Real Chain World",
+      description: "Admin",
       imageSrc: require("../assets/company1.png"),
     },
-    {
-      id: 2,
-      companyName: "Company 2",
-      description: "Description about companies",
-      imageSrc: require("../assets/company1.png"),
-    },
-    {
-      id: 3,
-      companyName: "Company 3",
-      description: "Description about companies",
-      imageSrc: require("../assets/company1.png"),
-    },
-    {
-      id: 4,
-      companyName: "Company 4",
-      description: "Description about companies",
-      imageSrc: require("../assets/company1.png"),
-    },
-    {
-      id: 5,
-      companyName: "Company 5",
-      description: "Description about companies",
-      imageSrc: require("../assets/company1.png"),
-    },
+
     // Add more card data objects as needed
   ];
   return (

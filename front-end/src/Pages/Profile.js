@@ -18,10 +18,10 @@ const Profile = () => {
   return (
     <>
       <div>
-        <div className="absolute left-[1320px] m-6">
+        <div className="absolute left-[1420px] m-6">
           <SmallNavBar />
         </div>
-        <div className="absolute left-[450px] top-[160px]">
+        <div className="absolute left-[600px] top-[160px]">
           <h1 className="font-serif text-7xl font-bold">Edit Your Profile</h1>
           <div className="text-4xl border-t-2 border-lightseagreen-100 mt-8 mb-16 w-[650px] h-[600px] shadow-lg bg-white">
             <form className="mx-24 pt-10" onSubmit={handleSubmit}>
